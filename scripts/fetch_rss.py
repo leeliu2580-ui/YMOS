@@ -3,8 +3,8 @@
 YMOS RSS 数据获取工具（投资场景示例）
 
 【本脚本是投资研究场景的实现示例】
-- 数据源：Yongmai 投资洞察博客 RSS + 其他财经 RSS
-- 数据类型：免费全文市场洞察、行业动态、宏观经济
+- 数据源：Bloomberg、Seeking Alpha、MarketBeat、Stratechery 等主流财经媒体 RSS
+- 数据类型：美股新闻、市场动向、科技趋势、商业分析
 
 【其他场景如何适配】
 本脚本是三层架构「第一层：信息输入」的具体实现。
@@ -16,11 +16,8 @@ YMOS RSS 数据获取工具（投资场景示例）
 核心不变：通过 RSS 自动抓取内容到本地，无需 API Key
 核心可变：RSS_SOURCES 字典中的订阅源列表
 
-【投资场景】免费数据源：
-https://yongmai.xyz/category/daily-research/feed/
-Yongmai 市场洞察日报，每日更新，全文输出。
-
-如需更多投资类 RSS 源，可参考 Yongmai 博客的推荐清单。
+【注意】部分 RSS 源（如 The Information、Stratechery）为付费订阅制媒体，
+其免费 RSS 仅提供文章摘要，全文需订阅。Bloomberg 和 MarketBeat 为免费开放源。
 """
 
 import urllib.request
@@ -32,20 +29,26 @@ import ssl
 import sys
 from datetime import datetime, timedelta, timezone
 
-# 【投资场景】默认使用 Yongmai 市场洞察 RSS
+# 【投资场景】默认使用 Bloomberg Markets RSS（无需账号，开箱即用）
 # 【其他场景】修改为你的主要数据源 URL
-DEFAULT_RSS_URL = "https://yongmai.xyz/category/daily-research/feed/"
+DEFAULT_RSS_URL = "https://feeds.bloomberg.com/markets/news.rss"
 
 # ============================================================
 # 【投资场景】默认 RSS 数据源
+# 说明：
+#   - Bloomberg Markets / Tech：免费，无需账号
+#   - MarketBeat Instant Alerts：免费，美股评级与异动
+#   - Seeking Alpha Editors' Picks：免费摘要，全文需订阅
+#   - The Information / Stratechery：付费媒体，RSS 仅含摘要
 # 【其他场景】修改为你的领域 RSS 订阅源
 # ============================================================
 RSS_SOURCES = {
-    "市场洞察": DEFAULT_RSS_URL,
-    # 添加更多 RSS 源示例：
-    # "科技新闻": "https://techcrunch.com/feed/",
-    # "学术论文": "http://arxiv.org/rss/cs.AI",
-    # "宏观经济": "https://example.com/macro/feed/",
+    "Bloomberg Markets":    "https://feeds.bloomberg.com/markets/news.rss",
+    "Bloomberg Tech":       "https://feeds.bloomberg.com/technology/news.rss",
+    "CNBC Markets":         "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258",
+    "CNBC Finance":         "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664",
+    "Seeking Alpha Picks":  "https://seekingalpha.com/tag/editors-picks.xml",
+    "Stratechery":          "https://stratechery.com/feed/",
 }
 
 
