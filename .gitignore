@@ -28,3 +28,6 @@ Brain/策略分析/Raw_Data/
 持仓与关注/动态Watchlist/*/
 !持仓与关注/动态Watchlist/.gitkeep
 持仓与关注/投资复盘/
+
+# Local docs (not part of YMOS repo)
+wordpress-docs/
