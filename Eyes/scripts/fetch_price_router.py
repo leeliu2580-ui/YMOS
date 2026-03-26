@@ -124,9 +124,10 @@ def main() -> None:
     if not symbols:
         raise SystemExit("symbols 不能为空")
 
-    finnhub_key   = args.finnhub_token  or os.getenv("FINNHUB_API_KEY", "")
-    tushare_token = args.tushare_token  or os.getenv("TUSHARE_TOKEN", "")
-    cmc_key       = os.getenv("COINMARKETCAP_API_KEY", "")
+    finnhub_key    = args.finnhub_token  or os.getenv("FINNHUB_API_KEY", "")
+    tushare_token  = args.tushare_token  or os.getenv("TUSHARE_TOKEN", "")
+    tickflow_key   = os.getenv("TICKFLOW_API_KEY", "")
+    cmc_key        = os.getenv("COINMARKETCAP_API_KEY", "")
 
     # ── 分流 ────────────────────────────────────────────────────────────────
     cmc_syms:     list[str] = []
@@ -149,10 +150,12 @@ def main() -> None:
             else:
                 yahoo_syms.append(s)          # 无 Key → Yahoo 兜底
         elif bucket == "tushare":
-            if tushare_token:
+            if tickflow_key:
+                tushare_syms.append(s)
+            elif tushare_token:
                 tushare_syms.append(s)
             else:
-                yahoo_syms.append(s)          # 无 Token → Yahoo 兜底
+                yahoo_syms.append(s)          # 无 Token/Key → Yahoo 兜底
         else:  # "yahoo"
             yahoo_syms.append(s)
 
@@ -207,19 +210,44 @@ def main() -> None:
         if code != 0:
             print(f"⚠️ Finnhub 调用失败（exit {code}），对应 ticker 可能无价格数据")
 
-    # ── Tushare（A股）───────────────────────────────────────────────────────
+    # ── A股主路由：TickFlow > Tushare ─────────────────────────────────────
     if tushare_syms:
-        out = out_dir / f"price_scan_tushare_{date_tag}.json"
-        cmd = [
-            sys.executable,
-            str(SCRIPTS_DIR / "fetch_price_tushare.py"),
-            "--symbols", ",".join(tushare_syms),
-            "--token", tushare_token,
-            "--output", str(out),
-        ]
-        code = run(cmd)
-        if code != 0:
-            print(f"⚠️ Tushare 调用失败（exit {code}），对应 ticker 可能无价格数据")
+        if tickflow_key:
+            out = out_dir / f"price_scan_tickflow_{date_tag}.json"
+            cmd = [
+                sys.executable,
+                str(SCRIPTS_DIR / "fetch_price_tickflow.py"),
+                "--symbols", ",".join(tushare_syms),
+                "--token", tickflow_key,
+                "--output", str(out),
+            ]
+            code = run(cmd)
+            if code != 0:
+                print(f"⚠️ TickFlow 调用失败（exit {code}），尝试回退到 Tushare")
+                if tushare_token:
+                    out = out_dir / f"price_scan_tushare_{date_tag}.json"
+                    cmd = [
+                        sys.executable,
+                        str(SCRIPTS_DIR / "fetch_price_tushare.py"),
+                        "--symbols", ",".join(tushare_syms),
+                        "--token", tushare_token,
+                        "--output", str(out),
+                    ]
+                    code = run(cmd)
+                    if code != 0:
+                        print(f"⚠️ Tushare 调用失败（exit {code}），对应 ticker 可能无价格数据")
+        else:
+            out = out_dir / f"price_scan_tushare_{date_tag}.json"
+            cmd = [
+                sys.executable,
+                str(SCRIPTS_DIR / "fetch_price_tushare.py"),
+                "--symbols", ",".join(tushare_syms),
+                "--token", tushare_token,
+                "--output", str(out),
+            ]
+            code = run(cmd)
+            if code != 0:
+                print(f"⚠️ Tushare 调用失败（exit {code}），对应 ticker 可能无价格数据")
 
     # ── Yahoo（港股 + 兜底）─────────────────────────────────────────────────
     if yahoo_syms_norm:
