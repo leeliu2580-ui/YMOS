@@ -36,7 +36,7 @@ from env_loader import load_dotenv
 # 状态机中统一写裸符号（BTC / ETH），路由器在调用数据源前自动转换
 # - Finnhub crypto endpoint 需要交易所前缀（BINANCE:BTCUSDT）
 # - Yahoo 需要 -USD 后缀（BTC-USD）
-CRYPTO_SYMBOLS = {"BTC", "ETH", "SOL", "DOGE", "XRP", "ADA", "AVAX", "DOT"}
+CRYPTO_SYMBOLS = {"BTC", "ETH", "SOL", "DOGE", "XRP", "ADA", "AVAX", "DOT", "HYPE", "HYPE-PERP-SHORT", "ETH-PERP-SHORT", "BTC-PERP-SHORT", "SOL-PERP-SHORT", "HLP"}
 
 CRYPTO_MAP_FINNHUB = {
     "BTC": "BINANCE:BTCUSDT",
@@ -59,6 +59,8 @@ CRYPTO_MAP_YAHOO = {
     "AVAX": "AVAX-USD",
     "DOT": "DOT-USD",
 }
+
+CMC_CRYPTO_SYMBOLS = {"BTC", "ETH", "SOL", "HYPE", "HYPE-PERP-SHORT", "ETH-PERP-SHORT", "BTC-PERP-SHORT", "SOL-PERP-SHORT"}
 
 
 def is_crypto(symbol: str) -> bool:
@@ -86,7 +88,8 @@ def parse_symbols(raw: str) -> list[str]:
 def classify(symbol: str) -> str:
     """
     返回该 Ticker 优先走哪个数据源（不考虑 Key 是否存在）。
-      'finnhub' → 美股 / Crypto
+      'cmc'     → 重点 Crypto（BTC/ETH/SOL/HYPE 及常见 PERP 映射）
+      'finnhub' → 美股 / 其他 Crypto
       'tushare' → A股（上交所 .SS / 深交所 .SZ）
       'yahoo'   → 港股（.HK），以及所有市场的兜底
     """
@@ -94,7 +97,8 @@ def classify(symbol: str) -> str:
         return "tushare"
     if symbol.endswith(".HK"):
         return "yahoo"
-    # BTC/ETH 等 Crypto 及纯字母美股
+    if symbol.upper() in CMC_CRYPTO_SYMBOLS:
+        return "cmc"
     return "finnhub"
 
 
@@ -122,15 +126,24 @@ def main() -> None:
 
     finnhub_key   = args.finnhub_token  or os.getenv("FINNHUB_API_KEY", "")
     tushare_token = args.tushare_token  or os.getenv("TUSHARE_TOKEN", "")
+    cmc_key       = os.getenv("COINMARKETCAP_API_KEY", "")
 
     # ── 分流 ────────────────────────────────────────────────────────────────
+    cmc_syms:     list[str] = []
     finnhub_syms: list[str] = []
     tushare_syms: list[str] = []
     yahoo_syms:   list[str] = []
 
     for s in symbols:
         bucket = classify(s)
-        if bucket == "finnhub":
+        if bucket == "cmc":
+            if cmc_key:
+                cmc_syms.append(s)
+            elif finnhub_key:
+                finnhub_syms.append(s)
+            else:
+                yahoo_syms.append(s)
+        elif bucket == "finnhub":
             if finnhub_key:
                 finnhub_syms.append(s)
             else:
@@ -148,6 +161,7 @@ def main() -> None:
     date_tag = args.date_tag or "latest"
 
     print(f"📡 价格路由分流结果：")
+    print(f"   CMC      ({len(cmc_syms)}): {cmc_syms or '—'}")
     print(f"   Finnhub  ({len(finnhub_syms)}): {finnhub_syms or '—'}")
     print(f"   Tushare  ({len(tushare_syms)}): {tushare_syms or '—'}")
     print(f"   Yahoo    ({len(yahoo_syms)}): {yahoo_syms or '—'}")
@@ -164,6 +178,19 @@ def main() -> None:
         if yahoo_syms_norm != yahoo_syms:
             print(f"   Yahoo:   {yahoo_syms} → {yahoo_syms_norm}")
         print()
+
+    # ── CoinMarketCap（重点 Crypto）───────────────────────────────────────
+    if cmc_syms:
+        out = out_dir / f"price_scan_cmc_{date_tag}.json"
+        cmd = [
+            sys.executable,
+            str(SCRIPTS_DIR / "fetch_price_cmc.py"),
+            "--symbols", ",".join(cmc_syms),
+            "--output", str(out),
+        ]
+        code = run(cmd)
+        if code != 0:
+            print(f"⚠️ CMC 调用失败（exit {code}），对应 ticker 可能无价格数据")
 
     # ── Finnhub ─────────────────────────────────────────────────────────────
     if finnhub_syms_norm:

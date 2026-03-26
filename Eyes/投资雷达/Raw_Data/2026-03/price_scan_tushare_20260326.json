@@ -1,0 +1,26 @@
+{
+  "source": "Tushare Pro daily API",
+  "fetched_at": "2026-03-26T15:24:31.968779+00:00",
+  "count": 1,
+  "symbols": [
+    "300308.SZ"
+  ],
+  "skipped": [],
+  "data": [
+    {
+      "symbol": "300308.SZ",
+      "ts_code": "300308.SZ",
+      "ok": true,
+      "trade_date": "20260326",
+      "last_close": 614.2,
+      "last_open": 626.89,
+      "last_high": 645.0,
+      "last_low": 612.83,
+      "last_volume": 262769.23,
+      "pre_close": 628.4,
+      "change": -14.2,
+      "pct_chg": -2.2597,
+      "amount_wan": 16491318.31
+    }
+  ]
+}

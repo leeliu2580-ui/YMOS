@@ -1,0 +1,39 @@
+{
+  "source": "Finnhub.io",
+  "watchlist": [
+    "GOLD",
+    "NVDA",
+    "BINANCE:HLPUSDT"
+  ],
+  "fetched_at": "2026-03-26T15:24:31.579065+00:00",
+  "time_range_days": 1,
+  "count": 2,
+  "data": [
+    {
+      "type": "quote",
+      "symbol": "GOLD",
+      "price": 40.11,
+      "change": -3.02,
+      "change_pct": -7.0021,
+      "high": 42.59,
+      "low": 39.99,
+      "open": 42.332499999999996,
+      "prev_close": 43.13,
+      "timestamp": 1774538625,
+      "fetched_at": "2026-03-26T15:24:29.739236+00:00"
+    },
+    {
+      "type": "quote",
+      "symbol": "NVDA",
+      "price": 174.21,
+      "change": -4.47,
+      "change_pct": -2.5017,
+      "high": 176.85,
+      "low": 173.04,
+      "open": 176.85,
+      "prev_close": 178.68,
+      "timestamp": 1774538663,
+      "fetched_at": "2026-03-26T15:24:30.798468+00:00"
+    }
+  ]
+}

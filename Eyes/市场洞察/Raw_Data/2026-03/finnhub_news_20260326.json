@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "source": "Finnhub company-news",
+    "mode": "holdings_only",
+    "hours_back": 24,
+    "date_range": "2026-03-25 ~ 2026-03-26",
+    "generated_at": "2026-03-26 15:26 UTC",
+    "holding_tickers": [
+      "BTC",
+      "ETH-PERP-SHORT",
+      "HLP",
+      "HYPE",
+      "HYPE-PERP-SHORT"
+    ],
+    "note": "Watchlist 不拉个股新闻（节省 rate limit，Watchlist 由 yongmai API 覆盖）",
+    "rate_limit_note": "Finnhub 免费 key = 60 calls/min；当前持仓标的数量决定调用次数",
+    "counts": {
+      "total_raw": 1,
+      "after_dedup": 1,
+      "p15_trigger": 0,
+      "by_ticker": {
+        "BTC": 1,
+        "ETH-PERP-SHORT": 0,
+        "HLP": 0,
+        "HYPE": 0,
+        "HYPE-PERP-SHORT": 0
+      }
+    }
+  },
+  "articles": [
+    {
+      "ticker": "BTC",
+      "datetime_ts": 1774476615,
+      "datetime_readable": "2026-03-25 22:10 UTC",
+      "source": "Benzinga",
+      "headline": "Bitcoin, Ethereum, XRP, Dogecoin Hold Steady Amid US-Iran Truce Momentum: Here's Why This Analyst Thinks Now Is A 'Great Time To Buy' BTC",
+      "summary": "Leading cryptocurrencies were range-bound on Wednesday, while stocks closed higher as investors weighed de-escalation prospects in the Middle East war.",
+      "url": "https://finnhub.io/api/news?id=5904a64fc873110b8e8c2329f1ce63c6e1f3ca22a87a87100f7b8db5750f141c",
+      "image": "https://cdn.benzinga.com/files/images/story/2026/03/25/Bitcoin-Coins-On-Reflective-Black-Surfac.jpeg?width=2048&height=1536",
+      "p15_trigger": false
+    }
+  ]
+}
