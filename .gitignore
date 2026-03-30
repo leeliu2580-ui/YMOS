@@ -16,6 +16,10 @@ tmp/
 dist/
 build/
 .cache/
+.tools/
+output/
+.openclaw/
+.clawhub/
 
 # Python
 __pycache__/
