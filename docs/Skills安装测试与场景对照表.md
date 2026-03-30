@@ -14,21 +14,21 @@
 
 ## 一、总览
 
-| Skill                          | 安装状态     | 测试状态                | 建议级别 | 说明                               |
-| :----------------------------- | :------- | :------------------ | :--- | :------------------------------- |
-| web-access                     | 已安装      | 已验证核心链路             | 高    | 复杂联网 / 动态网页 / 登录态首选增强层           |
-| tushare-data                   | 已安装      | 已完成落位验证             | 高    | A 股 / 指数 / 财报 / 资金流等中文投研数据任务     |
-| skill-creator                  | 已安装      | 已完成落位验证             | 高    | 创建、改造、整理你自己的 skill               |
-| subagent-driven-development    | 已安装      | 已完成落位验证             | 高    | 有实施计划后，按任务拆给子代理执行                |
-| test-driven-development        | 已安装      | 已完成落位验证             | 高    | 做功能 / 修 bug 前，先写测试               |
-| systematic-debugging           | 已安装      | 已完成落位验证             | 高    | 遇到 bug / 测试失败 / 异常时先系统排查         |
-| verification-before-completion | 已安装      | 已完成落位验证             | 高    | 在宣称完成前先跑验证                       |
-| executing-plans                | 已安装      | 已完成落位验证             | 中高   | 已有计划时，在当前会话按步骤执行                 |
-| summarize                      | 未安装      | 无标准来源确认             | 中    | 建议先不要装假货，后续明确来源或自建               |
-| openai-whisper                 | 未安装      | 无标准来源确认             | 中    | 建议优先通过工具/脚本实现，后续再封装成 skill       |
-| openai-image-gen               | 未安装      | 无标准来源确认             | 中    | 建议优先通过 API 工具链实现，后续再封装成 skill    |
-| video-frames                   | 未安装      | 无标准来源确认             | 中    | 建议先作为脚本/流程能力，后续再技能化              |
-| coding-agent                   | 未安装到统一目录 | 当前会话可用，但源目录当前不可直接读取 | 高    | 编码重活外包给 Codex / Claude Code / Pi |
+| Skill                          | 安装状态         | 测试状态                         | 建议级别 | 说明 |
+| :----------------------------- | :------------- | :--------------------------- | :--- | :--- |
+| web-access                     | 已安装          | 已验证核心链路                      | 高    | 复杂联网 / 动态网页 / 登录态首选增强层 |
+| tushare-data                   | 已安装          | 已完成落位验证                      | 高    | A 股 / 指数 / 财报 / 资金流等中文投研数据任务 |
+| skill-creator                  | 已安装          | 已完成落位验证                      | 高    | 创建、改造、整理你自己的 skill |
+| subagent-driven-development    | 已安装          | 已完成落位验证                      | 高    | 有实施计划后，按任务拆给子代理执行 |
+| test-driven-development        | 已安装          | 已完成落位验证                      | 高    | 做功能 / 修 bug 前，先写测试 |
+| systematic-debugging           | 已安装          | 已完成落位验证                      | 高    | 遇到 bug / 测试失败 / 异常时先系统排查 |
+| verification-before-completion | 已安装          | 已完成落位验证                      | 高    | 在宣称完成前先跑验证 |
+| executing-plans                | 已安装          | 已完成落位验证                      | 中高   | 已有计划时，在当前会话按步骤执行 |
+| summarize                      | 已安装并已适配      | skill 已就绪，底层 CLI 未装好           | 中高   | 现阶段作为“摘要工作流规范 skill”可用 |
+| openai-whisper                 | 已安装并已适配      | 已安装源码、依赖和 ffmpeg，模块 import 成功 | 高    | 已具备转写能力，可纳入流程 |
+| openai-image-gen               | 已适配          | skill 外壳已创建，待接 API key / 调用链   | 中高   | 适合作为配图工作流规范 |
+| video-frames                   | 已适配          | ffmpeg 已安装并验证，skill 外壳已创建    | 高    | 已具备抽帧能力 |
+| coding-agent                   | 未安装到统一目录     | 当前会话可用，但源目录当前不可直接读取      | 高    | 编码重活外包给 Codex / Claude Code / Pi |
 
 ---
 
