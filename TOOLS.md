@@ -37,4 +37,16 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+## Search Skills
+
+- 已安装：`skills/exa-search`
+- 已安装：`skills/grok-search`
+- 使用原则：
+  - `exa-search` → 官方文档、参数、定价、官网、正文提取
+  - `grok-search` → 实时动态、社区讨论、舆情扫描、多源综述
+- 投研默认规则：
+  - `grok-search` 负责看外面现在怎么说
+  - `exa-search` 负责回到官方或源头找证据
+- 详细说明见：`docs/搜索技能使用说明.md`
+
 Add whatever helps you do your job. This is your cheat sheet.
