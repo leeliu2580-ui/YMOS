@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>YMOS Dashboard - 2026-03-30</title>
+<style>
+body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f5f0;color:#222;font-size:16px;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;font-weight:700;font-size:20px}
+.grid{display:grid;gap:20px}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:24px}
+.card h2{margin:0 0 14px 0;font-size:22px}.card h3{margin:0 0 10px 0;font-size:18px}
+.muted{color:#666}.pill{display:inline-block;padding:4px 10px;border-radius:999px;font-size:14px;font-weight:700}.pill-yellow{background:#fff3cd;color:#8a6d3b}.pill-red{background:#f8d7da;color:#842029}.pill-green{background:#d1e7dd;color:#0f5132}.pill-blue{background:#dbeafe;color:#1d4ed8}
+.kpi{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.workflow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{border-radius:12px;padding:16px}.done{background:#d1e7dd}.todo{background:#ececec}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.list{margin:0;padding-left:20px}.list li{margin:6px 0}
+table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.5}th,td{padding:10px 12px;border-bottom:1px solid #eee;text-align:left;vertical-align:top}th{background:#fafafa}
+.footer{margin:24px 0 8px;color:#666;font-size:14px;text-align:center}
+@media (max-width: 768px){.workflow{grid-template-columns:repeat(2,1fr)}.two-col,.kpi{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="topbar"><div>YMOS │ 投资操作系统</div><div>2026-03-30</div></div>
+  <div class="grid">
+    <div class="card">
+      <h2>状态概览</h2>
+      <div class="kpi">
+        <div><span class="pill pill-yellow">🟡 有待确认</span><div class="muted" style="margin-top:8px">防守优先，重点是收复杂度，不是新增风险。</div></div>
+        <div><strong>持仓数量：</strong>5</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>每日工作流</h2>
+      <div class="workflow">
+        <div class="step done"><strong>1. 市场洞察</strong><div>✅ 今天已完成</div></div>
+        <div class="step done"><strong>2. 投资雷达</strong><div>✅ 今天已完成</div></div>
+        <div class="step done"><strong>3. 策略分析</strong><div>✅ 今天已完成</div></div>
+        <div class="step done"><strong>4. 持仓收口</strong><div>✅ 今天已完成</div></div>
+      </div>
+      <div class="muted" style="margin-top:10px">已完成 4/4</div>
+    </div>
+
+    <div class="card">
+      <h2>战略简报</h2>
+      <div style="margin-bottom:10px"><span class="pill pill-red">市场体温：Risk Off</span></div>
+      <p>中东冲突、油价、通胀再定价仍是主变量；AI 基建长期逻辑未坏，但交易层明显承压，当前市场更适合防守与强弱甄别。</p>
+      <table>
+        <thead><tr><th>信号类型</th><th>核心主题</th><th>研判结论</th></tr></thead>
+        <tbody>
+          <tr><td>主题收敛</td><td>中东冲突 → 油价 → 通胀再定价</td><td>风险偏好仍被压制，宏观不支持盲目进攻</td></tr>
+          <tr><td>高影响异常</td><td>铝/燃油/航运链冲击</td><td>资源与制造成本扰动升级</td></tr>
+          <tr><td>认知温差</td><td>AI 信息流强，价格承压</td><td>基本面推进未停，但交易在做内部淘汰赛</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>晨会速览</h2>
+      <div class="two-col">
+        <div>
+          <h3>今天必须做的事</h3>
+          <ul class="list">
+            <li>盯 BTC 的 66222 纪律线</li>
+            <li>按原计划收口 HYPE 剩余半边空单</li>
+            <li>补 HLP 净值/收益/回撤链路</li>
+          </ul>
+        </div>
+        <div>
+          <h3>今天不要做的事</h3>
+          <ul class="list">
+            <li>不要新增高弹性风险仓位</li>
+            <li>不要把 HYPE 剩余空单拖成主观看空仓</li>
+            <li>不要在 ETH 边界不清时继续加仓</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>需要你做的事</h2>
+      <table>
+        <tbody>
+          <tr><td><span class="pill pill-red">P0</span></td><td>若再次跌破 66222，立即执行</td><td>BTC</td></tr>
+          <tr><td><span class="pill pill-yellow">P1</span></td><td>剩余半边空单 4 月初前收口</td><td>HYPE</td></tr>
+          <tr><td><span class="pill pill-yellow">P1</span></td><td>不加仓，等待明确边界信号后简化</td><td>ETH</td></tr>
+          <tr><td><span class="pill pill-yellow">P1</span></td><td>补净值/收益/回撤/流动性数据链路</td><td>HLP</td></tr>
+          <tr><td><span class="pill pill-blue">P2</span></td><td>继续观察是否形成价格共振</td><td>GOLD / NVDA / 中际旭创 / SOL</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>持仓一览</h2>
+      <table>
+        <thead><tr><th>标的</th><th>阶段</th><th>最新动态 / 状态摘要</th></tr></thead>
+        <tbody>
+          <tr><td>BTC</td><td>P2：纪律验证区</td><td>67353 仅属弱修复；66222 仍是硬纪律线</td></tr>
+          <tr><td>HYPE</td><td>P2：现货逻辑未坏，保护腿收口中</td><td>38.5 已平掉一半空单；剩余半边继续按原计划处理</td></tr>
+          <tr><td>ETH 空头</td><td>P2：次级对冲腿 / 待简化</td><td>成本 2200，当前仍有缓冲，但边界不清</td></tr>
+          <tr><td>HLP</td><td>数据盲区</td><td>29% 权重，但净值/回撤/收益链路未补</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="footer">YMOS Dashboard · 数据截至 2026-03-30 16:56</div>
+</div>
+</body>
+</html>
