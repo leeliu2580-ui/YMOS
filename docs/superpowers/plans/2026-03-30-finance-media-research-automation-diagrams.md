@@ -30,15 +30,19 @@ flowchart TB
     DS3 -.登录态/交互站点.-> WA
     WA --> API
 
-    subgraph Rule[规则处理层]
-        RP1[清洗/去重/聚类]
-        RP2[规则筛选/公告分类]
+    subgraph Harness[Harness 层]
+        RP1[输入标准化/清洗/去重/聚类]
+        RP2[规则筛选/公告分类/风险护栏]
         RP3[token 预算预估\n上下文裁剪]
+        RP4[模型路由/失败降级]
+        RP5[输出后处理/结构修复]
     end
 
     API --> RP1
     API --> RP2
     API --> RP3
+    API --> RP4
+    API --> RP5
 
     subgraph AI[AI 分析层]
         LLM_LOCAL[本地模型\nOllama + Qwen2.5-7B]
@@ -52,6 +56,11 @@ flowchart TB
     RP2 --> LLM_CLOUD
     RP3 --> LLM_CLOUD
     RP3 --> LLM_LOCAL
+    RP4 --> LLM_CLOUD
+    RP4 --> LLM_LOCAL
+    LLM_LOCAL --> RP5
+    ASR --> RP5
+    LLM_CLOUD --> RP5
 
     subgraph Store[存储层]
         DB[(SQLite / PostgreSQL)]
@@ -98,7 +107,7 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-    A[数据采集层] --> B[规则处理层]
+    A[数据采集层] --> B[Harness 层]
     B --> C[AI 分析层]
     C --> D[交付层]
     D --> E[人机协同层]
@@ -106,7 +115,7 @@ flowchart LR
     F --> B
 
     A1[抓数据 / 抽正文 / 转结构化] --- A
-    B1[去重 / 聚类 / 筛选 / 路由 / 预算预估] --- B
+    B1[输入标准化 / 去重聚类 / 规则护栏 / 模型路由 / 输出修复 / 预算熔断] --- B
     C1[本地批处理 + 云端深度分析] --- C
     D1[日报 / 草稿 / Dashboard / 通知] --- D
     E1[审校 / 采纳 / 驳回 / 重生成] --- E
@@ -120,9 +129,10 @@ flowchart LR
 ```mermaid
 flowchart TB
     S1[热点源 / RSS / 财经站点 / 视频链接] --> P1[采集与正文抽取]
-    P1 --> P2[去重 / 聚类 / 热度评分]
+    P1 --> P2[Harness 预处理\n去重 / 聚类 / 热度评分 / 风险护栏]
     P2 --> P3[本地模型初筛\n标签 / 主题 / 提纲]
-    P3 --> P4[候选选题池]
+    P3 --> P35[Harness 后处理\n结构修复 / 字段补齐 / 质量闸门]
+    P35 --> P4[候选选题池]
     P4 --> P5[固定选题库 topic_library]
     P4 --> P6[云端模型生成高质量提纲 / 初稿]
     P6 --> P7[配图 API]
@@ -141,11 +151,12 @@ flowchart TB
 ```mermaid
 flowchart TB
     R1[行情 / 财务 / 公告 / 新闻] --> R2[采集与标准化]
-    R2 --> R3[规则筛股引擎]
+    R2 --> R3[Harness 预处理\n规则筛股 / 风险护栏 / 路由]
     R3 --> R35[交易规则引擎\nPhase 2 扩展]
     R3 --> R4[候选标的池]
     R4 --> R5[本地/云端批量初评]
-    R5 --> R6[重点标的深挖]
+    R5 --> R55[Harness 后处理\n结构修复 / 来源补齐 / 质量闸门]
+    R55 --> R6[重点标的深挖]
     R6 --> R7[YMOS 四步闭环\n市场洞察 → 投资雷达 → 策略分析 → 持仓收口]
     R7 --> R8[日报 / 盘后报告 / Dashboard]
     R8 --> R9[审校与人工确认]
