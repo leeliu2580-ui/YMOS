@@ -21,9 +21,14 @@ flowchart TB
         DS3[视频/图文素材源]
     end
 
+    WA[OpenClaw web-access 技能\n复杂联网增强层]
+
     DS1 --> API
     DS2 --> API
     DS3 --> API
+    DS1 -.复杂网页/动态站点.-> WA
+    DS3 -.登录态/交互站点.-> WA
+    WA --> API
 
     subgraph Rule[规则处理层]
         RP1[清洗/去重/聚类]
@@ -126,6 +131,7 @@ flowchart TB
     P8 --> P9[导出 Markdown / HTML / 平台草稿]
     P8 --> P10[反馈事件\nselected / edit_level / publish]
     P10 --> P11[周度统计与 Act 调整]
+    P11 -.高采纳选题入库.-> P5
 ```
 
 ---
