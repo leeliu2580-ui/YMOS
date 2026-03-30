@@ -9,6 +9,14 @@ wordpress-docs/
 .DS_Store
 Thumbs.db
 
+# Backup / build noise
+node_modules/
+*.log
+tmp/
+dist/
+build/
+.cache/
+
 # Python
 __pycache__/
 *.py[cod]
