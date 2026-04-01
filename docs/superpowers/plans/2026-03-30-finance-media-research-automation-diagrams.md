@@ -1,4 +1,4 @@
-# 财经自媒体与投研自动化系统架构图（v1）
+# 财经自媒体与投研自动化系统架构图（v2）
 
 > 配套主文档：`docs/superpowers/plans/2026-03-30-finance-media-research-automation-architecture.md`
 > 用途：用于沟通系统边界、数据流、任务流和 MVP 先后顺序。
@@ -45,22 +45,23 @@ flowchart TB
     API --> RP5
 
     subgraph AI[AI 分析层]
-        LLM_LOCAL[本地模型\nOllama + Qwen2.5-7B]
-        ASR[本地转写\nfaster-whisper]
-        LLM_CLOUD[云端模型 API\nGemini / GPT / DeepSeek]
-        IMG[图像 API\n豆包 / Gemini / Flux]
+        direction LR
+        MAIN[云端主力模型\n腾讯云混元 API\n(Coding Plan)]
+        ADV[高级模型\nGPT-4o-mini / DeepSeek / Gemini]
+        LOCAL[可选本地模型\nQwen2.5-7B\n(仅备用/降级)]
     end
 
-    RP1 --> LLM_LOCAL
-    RP1 --> ASR
-    RP2 --> LLM_CLOUD
-    RP3 --> LLM_CLOUD
-    RP3 --> LLM_LOCAL
-    RP4 --> LLM_CLOUD
-    RP4 --> LLM_LOCAL
-    LLM_LOCAL --> RP5
-    ASR --> RP5
-    LLM_CLOUD --> RP5
+    RP1 --> MAIN
+    RP1 --> LOCAL
+    RP2 --> ADV
+    RP3 --> MAIN
+    RP3 --> ADV
+    RP4 --> MAIN
+    RP4 --> ADV
+    RP4 --> LOCAL
+    MAIN --> RP5
+    ADV --> RP5
+    LOCAL --> RP5
 
     subgraph Store[存储层]
         DB[(SQLite / PostgreSQL)]
@@ -71,10 +72,9 @@ flowchart TB
     API --> DB
     API --> VDB
     API --> FILES
-    LLM_LOCAL --> API
-    ASR --> API
-    LLM_CLOUD --> API
-    IMG --> API
+    MAIN --> API
+    ADV --> API
+    LOCAL --> API
 
     subgraph Delivery[交付层]
         OUT1[自媒体选题 / 草稿 / 配图]
@@ -116,7 +116,7 @@ flowchart LR
 
     A1[抓数据 / 抽正文 / 转结构化] --- A
     B1[输入标准化 / 去重聚类 / 规则护栏 / 模型路由 / 输出修复 / 预算熔断] --- B
-    C1[本地批处理 + 云端深度分析] --- C
+    C1[云端主力模型 + 高级模型 + 可选本地备用] --- C
     D1[日报 / 草稿 / Dashboard / 通知] --- D
     E1[审校 / 采纳 / 驳回 / 重生成] --- E
     F1[周报 / 调规则 / 调 prompt / 版本回滚] --- F
@@ -130,11 +130,11 @@ flowchart LR
 flowchart TB
     S1[热点源 / RSS / 财经站点 / 视频链接] --> P1[采集与正文抽取]
     P1 --> P2[Harness 预处理\n去重 / 聚类 / 热度评分 / 风险护栏]
-    P2 --> P3[本地模型初筛\n标签 / 主题 / 提纲]
+    P2 --> P3[云端主力模型初筛\n标签 / 主题 / 提纲]
     P3 --> P35[Harness 后处理\n结构修复 / 字段补齐 / 质量闸门]
     P35 --> P4[候选选题池]
     P4 --> P5[固定选题库 topic_library]
-    P4 --> P6[云端模型生成高质量提纲 / 初稿]
+    P4 --> P6[高级模型生成高质量提纲 / 初稿]
     P6 --> P7[配图 API]
     P6 --> P8[审校后台]
     P7 --> P8
@@ -154,9 +154,9 @@ flowchart TB
     R2 --> R3[Harness 预处理\n规则筛股 / 风险护栏 / 路由]
     R3 --> R35[交易规则引擎\nPhase 2 扩展]
     R3 --> R4[候选标的池]
-    R4 --> R5[本地/云端批量初评]
+    R4 --> R5[云端主力模型批量初评]
     R5 --> R55[Harness 后处理\n结构修复 / 来源补齐 / 质量闸门]
-    R55 --> R6[重点标的深挖]
+    R55 --> R6[重点标的深挖（高级模型）]
     R6 --> R7[YMOS 四步闭环\n市场洞察 → 投资雷达 → 策略分析 → 持仓收口]
     R7 --> R8[日报 / 盘后报告 / Dashboard]
     R8 --> R9[审校与人工确认]
@@ -206,13 +206,13 @@ flowchart LR
 
 ---
 
-## 7. GPU 调度图
+## 7. GPU 调度图（可选，仅当启用本地模型时）
 
 ```mermaid
 flowchart TB
-    Q1[GPU 队列 A\n本地 LLM 文本任务]
-    Q2[GPU 队列 B\nWhisper 转写]
-    Q3[GPU 队列 C\nEmbedding / 建库]
+    Q1[GPU 队列 A\n本地 LLM 文本任务（备用）]
+    Q2[GPU 队列 B\nWhisper 转写（可选）]
+    Q3[GPU 队列 C\nEmbedding / 建库（可选）]
 
     SCH[GPU 调度器\n并发上限=1] --> Q1
     SCH --> Q2
@@ -222,7 +222,7 @@ flowchart TB
     T2[盘后\n投研筛选 / 候选分析] --> SCH
     T3[夜间\n批量转写 / RAG 重建] --> SCH
 
-    SCH --> GPU[RTX 3060 12GB]
+    SCH --> GPU[RTX 3060 12GB\n（仅当本地模型启用时使用）]
 ```
 
 ---
@@ -247,7 +247,7 @@ flowchart LR
 
     A5 --> M2[Phase 2: 降本增效]
     B5 --> M2
-    M2 --> M3[本地模型 / RAG / 爆款拆解 / Dashboard]
+    M2 --> M3[腾讯云混元 API 集成 / RAG / 爆款拆解 / Dashboard]
     M3 --> M4[Phase 3: 半自动运营]
 ```
 
@@ -286,10 +286,18 @@ flowchart TB
 1. 分层职责图
 2. 任务流图（状态机）
 3. 成本与熔断控制图
-4. GPU 调度图
+4. GPU 调度图（若启用本地模型）
 5. 审校与回流图
 
 ### 对后续实施的意义
 - 主文档负责原则与约束
 - 图文档负责边界和路径
 - 两者一起，基本可以进入 MVP 实施计划拆分阶段
+
+---
+
+**修改说明：**
+- 图1：明确 AI 分析层分为云端主力模型（腾讯云混元）、高级模型、可选本地模型，并展示路由与降级关系。
+- 图2：AI 分析层描述改为“云端主力模型 + 高级模型 + 可选本地备用”。
+- 图3、图4：将本地模型替换为“云端主力模型”，高级模型用于复杂任务。
+- 图7：增加说明“仅当本地模型启用时使用”，与总方案保持一致。
