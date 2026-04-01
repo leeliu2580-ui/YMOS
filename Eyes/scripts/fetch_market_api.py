@@ -237,31 +237,43 @@ def main():
 
     # 1. 尝试 YMOS (优先级最高)
     if keys["YMOS"]:
-        res = fetch_ymos(args.api_url, keys["YMOS"], args.time_value, categories)
-        if res and res.get("events"):
-            all_events.extend(res["events"])
-            sources_used.append("YMOS")
+        try:
+            res = fetch_ymos(args.api_url, keys["YMOS"], args.time_value, categories)
+            if res and res.get("events"):
+                all_events.extend(res["events"])
+                sources_used.append("YMOS")
+        except Exception:
+            pass
 
     # 2. 尝试 Finnhub
     if keys["FINNHUB"]:
-        res = fetch_finnhub(keys["FINNHUB"], hours=int(args.time_value * 24))
-        if res and res.get("events"):
-            all_events.extend(res["events"])
-            sources_used.append("Finnhub")
+        try:
+            res = fetch_finnhub(keys["FINNHUB"], hours=int(args.time_value * 24))
+            if res and res.get("events"):
+                all_events.extend(res["events"])
+                sources_used.append("Finnhub")
+        except Exception:
+            pass
 
     # 3. 尝试 Tushare
     if keys["TUSHARE"]:
-        res = fetch_tushare(keys["TUSHARE"], hours=int(args.time_value * 24))
-        if res and res.get("events"):
-            all_events.extend(res["events"])
-            sources_used.append("Tushare")
+        try:
+            res = fetch_tushare(keys["TUSHARE"], hours=int(args.time_value * 24))
+            if res and res.get("events"):
+                all_events.extend(res["events"])
+                sources_used.append("Tushare")
+        except Exception:
+            pass
 
     # 4. 尝试 Tavily
     if keys["TAVILY"]:
-        res = fetch_tavily(keys["TAVILY"], categories)
-        if res and res.get("events"):
-            all_events.extend(res["events"])
-            sources_used.append("Tavily")
+        try:
+            res = fetch_tavily(keys["TAVILY"], categories)
+            if res and res.get("events"):
+                all_events.extend(res["events"])
+                sources_used.append("Tavily")
+        except Exception:
+            pass
 
     if not all_events:
         print("❌ 所有 API 数据源均未获取到有效数据。")
