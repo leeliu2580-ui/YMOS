@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>YMOS Dashboard - 2026-04-01</title>
+<style>
+body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f5f0;color:#222;font-size:16px;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;font-weight:700;font-size:20px}
+.grid{display:grid;gap:20px}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:24px}
+.card h2{margin:0 0 14px 0;font-size:22px}.card h3{margin:0 0 10px 0;font-size:18px}
+.muted{color:#666}.pill{display:inline-block;padding:4px 10px;border-radius:999px;font-size:14px;font-weight:700}.pill-yellow{background:#fff3cd;color:#8a6d3b}.pill-red{background:#f8d7da;color:#842029}.pill-green{background:#d1e7dd;color:#0f5132}.pill-blue{background:#dbeafe;color:#1d4ed8}
+.kpi{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.workflow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{border-radius:12px;padding:16px}.done{background:#d1e7dd}.todo{background:#ececec}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.list{margin:0;padding-left:20px}.list li{margin:6px 0}
+table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.5}th,td{padding:10px 12px;border-bottom:1px solid #eee;text-align:left;vertical-align:top}th{background:#fafafa}
+.footer{margin:24px 0 8px;color:#666;font-size:14px;text-align:center}
+@media (max-width: 768px){.workflow{grid-template-columns:repeat(2,1fr)}.two-col,.kpi{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="topbar"><div>YMOS │ 投资操作系统</div><div>2026-04-01</div></div>
+  <div class="grid">
+    <div class="card">
+      <h2>状态概览</h2>
+      <div class="kpi">
+        <div><span class="pill pill-red">🔴 结构失衡 / 紧急动作</span><div class="muted" style="margin-top:8px">HYPE 仓位 44% 严重超标（上限 21%），需执行减仓审计。</div></div>
+        <div><strong>持仓数量：</strong>4</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>每日工作流</h2>
+      <div class="workflow">
+        <div class="step done"><strong>1. 市场洞察</strong><div>✅ 已完成</div></div>
+        <div class="step done"><strong>2. 投资雷达</strong><div>✅ 已完成</div></div>
+        <div class="step done"><strong>3. 策略分析</strong><div>✅ 已完成</div></div>
+        <div class="step done"><strong>4. 持仓收口</strong><div>✅ 已完成</div></div>
+      </div>
+      <div class="muted" style="margin-top:10px">全流程已跑通 (2026-04-01 22:45)</div>
+    </div>
+
+    <div class="card">
+      <h2>战略简报</h2>
+      <div style="margin-bottom:10px"><span class="pill pill-green">市场体温：Risk On (不稳)</span></div>
+      <p>地缘局势预期好转带动风险资产反弹；OpenAI 巨额融资再次确认 AI 长线基建逻辑；需警惕 Short Squeeze 后的基本面回归。</p>
+      <table>
+        <thead><tr><th>信号类型</th><th>核心主题</th><th>研判结论</th></tr></thead>
+        <tbody>
+          <tr><td>地缘拐点</td><td>伊朗战争有望 2-3 周内结束</td><td>风险资产 Risk-on，油价回落缓解通胀</td></tr>
+          <tr><td>AI 主权 CapEx</td><td>OpenAI $122B 超级融资落地</td><td>算力/电力/网络产业链逻辑持续强化</td></tr>
+          <tr><td>宏观隐忧</td><td>衰退概率 40% + 通胀预期超调</td><td>反弹非趋势反转，保持警惕</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>晨会速览</h2>
+      <div class="two-col">
+        <div>
+          <h3>今天必须做的事</h3>
+          <ul class="list">
+            <li><strong>HYPE 强制减仓审计</strong>（降至 21% 以内）</li>
+            <li><strong>ETH 空头下移止损</strong>至 $2200（保本位）</li>
+            <li>启动 NVDA / 300308.SZ 初始调研</li>
+          </ul>
+        </div>
+        <div>
+          <h3>今天不要做的事</h3>
+          <ul class="list">
+            <li>不要在 Risk-on 情绪下盲目加空</li>
+            <li>不要因为 HYPE 盈利丰厚就无视集中度风险</li>
+            <li>不要在没有 P1 调研的情况下重仓追涨 AI</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>需要你做的事</h2>
+      <table>
+        <tbody>
+          <tr><td><span class="pill pill-red">P0</span></td><td>减仓 HYPE 至 21% 以内，锁定利润</td><td>HYPE</td></tr>
+          <tr><td><span class="pill pill-yellow">P1</span></td><td>止损下移至 $2200，确保头寸不亏钱</td><td>ETH</td></tr>
+          <tr><td><span class="pill pill-yellow">P1</span></td><td>启动 P1/P4 初始调研并建档</td><td>NVDA / 300308.SZ</td></tr>
+          <tr><td><span class="pill pill-blue">P2</span></td><td>补充 HLP 成本及收益链路数据</td><td>HLP</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>持仓一览</h2>
+      <table>
+        <thead><tr><th>标的</th><th>阶段</th><th>最新动态 / 状态摘要</th></tr></thead>
+        <tbody>
+          <tr><td>HYPE</td><td>P2：主升浪 / 集中风险</td><td>44% 纯现货，对冲已清。建议减仓至 21% 锁定利润。</td></tr>
+          <tr><td>BTC</td><td>P2：盈亏平衡点博弈</td><td>成本 69487，现价 68421。关注 7w 关口。</td></tr>
+          <tr><td>ETH 空头</td><td>P2：风险观察（逆势）</td><td>成本 2200，现价 2122。建议设保本止损防挤压。</td></tr>
+          <tr><td>HLP</td><td>做市金库</td><td>29% 权重。数据链路仍待补齐。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>数据缺口 & 新鲜度预警</h2>
+      <ul class="list">
+        <li style="color:#842029">⚠️ <strong>HYPE_HYPE</strong>: P4 关注点已过期 (>30天)，需重审逻辑</li>
+        <li>💡 <strong>HLP</strong>: 缺少成本、净值、收益率详细数据</li>
+        <li>💡 <strong>1-2倍杠杆</strong>: 具体数值需同步至状态机看板</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">YMOS Dashboard · 数据截至 2026-04-01 22:45</div>
+</div>
+</body>
+</html>
