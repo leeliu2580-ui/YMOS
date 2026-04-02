@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YMOS Dashboard · 2026-04-02</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f5f5f0;
+    color: #222;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: #1a1a2e;
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  .topbar .brand { font-weight: 700; font-size: 18px; letter-spacing: 1px; }
+  .topbar .date { color: #aaa; font-size: 14px; }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .card h2 { font-size: 17px; font-weight: 700; margin-bottom: 16px; color: #1a1a2e; }
+  .card h3 { font-size: 15px; font-weight: 600; margin-bottom: 10px; color: #333; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .status-lamp {
+    display: inline-block;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+  .lamp-red { background: #e74c3c; }
+  .lamp-yellow { background: #f39c12; }
+  .lamp-green { background: #27ae60; }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .tag-red { background: #fde8e7; color: #c0392b; }
+  .tag-orange { background: #fef3e2; color: #d35400; }
+  .tag-gray { background: #f0f0f0; color: #666; }
+  .tag-green { background: #e8f8f0; color: #1e8449; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th {
+    text-align: left;
+    padding: 10px 12px;
+    background: #f8f8f5;
+    border-bottom: 2px solid #e0e0d8;
+    font-weight: 600;
+    color: #555;
+  }
+  td { padding: 10px 12px; border-bottom: 1px solid #f0f0e8; }
+  tr:last-child td { border-bottom: none; }
+  .mono { font-family: "SF Mono", "Consolas", monospace; }
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .workflow-step {
+    padding: 14px 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .step-done { background: #e8f8f0; color: #1e8449; }
+  .step-pending { background: #f0f0f0; color: #888; }
+  .step-current { background: #fef3e2; color: #d35400; }
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  .summary-row:last-child { border-bottom: none; }
+  .footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+    padding: 20px 0;
+  }
+  @media (max-width: 768px) {
+    .grid-2, .grid-4 { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <span class="brand">YMOS │ 投资操作系统</span>
+    <span class="date">2026-04-02</span>
+  </div>
+
+  <!-- Status Overview -->
+  <div class="grid-2">
+    <div class="card">
+      <h2>📊 状态概览</h2>
+      <div style="display:flex; align-items:center; margin-bottom:12px;">
+        <span class="status-lamp lamp-red"></span>
+        <strong style="font-size:18px;">有待确认</strong>
+      </div>
+      <p style="color:#666; font-size:14px;">HYPE 减仓决策未执行；4月6日代币解锁窗口临近</p>
+      <div style="margin-top:16px;">
+        <div class="summary-row">
+          <span>持仓数</span><strong>4 只</strong>
+        </div>
+        <div class="summary-row">
+          <span>Watchlist</span><strong>3 只</strong>
+        </div>
+        <div class="summary-row">
+          <span>风险等级</span><strong>高波动</strong>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>⚠️ 风控警告</h2>
+      <div style="background:#fde8e7; border-left:4px solid #e74c3c; padding:12px 16px; border-radius:6px; margin-bottom:16px;">
+        <strong>仓位集中度过高</strong><br>
+        <span style="font-size:13px; color:#c0392b;">HYPE 44% &gt; 21% 上限 2x · SOL 已亏损 -2500U离场</span>
+      </div>
+      <div style="background:#fef9e7; border-left:4px solid #f39c12; padding:12px 16px; border-radius:6px;">
+        <strong>代币解锁窗口</strong><br>
+        <span style="font-size:13px; color:#d35400;">HYPE 4月6日解锁 9.92M HYPE，约4天后</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Daily Workflow -->
+  <div class="card">
+    <h2>🔄 每日工作流</h2>
+    <div class="grid-4">
+      <div>
+        <div class="workflow-step step-done">✅ 市场洞察</div>
+        <div style="text-align:center; font-size:12px; color:#888; margin-top:4px;">已完成</div>
+      </div>
+      <div>
+        <div class="workflow-step step-done">✅ 投资雷达</div>
+        <div style="text-align:center; font-size:12px; color:#888; margin-top:4px;">已完成</div>
+      </div>
+      <div>
+        <div class="workflow-step step-done">✅ 策略分析</div>
+        <div style="text-align:center; font-size:12px; color:#888; margin-top:4px;">已完成</div>
+      </div>
+      <div>
+        <div class="workflow-step step-current">🔄 持仓收口</div>
+        <div style="text-align:center; font-size:12px; color:#d35400; margin-top:4px;">正在执行</div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:10px; font-size:13px; color:#888;">已完成 3/4</div>
+  </div>
+
+  <!-- Strategic Briefing -->
+  <div class="card">
+    <h2>📋 战略简报</h2>
+    <div class="summary-row">
+      <span>市场体温</span>
+      <span class="tag tag-orange">Risk On（反弹成色存疑）</span>
+    </div>
+    <div class="summary-row">
+      <span>AI 叙事</span>
+      <span style="font-size:13px;">AI 基础设施持续高景气的共识仍在，需警惕估值透支</span>
+    </div>
+    <div class="summary-row">
+      <span>加密市场</span>
+      <span style="font-size:13px;">BTC $68K 支撑位博弈；HYPE TVL 强劲但代币解锁压顶</span>
+    </div>
+  </div>
+
+  <!-- Morning Meeting -->
+  <div class="grid-2">
+    <div class="card">
+      <h3>✅ 今天必须做的事</h3>
+      <ul style="padding-left:20px; font-size:14px; color:#333;">
+        <li>HYPE 减仓决策：44%→30%，4月6日前执行</li>
+        <li>补充 HLP 建仓成本数据</li>
+        <li>监控 HYPE 价格在 $33-$35 区间异动</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🚫 今天不要做的事</h3>
+      <ul style="padding-left:20px; font-size:14px; color:#333;">
+        <li>不追高 SOL（已清仓完毕）</li>
+        <li>不因 HYPE 短期涨跌推翻中期逻辑</li>
+        <li>不动高杠杆试图回本</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Action Queue -->
+  <div class="card">
+    <h2>🎯 需要你做的事</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>优先级</th>
+          <th>动作</th>
+          <th>标的</th>
+          <th>来源</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-red">P0</span></td>
+          <td>确认 HYPE 减仓计划：$35-$38 区间降至 30%</td>
+          <td class="mono">HYPE</td>
+          <td>策略分析</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-orange">P1</span></td>
+          <td>补充 HLP 建仓成本</td>
+          <td class="mono">HLP</td>
+          <td>状态机缺失</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-gray">P2</span></td>
+          <td>ETH 空头止损逻辑文档化</td>
+          <td class="mono">ETH-PERP-SHORT</td>
+          <td>备忘录缺失</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-gray">P2</span></td>
+          <td>NVDA / 中际旭创初始调研（可选）</td>
+          <td class="mono">NVDA / 300308.SZ</td>
+          <td>雷达建议</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Portfolio Overview -->
+  <div class="card">
+    <h2>💼 持仓一览</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>标的</th>
+          <th>仓位</th>
+          <th>成本</th>
+          <th>当前状态</th>
+          <th>阶段</th>
+          <th>信号</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>HYPE</strong><br><span class="mono" style="font-size:12px; color:#888;">Crypto/Hyperliquid</span></td>
+          <td><strong>44%</strong></td>
+          <td class="mono">$3.7</td>
+          <td style="font-size:13px;">+909% 浮盈；4月6日代币解锁⚠️</td>
+          <td><span class="tag tag-green">PVE</span></td>
+          <td><span class="tag tag-orange">⚠️ 观察</span></td>
+        </tr>
+        <tr>
+          <td><strong>ETH 空头</strong><br><span class="mono" style="font-size:12px; color:#888;">Crypto/Hyperliquid</span></td>
+          <td><strong>7%</strong></td>
+          <td class="mono">$2200</td>
+          <td style="font-size:13px;">$2250 止损；仅对冲</td>
+          <td><span class="tag tag-gray">PVP</span></td>
+          <td><span class="tag tag-orange">⚠️ 持有</span></td>
+        </tr>
+        <tr>
+          <td><strong>HLP</strong><br><span class="mono" style="font-size:12px; color:#888;">Crypto/Hyperliquid</span></td>
+          <td><strong>29%</strong></td>
+          <td class="mono">待补 ⚠️</td>
+          <td style="font-size:13px;">做市金库；被动收益</td>
+          <td><span class="tag tag-gray">⏸️</span></td>
+          <td><span class="tag tag-gray">休眠</span></td>
+        </tr>
+        <tr>
+          <td><strong>BTC</strong><br><span class="mono" style="font-size:12px; color:#888;">Crypto</span></td>
+          <td><strong>27%</strong></td>
+          <td class="mono">$69,487</td>
+          <td style="font-size:13px;">$67K 止损；关注 ETF 资金流</td>
+          <td><span class="tag tag-gray">PVP</span></td>
+          <td><span class="tag tag-orange">⚠️ 持有</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Watchlist -->
+  <div class="card">
+    <h2>👁️ Watchlist</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>标的</th>
+          <th>优先级</th>
+          <th>关注逻辑</th>
+          <th>状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>黄金 GOLD</strong></td>
+          <td><span class="tag tag-orange">A</span></td>
+          <td style="font-size:13px;">长期避险逻辑未破；$40 高位观察</td>
+          <td><span class="tag tag-orange">⚠️ 观察</span></td>
+        </tr>
+        <tr>
+          <td><strong>英伟达 NVDA</strong></td>
+          <td><span class="tag tag-orange">A</span></td>
+          <td style="font-size:13px;">AI 算力链核心；缺 P1/P4 调研</td>
+          <td><span class="tag tag-orange">⚠️ 观察</span></td>
+        </tr>
+        <tr>
+          <td><strong>中际旭创 300308.SZ</strong></td>
+          <td><span class="tag tag-orange">A</span></td>
+          <td style="font-size:13px;">AI 光模块景气；缺 P1/P4 调研</td>
+          <td><span class="tag tag-orange">⚠️ 观察</span></td>
+        </tr>
+        <tr>
+          <td><strong>SOL（已清仓）</strong></td>
+          <td><span class="tag tag-gray">归档</span></td>
+          <td style="font-size:13px; color:#999;">-2500U 亏损离场；详见复盘</td>
+          <td><span class="tag tag-red">❌</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    YMOS Dashboard · 数据截至 2026-04-02 23:47<br>
+    真相源：持仓_状态机.md · 持仓备忘录_视图.md
+  </div>
+
+</div>
+</body>
+</html>
