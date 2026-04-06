@@ -1,0 +1,746 @@
+{
+  "sources": [
+    "Bloomberg Markets",
+    "Bloomberg Tech",
+    "Bloomberg Crypto",
+    "Bloomberg Opinion",
+    "CNBC Markets",
+    "CNBC Finance",
+    "Seeking Alpha Editors' Picks",
+    "Stratechery",
+    "FT Tech",
+    "FT Markets",
+    "The Economist Finance",
+    "TechCrunch",
+    "TechInAsia",
+    "Nvidia Blog",
+    "The Verge"
+  ],
+  "fetched_at": "2026-04-06T04:08:26.608261+00:00",
+  "time_range_days": 1.0,
+  "count": 35,
+  "sources_ok": 4,
+  "sources_fail": 11,
+  "sources_blocked_403": 0,
+  "categories_summary": {
+    "深度洞察": 2,
+    "科技": 33
+  },
+  "data": [
+    {
+      "title": "Don't Put All Your REIT Eggs In One Basket",
+      "link": "https://seekingalpha.com/article/4888480-do-not-put-all-your-reit-eggs-in-one-basket?source=feed_tag_editors_picks",
+      "pub_date": "Sun, 05 Apr 2026 10:05:53 -0400",
+      "categories": [
+        "DG",
+        "AAP",
+        "CVS",
+        "IRM",
+        "O",
+        "PLD",
+        "CDP",
+        "EGP",
+        "STAG",
+        "ADC",
+        "EPRT",
+        "BRK.A",
+        "BRK.B",
+        "COLD",
+        "LINE",
+        "INVH",
+        "ELS",
+        "Brad Thomas"
+      ],
+      "description": "",
+      "content": "",
+      "source_name": "Seeking Alpha Editors' Picks",
+      "source_category": "深度洞察",
+      "source_priority": "high"
+    },
+    {
+      "title": "Consecutive Weekly Declines And Fading Rallies",
+      "link": "https://seekingalpha.com/article/4888466-consecutive-weekly-declines-and-fading-rallies?source=feed_tag_editors_picks",
+      "pub_date": "Sun, 05 Apr 2026 06:04:00 -0400",
+      "categories": [
+        "AFMC",
+        "AFSM",
+        "ARKK",
+        "AVUV",
+        "BAPR",
+        "IVOO",
+        "IVOV",
+        "IVV",
+        "IVW",
+        "IWC",
+        "IWM",
+        "IWN",
+        "IWO",
+        "IWP",
+        "IWR",
+        "IWS",
+        "IYY",
+        "QQQ",
+        "SPLV",
+        "SPMD",
+        "SPMO",
+        "SPSM",
+        "SPUS",
+        "SPUU",
+        "SPVM",
+        "QVMT",
+        "SPXE",
+        "SPXL",
+        "SPXN",
+        "SPXS",
+        "SPXT",
+        "SPXU",
+        "SPXV",
+        "SPY",
+        "SPYD",
+        "SPYG",
+        "SPYV",
+        "SPYX",
+        "SQLV",
+        "SSO",
+        "SSPY",
+        "SVAL",
+        "SYLD",
+        "TMDV",
+        "TPHD",
+        "TPLC",
+        "TPSC",
+        "UAUG",
+        "UJAN",
+        "UMAR",
+        "UMAY",
+        "UOCT",
+        "UPRO",
+        "USMC",
+        "USMF",
+        "USVM",
+        "MAGS",
+        "Lance Roberts"
+      ],
+      "description": "",
+      "content": "",
+      "source_name": "Seeking Alpha Editors' Picks",
+      "source_category": "深度洞察",
+      "source_priority": "high"
+    },
+    {
+      "title": "Polymarket took down wagers tied to rescue of downed Air Force officer",
+      "link": "https://techcrunch.com/2026/04/05/polymarket-took-down-wagers-tied-to-rescue-of-downed-air-force-officer/",
+      "pub_date": "Sun, 05 Apr 2026 19:36:03 +0000",
+      "categories": [
+        "Government & Policy",
+        "Startups",
+        "Polymarket"
+      ],
+      "description": "A Democratic congressman had harsh criticism for Polymarket for allowing users to bet on the date the U.S. would confirm the rescue of Air Force service members shot down over Iran.",
+      "content": "A Democratic congressman had harsh criticism for Polymarket for allowing users to bet on the date the U.S. would confirm the rescue of Air Force service members shot down over Iran.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Copilot is ‘for entertainment purposes only,’ according to Microsoft’s terms of use",
+      "link": "https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsofts-terms-of-service/",
+      "pub_date": "Sun, 05 Apr 2026 18:51:37 +0000",
+      "categories": [
+        "AI",
+        "Copilot",
+        "Microsoft"
+      ],
+      "description": "AI skeptics aren’t the only ones warning users not to unthinkingly trust models’ outputs — that’s what the AI companies say themselves in their terms of service.",
+      "content": "AI skeptics aren’t the only ones warning users not to unthinkingly trust models’ outputs — that’s what the AI companies say themselves in their terms of service.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "As people look for ways to make new friends, here are the apps promising to help",
+      "link": "https://techcrunch.com/2026/04/05/as-people-look-for-ways-to-make-new-friends-here-are-the-apps-promising-to-help/",
+      "pub_date": "Sun, 05 Apr 2026 18:01:37 +0000",
+      "categories": [
+        "Apps",
+        "Social",
+        "android apps",
+        "iOS apps",
+        "evergreens",
+        "Bumble BFF"
+      ],
+      "description": "We've compiled a list of friendship apps, from friend discovery platforms like BFF to event-focused ones like Timeleft.",
+      "content": "We've compiled a list of friendship apps, from friend discovery platforms like BFF to event-focused ones like Timeleft.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "TechCrunch Mobility: ‘A stunning lack of transparency’",
+      "link": "https://techcrunch.com/2026/04/05/techcrunch-mobility-a-stunning-lack-of-transparency/",
+      "pub_date": "Sun, 05 Apr 2026 16:05:00 +0000",
+      "categories": [
+        "Transportation",
+        "Tesla",
+        "Toyota",
+        "subaru",
+        "Waymo",
+        "weride",
+        "robotaxis"
+      ],
+      "description": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation. T",
+      "content": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation. T",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Can orbital data centers help justify a massive valuation for SpaceX?",
+      "link": "https://techcrunch.com/2026/04/05/can-orbital-data-centers-help-justify-a-massive-valuation-for-spacex/",
+      "pub_date": "Sun, 05 Apr 2026 15:40:58 +0000",
+      "categories": [
+        "AI",
+        "Space",
+        "Elon Musk",
+        "Equity podcast"
+      ],
+      "description": "On the latest episode of TechCrunch’s Equity podcast, we debated Elon Musk's vision for data centers in space.",
+      "content": "On the latest episode of TechCrunch’s Equity podcast, we debated Elon Musk's vision for data centers in space.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "In Japan, the robot isn’t coming for your job; it’s filling the one nobody wants",
+      "link": "https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/",
+      "pub_date": "Sun, 05 Apr 2026 14:00:00 +0000",
+      "categories": [
+        "Hardware",
+        "AI",
+        "Japan",
+        "Salesforce Ventures",
+        "Global Brain",
+        "woven capital",
+        "physical ai"
+      ],
+      "description": "Driven by labor shortages, Japan is pushing physical AI from pilot projects into real-world deployment.",
+      "content": "Driven by labor shortages, Japan is pushing physical AI from pilot projects into real-world deployment.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Foreign VC flows in SEA: Who’s staying and who’s leaving?",
+      "link": "https://www.techinasia.com/visual-story/foreign-vc-flows-sea-staying-leaving",
+      "pub_date": "Mon, 06 Apr 2026 04:00:00 +0000",
+      "categories": [
+        "Investments",
+        "Premium Content",
+        "Visual Stories",
+        "foreign investors in sea",
+        "foreign vc",
+        "investors in SEA",
+        "local vcs",
+        "new investors in SEA",
+        "southeast asia's tech scene",
+        "storyed duc@techinasia.com",
+        "storyed terence@techinasia.com"
+      ],
+      "description": "Find out which global players are increasing their commitments and which are scaling back their presence in the region.",
+      "content": "Find out which global players are increasing their commitments and which are scaling back their presence in the region.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Taiwan probes 11 China firms over chip talent poaching",
+      "link": "https://www.techinasia.com/news/taiwan-probes-11-china-firms-over-chip-talent-poaching",
+      "pub_date": "Mon, 06 Apr 2026 03:42:31 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "News",
+        "ai",
+        "China",
+        "semiconductor",
+        "Taiwan"
+      ],
+      "description": "Authorities said the companies hid their mainland ties, used shell entities, and operated in Taiwan without approval.",
+      "content": "Authorities said the companies hid their mainland ties, used shell entities, and operated in Taiwan without approval.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "LG Energy patent suit puts Chinese EV battery supplier at risk",
+      "link": "https://www.techinasia.com/news/lg-energy-patent-suit-puts-chinese-ev-battery-supplier-at-risk",
+      "pub_date": "Mon, 06 Apr 2026 03:34:43 +0000",
+      "categories": [
+        "News",
+        "LG Energy Solution",
+        "South Korea",
+        "Sunwoda",
+        "Volvo Car Korea"
+      ],
+      "description": "LG also asked Korea's Trade Commission to investigate alleged unfair trade practices.",
+      "content": "LG also asked Korea's Trade Commission to investigate alleged unfair trade practices.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Gig worker crunch slows India’s quick commerce boom",
+      "link": "https://www.techinasia.com/news/gig-worker-crunch-slows-indias-quick-commerce-boom",
+      "pub_date": "Mon, 06 Apr 2026 02:21:49 +0000",
+      "categories": [
+        "Ecommerce",
+        "News",
+        "delivery platforms",
+        "gig economy",
+        "India",
+        "quick commerce"
+      ],
+      "description": "Gig worker shortages during harvest and elections have delayed order fulfillment in major Indian cities.",
+      "content": "Gig worker shortages during harvest and elections have delayed order fulfillment in major Indian cities.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "TIA Conference: How we produced a Product Stage people stayed for",
+      "link": "https://www.techinasia.com/tia-conference-how-we-produced-a-product-stage-people-stayed-for",
+      "pub_date": "Mon, 06 Apr 2026 02:18:11 +0000",
+      "categories": [
+        "Conference",
+        "Events",
+        "Studios",
+        "artificial intelligence",
+        "Studios Case Studies",
+        "tech in asia",
+        "Tech in Asia conference",
+        "tech in asia studios"
+      ],
+      "description": "Audiences now crave practical application and peer-led truths. Here’s our blueprint for producing a successful stage for post-hype AI.",
+      "content": "Audiences now crave practical application and peer-led truths. Here’s our blueprint for producing a successful stage for post-hype AI.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "More than capital: How HSBC helps SEA’s startups scale up",
+      "link": "https://www.techinasia.com/capital-hsbc-helps-seas-startups-scale",
+      "pub_date": "Mon, 06 Apr 2026 02:00:02 +0000",
+      "categories": [
+        "Business-to-business",
+        "Paid Content Partnerships",
+        "Startups",
+        "banking",
+        "brandawareness",
+        "Funding",
+        "HSBC",
+        "robotics",
+        "Singapore",
+        "Southeast Asia"
+      ],
+      "description": "Through tailored capital opportunities and access to global markets, HSBC Innovation Banking offers startups comprehensive support.",
+      "content": "Through tailored capital opportunities and access to global markets, HSBC Innovation Banking offers startups comprehensive support.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "A cheat sheet of M&As in Japan",
+      "link": "https://www.techinasia.com/visual-story/cheat-sheet-mas-japan",
+      "pub_date": "Mon, 06 Apr 2026 02:00:00 +0000",
+      "categories": [
+        "Investments",
+        "Premium Content",
+        "Visual Stories",
+        "investors in japan",
+        "Japan",
+        "japanese startups",
+        "M&A",
+        "m&a deals",
+        "m&a in japan",
+        "startups in japan",
+        "storyed duc@techinasia.com"
+      ],
+      "description": "Need to get up to speed with Japan's M&#038;A scene? This one’s for you.",
+      "content": "Need to get up to speed with Japan's M&#038;A scene? This one’s for you.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Paramount nears $24b Gulf backing for Warner deal",
+      "link": "https://www.techinasia.com/news/paramount-nears-24b-gulf-backing-for-warner-deal",
+      "pub_date": "Mon, 06 Apr 2026 01:43:50 +0000",
+      "categories": [
+        "Investments",
+        "News",
+        "Gulf sovereign wealth funds",
+        "Paramount Skydance",
+        "saudi arabia",
+        "Warner Bros Discovery"
+      ],
+      "description": "Saudi Arabia’s Public Investment Fund has agreed to provide around US$10 billion.",
+      "content": "Saudi Arabia’s Public Investment Fund has agreed to provide around US$10 billion.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Foxconn Q1 sales jump on AI server demand, flags risks",
+      "link": "https://www.techinasia.com/news/foxconn-q1-sales-jump-on-ai-server-demand-flags-risks",
+      "pub_date": "Mon, 06 Apr 2026 01:36:38 +0000",
+      "categories": [
+        "News",
+        "ai",
+        "Apple",
+        "Hon Hai Precision Industry",
+        "Taiwan"
+      ],
+      "description": "The company assembles Nvidia-based servers, making it a key beneficiary of rising AI infrastructure spending by US tech firms.",
+      "content": "The company assembles Nvidia-based servers, making it a key beneficiary of rising AI infrastructure spending by US tech firms.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Polymarket reviews market safeguards after rescue bet backlash",
+      "link": "https://www.techinasia.com/news/polymarket-reviews-market-safeguards-after-rescue-bet-backlash",
+      "pub_date": "Mon, 06 Apr 2026 01:30:17 +0000",
+      "categories": [
+        "Crypto",
+        "News",
+        "crypto",
+        "polymarket",
+        "Seth Moulton",
+        "US"
+      ],
+      "description": "Polymarket said it took down the market after determining it did not meet its integrity standards and is reviewing how it was approved.",
+      "content": "Polymarket said it took down the market after determining it did not meet its integrity standards and is reviewing how it was approved.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Samsung hikes device prices as AI drives costs higher",
+      "link": "https://www.techinasia.com/news/samsung-hikes-device-prices-ai-drives-costs-higher",
+      "pub_date": "Mon, 06 Apr 2026 01:19:12 +0000",
+      "categories": [
+        "Gadgets",
+        "Mobile",
+        "News",
+        "AI infrastructure",
+        "consumer electronics",
+        "samsung electronics",
+        "South Korea"
+      ],
+      "description": "Samsung usually changes prices when launching new devices rather than for models already on sale.",
+      "content": "Samsung usually changes prices when launching new devices rather than for models already on sale.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "The Southeast Asian playbook for winning at voice AI",
+      "link": "https://www.techinasia.com/southeast-asian-playbook-winning-voice-ai",
+      "pub_date": "Mon, 06 Apr 2026 01:00:07 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "Premium Content",
+        "Startups",
+        "ai",
+        "ai startup",
+        "artificial intelligence",
+        "asr",
+        "ElevenLabs",
+        "fano",
+        "gowajee",
+        "Indonesia",
+        "Kata.ai",
+        "mimin",
+        "Singapore",
+        "Southeast Asia",
+        "speech recognition",
+        "text-to-speech",
+        "tts",
+        "voice AI",
+        "voice AI startup",
+        "Wiz.ai"
+      ],
+      "description": "As ElevenLabs moves up the chain and gets enterprises in its crosshairs, Southeast Asian startups are racing to make themselves impossible to displace.",
+      "content": "As ElevenLabs moves up the chain and gets enterprises in its crosshairs, Southeast Asian startups are racing to make themselves impossible to displace.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Binance sees Bitcoin decoupling from Fed after ETFs",
+      "link": "https://www.techinasia.com/news/binance-sees-bitcoin-decoupling-fed-etfs",
+      "pub_date": "Mon, 06 Apr 2026 00:41:50 +0000",
+      "categories": [
+        "Crypto",
+        "Fintech",
+        "Investments",
+        "News",
+        "Binance",
+        "bitcoin",
+        "etf",
+        "Federal Reserve"
+      ],
+      "description": "Bitcoin's correlation with Binance’s Global Easing Breadth Index, which tracks 41 central banks, turned strongly negative from 2024.",
+      "content": "Bitcoin's correlation with Binance’s Global Easing Breadth Index, which tracks 41 central banks, turned strongly negative from 2024.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "A cheat sheet of M&As in Southeast Asia",
+      "link": "https://www.techinasia.com/visual-story/cheat-sheet-mas-southeast-asia",
+      "pub_date": "Mon, 06 Apr 2026 00:00:00 +0000",
+      "categories": [
+        "Premium Content",
+        "Visual Stories",
+        "landscape report",
+        "M&A",
+        "mergers and acquisitions",
+        "Southeast Asia",
+        "visual stories team"
+      ],
+      "description": "Need to get up to speed with SEA’s M&#38;A scene? This one’s for you.",
+      "content": "Need to get up to speed with SEA’s M&#38;A scene? This one’s for you.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Starting from zero, maybe to hero",
+      "link": "https://www.techinasia.com/starting-hero",
+      "pub_date": "Sun, 05 Apr 2026 09:30:39 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "Newsletters",
+        "ai",
+        "articial intelligence",
+        "OpenClaw",
+        "Sarvam",
+        "Singapore",
+        "Startups",
+        "Sunday newsletter"
+      ],
+      "description": "We explore if the early excitement over India’s latest LLM can be sustained, and how OpenClaw changed a girlboss’ life - in her words.",
+      "content": "We explore if the early excitement over India’s latest LLM can be sustained, and how OpenClaw changed a girlboss’ life - in her words.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Meet the 50 top-funded startups and tech companies in India",
+      "link": "https://www.techinasia.com/top-funded-startups-tech-companies-india",
+      "pub_date": "Sun, 05 Apr 2026 09:00:00 +0000",
+      "categories": [
+        "Investments",
+        "Premium Content",
+        "Startups",
+        "India",
+        "Startup funding lists",
+        "startups"
+      ],
+      "description": "Here are the companies in India that are attracting tons of investors and have the resources to spend on software, talent, and expansion.",
+      "content": "Here are the companies in India that are attracting tons of investors and have the resources to spend on software, talent, and expansion.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Renault considers EV production in Korea to boost growth",
+      "link": "https://www.techinasia.com/news/renault-considers-ev-production-in-korea-to-boost-growth",
+      "pub_date": "Sun, 05 Apr 2026 07:04:17 +0000",
+      "categories": [
+        "News",
+        "Transportation",
+        "EV",
+        "LG Energy Solution",
+        "Renault",
+        "South Korea"
+      ],
+      "description": "It has not launched a Renault-branded EV in Korea, where its current lineup includes the Grand Koleos in gasoline and hybrid versions.",
+      "content": "It has not launched a Renault-branded EV in Korea, where its current lineup includes the Grand Koleos in gasoline and hybrid versions.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "50 rising startups and tech companies in India",
+      "link": "https://www.techinasia.com/50-rising-startups-india",
+      "pub_date": "Sun, 05 Apr 2026 07:00:00 +0000",
+      "categories": [
+        "Investments",
+        "Premium Content",
+        "Startups",
+        "Asia",
+        "Funding",
+        "India",
+        "Rising startups on Tech in Asia"
+      ],
+      "description": "Which are the startups that are on the path to becoming the next big thing?",
+      "content": "Which are the startups that are on the path to becoming the next big thing?",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Danantara unit to merge asset managers in $159m deal",
+      "link": "https://www.techinasia.com/news/indonesias-danantara-unit-to-merge-asset-managers-in-159m-deal",
+      "pub_date": "Sun, 05 Apr 2026 05:37:29 +0000",
+      "categories": [
+        "News",
+        "asset management",
+        "danantara",
+        "Indonesia",
+        "Sovereign Wealth Fund"
+      ],
+      "description": "The transactions, disclosed in stock exchange filings, advance Danantara’s plan to combine the asset management firms into a larger asset manager.",
+      "content": "The transactions, disclosed in stock exchange filings, advance Danantara’s plan to combine the asset management firms into a larger asset manager.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "UK reportedly pushes Anthropic expansion during US tensions",
+      "link": "https://www.techinasia.com/news/uk-reportedly-courts-anthropic-with-expansion-plan-during-us-tensions",
+      "pub_date": "Sun, 05 Apr 2026 05:30:39 +0000",
+      "categories": [
+        "News",
+        "ai",
+        "Anthropic",
+        "Keir Starmer",
+        "UK"
+      ],
+      "description": "The FT said Prime Minister Keir Starmer’s office has backed the work by the Department of Science, Innovation and Technology.",
+      "content": "The FT said Prime Minister Keir Starmer’s office has backed the work by the Department of Science, Innovation and Technology.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Mistral AI, Samsung in talks on memory chips",
+      "link": "https://www.techinasia.com/news/mistral-ai-samsung-in-talks-on-memory-chips",
+      "pub_date": "Sun, 05 Apr 2026 04:41:17 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "News",
+        "France",
+        "Mistral AI",
+        "samsung electronics",
+        "South Korea"
+      ],
+      "description": "Mistral, founded in 2023, is preparing to open a data center near Paris in Q2 with about 14,000 Nvidia GPUs and 44 megawatts of initial power.",
+      "content": "Mistral, founded in 2023, is preparing to open a data center near Paris in Q2 with about 14,000 Nvidia GPUs and 44 megawatts of initial power.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Los Thuthanaka’s Wak&#8217;a is a mellower follow-up to last year’s surprise Pitchfork favorite",
+      "link": "https://www.theverge.com/entertainment/907174/los-thuthanaka-waka-review",
+      "pub_date": "2026-04-05T14:30:00-04:00",
+      "categories": [
+        "Column",
+        "Entertainment",
+        "Music",
+        "Music Review"
+      ],
+      "description": "Los Thuthanaka basically came out of nowhere last year to capture Pitchfork's album of the year with their self-titled debut. Because it wasn't available on streaming, it largely flew under the radar. I honestly kind of forgot about it until Pitchfork gave it the number one spot in its year-end list. In retrospect, I'm not [&#8230;]",
+      "content": "Los Thuthanaka basically came out of nowhere last year to capture Pitchfork's album of the year with their self-titled debut. Because it wasn't available on streaming, it largely flew under the radar. I honestly kind of forgot about it until Pitchfork gave it the number one spot in its year-end list. In retrospect, I'm not [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Suno is a music copyright nightmare",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/906896/sunos-copyright-ai-music-covers",
+      "pub_date": "2026-04-05T12:00:00-04:00",
+      "categories": [
+        "AI",
+        "Entertainment",
+        "Music",
+        "Report",
+        "Tech"
+      ],
+      "description": "AI music platform Suno's policy is that it does not permit the use of copyrighted material. You can upload your own tracks to remix or set your original lyrics to AI-generated music. But, it's supposed to recognize and stop you from using other people's songs and lyrics. Now, no system is perfect, but it turns [&#8230;]",
+      "content": "AI music platform Suno's policy is that it does not permit the use of copyrighted material. You can upload your own tracks to remix or set your original lyrics to AI-generated music. But, it's supposed to recognize and stop you from using other people's songs and lyrics. Now, no system is perfect, but it turns [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "I let Gemini in Google Maps plan my day and it went surprisingly well",
+      "link": "https://www.theverge.com/tech/907015/gemini-google-maps-hands-on",
+      "pub_date": "2026-04-05T10:00:00-04:00",
+      "categories": [
+        "AI",
+        "Google",
+        "Hands-on",
+        "Reviews",
+        "Tech"
+      ],
+      "description": "You may be familiar with Gemini as the thing that's in every Google service you use - whether you want it or not. While it's been a constant, sometimes unwelcome presence in Gmail for at least the past year, it's a relatively new addition to Maps. And you know what? It's kind of great. To [&#8230;]",
+      "content": "You may be familiar with Gemini as the thing that's in every Google service you use - whether you want it or not. While it's been a constant, sometimes unwelcome presence in Gmail for at least the past year, it's a relatively new addition to Maps. And you know what? It's kind of great. To [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Is the Slate Truck too minimal for its own good?",
+      "link": "https://www.theverge.com/transportation/905947/slate-truck-ev-minimal-range-size-interior-design",
+      "pub_date": "2026-04-05T09:00:00-04:00",
+      "categories": [
+        "Electric Cars",
+        "Hands-on",
+        "Reviews",
+        "Tech",
+        "Transportation"
+      ],
+      "description": "The first thing you notice about the Slate Truck is its size. It's small, surprisingly so. In a country where trucks often come with their own zip code, Slate's pickup is refreshingly puny, measuring 174.6 inches long, 70.6 inches wide, and 69.3 inches tall, with a curb weight of approximately 3,602 pounds (1,634kg). As a [&#8230;]",
+      "content": "The first thing you notice about the Slate Truck is its size. It's small, surprisingly so. In a country where trucks often come with their own zip code, Slate's pickup is refreshingly puny, measuring 174.6 inches long, 70.6 inches wide, and 69.3 inches tall, with a curb weight of approximately 3,602 pounds (1,634kg). As a [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "How the Amazon Echo learned to talk — and listen",
+      "link": "https://www.theverge.com/podcast/907146/amazon-echo-alexa-version-history",
+      "pub_date": "2026-04-05T08:24:45-04:00",
+      "categories": [
+        "Amazon",
+        "Amazon Alexa",
+        "Gadgets",
+        "Podcasts",
+        "Tech",
+        "Version History"
+      ],
+      "description": "Jeff Bezos badly wanted a voice computer. He had been saying so publicly since the very early days of Amazon, telling anyone who would listen about why voice might make it easier and more natural to interact with technology. (And to buy stuff from Jeff Bezos.) But when a team at Amazon set out to [&#8230;]",
+      "content": "Jeff Bezos badly wanted a voice computer. He had been saying so publicly since the very early days of Amazon, telling anyone who would listen about why voice might make it easier and more natural to interact with technology. (And to buy stuff from Jeff Bezos.) But when a team at Amazon set out to [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Grammarly’s sloppelganger saga",
+      "link": "https://www.theverge.com/column/906606/grammarly-expert-review-ai-saga",
+      "pub_date": "2026-04-05T08:00:00-04:00",
+      "categories": [
+        "AI",
+        "Column",
+        "The Stepback"
+      ],
+      "description": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on the ups and downs of AI, follow Stevie Bonifield. The Stepback arrives in our subscribers' inboxes at 8AM ET. Opt in for The Stepback here. How it started Most people probably know Grammarly for its browser [&#8230;]",
+      "content": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on the ups and downs of AI, follow Stevie Bonifield. The Stepback arrives in our subscribers' inboxes at 8AM ET. Opt in for The Stepback here. How it started Most people probably know Grammarly for its browser [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    }
+  ]
+}
