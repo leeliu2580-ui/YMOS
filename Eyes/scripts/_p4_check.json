@@ -1,0 +1,26 @@
+{
+  "BTC": {
+    "file": "基础知识库.md",
+    "has_p4": true,
+    "has_date": false,
+    "date": null
+  },
+  "NVDA": {
+    "file": "基础知识库.md",
+    "has_p4": true,
+    "has_date": false,
+    "date": null
+  },
+  "GOLD": {
+    "file": "个股基础知识库.md",
+    "has_p4": true,
+    "has_date": false,
+    "date": null
+  },
+  "HYPE": {
+    "file": "个股基础知识库.md",
+    "has_p4": true,
+    "has_date": false,
+    "date": null
+  }
+}
