@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YMOS 投资看板 2026-04-11</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  background: #f5f5f0;
+  color: #1a1a1a;
+  padding: 24px;
+}
+.container { max-width: 1200px; margin: 0 auto; }
+
+/* Top bar */
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 24px; background: #2c3e50; color: white;
+  border-radius: 12px; margin-bottom: 20px;
+}
+.topbar .brand { font-size: 18px; font-weight: 700; }
+.topbar .date { font-size: 14px; opacity: 0.8; }
+
+/* Cards */
+.card {
+  background: white; border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 24px; margin-bottom: 16px;
+}
+.card-title { font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+
+/* Grid layouts */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+
+/* Status lights */
+.status-light {
+  display: inline-block; width: 12px; height: 12px;
+  border-radius: 50%; margin-right: 8px;
+}
+.status-yellow { background: #f39c12; }
+.status-red { background: #e74c3c; }
+.status-green { background: #27ae60; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { background: #f8f8f5; padding: 10px 12px; text-align: left; font-weight: 600; border-bottom: 2px solid #eee; }
+td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; }
+tr:last-child td { border-bottom: none; }
+
+/* Priority tags */
+.tag {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  font-size: 12px; font-weight: 600; margin-right: 4px;
+}
+.tag-p0 { background: #ffebee; color: #c0392b; }
+.tag-p1 { background: #fff3e0; color: #e67e22; }
+.tag-p2 { background: #f0f0f0; color: #555; }
+
+/* Signal badges */
+.signal { font-size: 13px; }
+.signal-bull { color: #27ae60; }
+.signal-bear { color: #e74c3c; }
+.signal-neutral { color: #7f8c8d; }
+
+/* Holdings list */
+.holding-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 0; border-bottom: 1px solid #f0f0f0;
+}
+.holding-row:last-child { border-bottom: none; }
+.holding-name { font-weight: 600; font-size: 15px; }
+.holding-meta { font-size: 13px; color: #888; }
+.holding-pnl { font-weight: 600; font-size: 15px; }
+.holding-pnl.positive { color: #27ae60; }
+.holding-pnl.negative { color: #e74c3c; }
+
+/* Workflow steps */
+.wf-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.wf-step {
+  padding: 12px; border-radius: 8px; text-align: center;
+  font-size: 13px; font-weight: 600;
+}
+.wf-done { background: #d5f4e6; color: #1e8449; }
+.wf-todo { background: #f0f0f0; color: #888; }
+
+/* Footer */
+.footer {
+  text-align: center; padding: 20px; color: #aaa; font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-2, .grid-4, .grid-3, .wf-steps { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="brand">YMOS │ 投资操作系统</div>
+    <div class="date">2026-04-11（周六）</div>
+  </div>
+
+  <!-- Status Overview -->
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">状态概览</div>
+      <div style="font-size:15px;">
+        <span class="status-light status-yellow"></span>
+        <strong>🟡 有待确认</strong> — 今日已完成：市场洞察 / 投资雷达 / 策略分析 / 持仓收口
+      </div>
+      <div style="margin-top:12px;font-size:14px;color:#e74c3c;">
+        ⚠️ HYPE 44% vs 21% 上限超限 | HLP 成本数据缺失
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">持仓一览</div>
+      <div style="font-size:14px;">
+        <strong>4 只</strong> 持仓 │ <strong>3 只</strong> Watchlist │ <strong>1 只</strong> 待建档
+      </div>
+      <div style="margin-top:8px;font-size:13px;color:#666;">
+        组合分布：HYPE 44% / HLP 29% / BTC 27% / ETH空头 7%<br>
+        <span style="color:#e74c3c;">🔴 Crypto 生态集中度 73% — 系统性风险极高</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Daily Workflow -->
+  <div class="card">
+    <div class="card-title">每日工作流</div>
+    <div class="wf-steps">
+      <div class="wf-step wf-done">✅ 市场洞察<br><span style="font-weight:400;font-size:12px;">今天已完成</span></div>
+      <div class="wf-step wf-done">✅ 投资雷达<br><span style="font-weight:400;font-size:12px;">今天已完成</span></div>
+      <div class="wf-step wf-done">✅ 策略分析<br><span style="font-weight:400;font-size:12px;">HYPE/BTC/NVDA</span></div>
+      <div class="wf-step wf-done">✅ 持仓收口<br><span style="font-weight:400;font-size:12px;">正在生成</span></div>
+    </div>
+    <div style="margin-top:12px;font-size:13px;color:#888;">已完成 4/4</div>
+  </div>
+
+  <!-- Strategic Brief -->
+  <div class="card">
+    <div class="card-title">战略简报（市场洞察 2026-04-11）</div>
+    <div style="margin-bottom:12px;">
+      <span style="background:#ffe0e0;color:#c0392b;padding:3px 10px;border-radius:4px;font-size:13px;font-weight:600;">
+        Risk Off 边际升温 → 滞胀阴影重现
+      </span>
+    </div>
+    <table>
+      <tr><th style="width:120px;">信号类型</th><th style="width:200px;">核心主题</th><th>信号解读</th></tr>
+      <tr>
+        <td><span style="color:#e74c3c;">🔴 宏观异常</span></td>
+        <td>CPI +3.3%（两年最大涨幅）</td>
+        <td>伊朗战争能源冲击已渗入CPI，核心通胀粘性验证滞胀叙事</td>
+      </tr>
+      <tr>
+        <td><span style="color:#e74c3c;">🔴 AI安全</span></td>
+        <td>Fed+Bessent警示Mythos AI风险</td>
+        <td>AI安全升级为金融稳定议题，网络安全板块中期逻辑生变</td>
+      </tr>
+      <tr>
+        <td><span style="color:#f39c12;">🟡 地缘</span></td>
+        <td>美伊本周末重启谈判</td>
+        <td>谈判门槛极低，霍尔木兹前景仍脆弱，能源价格波动</td>
+      </tr>
+      <tr>
+        <td><span style="color:#27ae60;">🟢 基建热潮</span></td>
+        <td>AI数据中心$230亿+ CapEx</td>
+        <td>CoreWeave+Blackstone+Meta，电力短缺成真实约束</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Today's Action Queue -->
+  <div class="card">
+    <div class="card-title">需要你做的事</div>
+    <table>
+      <tr><th style="width:80px;">优先级</th><th style="width:80px;">标的</th><th>动作</th><th style="width:120px;">来源</th></tr>
+      <tr>
+        <td><span class="tag tag-p1">P1</span></td>
+        <td>HYPE</td>
+        <td>补充 <strong>HLP 建仓成本</strong>（数据缺失）</td>
+        <td>持仓收口</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-p1">P1</span></td>
+        <td>HYPE</td>
+        <td>等5月5-10日窗口降至30%</td>
+        <td>用户确认</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-p2">P2</span></td>
+        <td>BTC</td>
+        <td>每日监控 ETF 净流入</td>
+        <td>投资雷达</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-p2">P2</span></td>
+        <td>NVDA</td>
+        <td>等待 $155-$165 建仓区间（当前 $188，不追高）</td>
+        <td>策略分析</td>
+      </tr>
+      <tr>
+        <td><span class="tag tag-p2">P2</span></td>
+        <td>CoreWeave</td>
+        <td>补充 P4 关注点（新鲜度检查发现缺失）</td>
+        <td>持仓收口</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Holdings Overview -->
+  <div class="card">
+    <div class="card-title">持仓一览</div>
+    <div class="holding-row">
+      <div>
+        <div class="holding-name">HYPE <span style="font-size:12px;color:#888;">Crypto/Hyperliquid</span></div>
+        <div class="holding-meta">44%仓位 │ PVE扩张 │ 成本 $3.7 │ <strong style="color:#27ae60;">+$42.33 浮盈+1043%</strong></div>
+      </div>
+      <div style="text-align:right;">
+        <div class="holding-pnl positive">+1043%</div>
+        <div style="font-size:12px;color:#888;">TVL $5B+</div>
+      </div>
+    </div>
+    <div class="holding-row">
+      <div>
+        <div class="holding-name">HLP <span style="font-size:12px;color:#888;">Crypto/Hyperliquid</span></div>
+        <div class="holding-meta">29%仓位 │ 休眠 │ 成本 <span style="color:#e74c3c;">❓待补</span></div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:13px;color:#888;">—</div>
+        <div style="font-size:12px;color:#888;">平台风险</div>
+      </div>
+    </div>
+    <div class="holding-row">
+      <div>
+        <div class="holding-name">BTC <span style="font-size:12px;color:#888;">Crypto</span></div>
+        <div class="holding-meta">27%仓位 │ PVE整固 │ 成本 $69,487 │ <strong style="color:#27ae60;">+$72,871 浮盈+4.87%</strong></div>
+      </div>
+      <div style="text-align:right;">
+        <div class="holding-pnl positive">+4.87%</div>
+        <div style="font-size:12px;color:#888;">$75K目标/$68K止损</div>
+      </div>
+    </div>
+    <div class="holding-row">
+      <div>
+        <div class="holding-name">ETH空头 <span style="font-size:12px;color:#888;">Crypto/Hyperliquid</span></div>
+        <div class="holding-meta">7%仓位 │ 长持对冲 │ 成本 $2,200 │ <strong style="color:#e74c3c;">-$2,240 浮亏-1.8%</strong></div>
+      </div>
+      <div style="text-align:right;">
+        <div class="holding-pnl negative">-1.8%</div>
+        <div style="font-size:12px;color:#888;">不主动平仓</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Watchlist -->
+  <div class="card">
+    <div class="card-title">Watchlist 动态</div>
+    <table>
+      <tr><th>标的</th><th>当前价</th><th>涨跌</th><th>机会信号</th><th>结论</th></tr>
+      <tr>
+        <td>GOLD</td>
+        <td>$43.98（Finnhub）</td>
+        <td class="signal signal-neutral">-0.32%</td>
+        <td>🟡 滞胀避险需求强化</td>
+        <td>观察；$4,910高位</td>
+      </tr>
+      <tr>
+        <td>NVDA</td>
+        <td>$188.63（+2.57%）</td>
+        <td class="signal signal-bull">▲ +2.57%</td>
+        <td>🟢 AI基础设施热潮</td>
+        <td>升级建仓候选；等$155-$165</td>
+      </tr>
+      <tr>
+        <td>300308.SZ（中际旭创）</td>
+        <td>¥734.65</td>
+        <td class="signal signal-bull">▲ +6.01%</td>
+        <td>🟢 AI光模块强势</td>
+        <td>观察；¥700强势支撑</td>
+      </tr>
+      <tr>
+        <td>CoreWeave (CRWV)</td>
+        <td>~市值$536亿</td>
+        <td>—</td>
+        <td>🟢 IPO后强势</td>
+        <td>P4缺失；待建档</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Gaps -->
+  <div class="card">
+    <div class="card-title">缺口清单</div>
+    <table>
+      <tr><th style="width:120px;">类型</th><th>内容</th></tr>
+      <tr>
+        <td>数据缺口</td>
+        <td>HLP 建仓成本缺失（持仓状态机标注为"待补"）</td>
+      </tr>
+      <tr>
+        <td>结构缺口</td>
+        <td>CoreWeave P4 关注点未建档（新鲜度检查发现，2026-04-11）</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+<div class="footer">
+  YMOS Dashboard · 数据截至 2026-04-11 20:40 · 真相源：持仓_状态机.md / Watchlist_状态机.md
+</div>
+</body>
+</html>
