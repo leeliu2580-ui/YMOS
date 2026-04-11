@@ -1,0 +1,28 @@
+{
+  "source": "CoinMarketCap",
+  "watchlist": [
+    "BTC"
+  ],
+  "fetched_at": "2026-04-11T10:30:05.371018+00:00",
+  "count": 1,
+  "skipped": [],
+  "data": [
+    {
+      "type": "quote",
+      "symbol": "BTC",
+      "base_symbol": "BTC",
+      "price": 72879.46659064341,
+      "change": null,
+      "change_pct": 1.53329799,
+      "high": null,
+      "low": null,
+      "open": null,
+      "prev_close": null,
+      "market_cap": 1458631216667.248,
+      "volume_24h": 33835698864.327236,
+      "cmc_rank": 1,
+      "timestamp": "2026-04-11T10:27:00.000Z",
+      "fetched_at": "2026-04-11T10:30:05.370986+00:00"
+    }
+  ]
+}
