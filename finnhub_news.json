@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "source": "Finnhub company-news",
+    "mode": "holdings_only",
+    "hours_back": 24,
+    "date_range": "2026-04-11 ~ 2026-04-12",
+    "generated_at": "2026-04-12 23:39 UTC",
+    "holding_tickers": [
+      "BTC",
+      "ETH-PERP-SHORT",
+      "HLP",
+      "HYPE",
+      "~~HYPE-PERP-SHORT~~"
+    ],
+    "note": "Watchlist 不拉个股新闻（节省 rate limit，Watchlist 由 yongmai API 覆盖）",
+    "rate_limit_note": "Finnhub 免费 key = 60 calls/min；当前持仓标的数量决定调用次数",
+    "counts": {
+      "total_raw": 1,
+      "after_dedup": 1,
+      "p15_trigger": 0,
+      "by_ticker": {
+        "BTC": 1,
+        "ETH-PERP-SHORT": 0,
+        "HLP": 0,
+        "HYPE": 0,
+        "~~HYPE-PERP-SHORT~~": 0
+      }
+    }
+  },
+  "articles": [
+    {
+      "ticker": "BTC",
+      "datetime_ts": 1775953800,
+      "datetime_readable": "2026-04-12 00:30 UTC",
+      "source": "SeekingAlpha",
+      "headline": "Whale's Insight: BTC Outperforms Gold In Wartime, AI Tokens Lead Q1 Rotation",
+      "summary": "BTC is up 1.5% since the Iran conflict began, outperforming other major assets over the same period. Read more here.",
+      "url": "https://finnhub.io/api/news?id=b8bc6b21dcec4e972c4687c60bbf9936c2463c9fe9e6cd3abae7d008bf7f7eab",
+      "image": "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2194779803/image_2194779803.jpg?io=getty-c-w1536",
+      "p15_trigger": false
+    }
+  ]
+}
