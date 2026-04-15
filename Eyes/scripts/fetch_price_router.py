@@ -60,6 +60,13 @@ CRYPTO_MAP_YAHOO = {
     "DOT": "DOT-USD",
 }
 
+# 黄金等大宗商品 Yahoo Finance 映射（Finnhub GOLD = per gram 单位错误，绕道 Yahoo GC=F）
+COMMODITY_MAP_YAHOO = {
+    "GOLD": "GC=F",
+    "XAU": "GC=F",
+    "XAUUSD": "GC=F",
+}
+
 CMC_CRYPTO_SYMBOLS = {"BTC", "ETH", "SOL", "HYPE", "HYPE-PERP-SHORT", "ETH-PERP-SHORT", "BTC-PERP-SHORT", "SOL-PERP-SHORT"}
 
 
@@ -71,6 +78,9 @@ def normalize_for_source(symbol: str, source: str) -> str:
     """将状态机中的 crypto 裸符号转换为数据源需要的格式。非 crypto 原样返回。"""
     upper = symbol.upper()
     if upper not in CRYPTO_SYMBOLS:
+        # 大宗商品映射（Finnhub GOLD = per gram，必须绕道 Yahoo）
+        if source == "yahoo" and upper in COMMODITY_MAP_YAHOO:
+            return COMMODITY_MAP_YAHOO[upper]
         return symbol
     if source == "finnhub":
         return CRYPTO_MAP_FINNHUB.get(upper, f"BINANCE:{upper}USDT")
@@ -91,11 +101,15 @@ def classify(symbol: str) -> str:
       'cmc'     → 重点 Crypto（BTC/ETH/SOL/HYPE 及常见 PERP 映射）
       'finnhub' → 美股 / 其他 Crypto
       'tushare' → A股（上交所 .SS / 深交所 .SZ）
-      'yahoo'   → 港股（.HK），以及所有市场的兜底
+      'yahoo'   → 港股（.HK）、黄金等大宗商品（Finnhub GOLD = per gram 单位错误，需绕道）
     """
     if symbol.endswith((".SS", ".SZ")):
         return "tushare"
     if symbol.endswith(".HK"):
+        return "yahoo"
+    # Finnhub GOLD 报价单位为 per gram（$44.51/g ≈ $1,384/oz），与市场基准（per oz）相差31倍
+    # 黄金价格统一走 Yahoo Finance GC=F
+    if symbol.upper() in ("GOLD", "XAU", "XAUUSD"):
         return "yahoo"
     if symbol.upper() in CMC_CRYPTO_SYMBOLS:
         return "cmc"
