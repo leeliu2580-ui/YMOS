@@ -1,0 +1,2255 @@
+{
+  "sources": [
+    "Bloomberg Markets",
+    "Bloomberg Tech",
+    "Bloomberg Crypto",
+    "Bloomberg Opinion",
+    "CNBC Markets",
+    "CNBC Finance",
+    "Seeking Alpha Editors' Picks",
+    "Stratechery",
+    "FT Tech",
+    "FT Markets",
+    "The Economist Finance",
+    "TechCrunch",
+    "TechInAsia",
+    "Nvidia Blog",
+    "The Verge"
+  ],
+  "fetched_at": "2026-04-17T04:26:07.464724+00:00",
+  "time_range_days": 1.0,
+  "count": 156,
+  "sources_ok": 12,
+  "sources_fail": 3,
+  "sources_blocked_403": 0,
+  "categories_summary": {
+    "美股": 32,
+    "科技": 112,
+    "Crypto": 5,
+    "宏观": 6,
+    "深度洞察": 1
+  },
+  "data": [
+    {
+      "title": "ECB to Hike Rates in June as 2026 Inflation Jumps, Survey Shows",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/ecb-to-hike-rates-in-june-as-2026-inflation-jumps-survey-shows",
+      "pub_date": "Fri, 17 Apr 2026 04:15:00 GMT",
+      "categories": [],
+      "description": "The European Central Bank will raise interest rates in June as the Iran war drives inflation higher this year, a Bloomberg survey showed.",
+      "content": "The European Central Bank will raise interest rates in June as the Iran war drives inflation higher this year, a Bloomberg survey showed.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Stock Rally Pauses as Traders Await Iran Ceasefire: Markets Wrap",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/stock-market-today-dow-s-p-live-updates",
+      "pub_date": "Thu, 16 Apr 2026 22:15:10 GMT",
+      "categories": [],
+      "description": "A record-breaking rally in global equities stalled in Asia as investors trimmed positions ahead of the weekend while awaiting progress on extending the US-Iran ceasefire.",
+      "content": "A record-breaking rally in global equities stalled in Asia as investors trimmed positions ahead of the weekend while awaiting progress on extending the US-Iran ceasefire.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "London Metals Index at Record High on Aluminum ‘Black Hole’ Fear",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/london-metals-index-at-record-high-on-aluminum-black-hole-fear",
+      "pub_date": "Fri, 17 Apr 2026 02:58:22 GMT",
+      "categories": [],
+      "description": "Industrial metals jumped to a record high on the London Metal Exchange, driven by gains in aluminum after the Middle East war disrupted supplies, as well as a recent revival in copper.",
+      "content": "Industrial metals jumped to a record high on the London Metal Exchange, driven by gains in aluminum after the Middle East war disrupted supplies, as well as a recent revival in copper.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "China Moves to Slow Yuan Rally by Cooling Fixing Volatility",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/china-moves-to-slow-yuan-rally-by-cooling-fixing-volatility",
+      "pub_date": "Fri, 17 Apr 2026 03:54:26 GMT",
+      "categories": [],
+      "description": "China’s central bank is using its daily reference rate to temper the yuan’s rally as the currency’s outperformance during the Iran war fuels further bullish sentiment.",
+      "content": "China’s central bank is using its daily reference rate to temper the yuan’s rally as the currency’s outperformance during the Iran war fuels further bullish sentiment.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Oil Drops as Trump Strikes Upbeat Tone With War Near 50-Day Mark",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/latest-oil-market-news-and-analysis-for-april-17",
+      "pub_date": "Thu, 16 Apr 2026 22:01:57 GMT",
+      "categories": [],
+      "description": "Oil dropped as President Donald Trump struck an optimistic tone on prospects for a permanent ceasefire between the US and Iran.",
+      "content": "Oil dropped as President Donald Trump struck an optimistic tone on prospects for a permanent ceasefire between the US and Iran.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Gold Heads for Fourth Weekly Gain on Optimism for US-Iran Truce",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/gold-steadies-after-trump-expresses-optimism-on-us-iran-truce",
+      "pub_date": "Thu, 16 Apr 2026 22:19:47 GMT",
+      "categories": [],
+      "description": "Gold headed for a fourth weekly gain after President Donald Trump expressed optimism that the US and Iran could agree a permanent ceasefire to end the war that’s upended markets and heightened inflation fears.",
+      "content": "Gold headed for a fourth weekly gain after President Donald Trump expressed optimism that the US and Iran could agree a permanent ceasefire to end the war that’s upended markets and heightened inflation fears.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Oaktree’s Senior Credit Executive for Asia Set to Depart Firm",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/oaktree-s-senior-credit-executive-for-asia-set-to-depart-firm",
+      "pub_date": "Fri, 17 Apr 2026 03:20:41 GMT",
+      "categories": [],
+      "description": "One of Oaktree Capital Group LLC’s most senior investment professionals for Asia is set to leave the firm in the coming months, according to people familiar with the matter.",
+      "content": "One of Oaktree Capital Group LLC’s most senior investment professionals for Asia is set to leave the firm in the coming months, according to people familiar with the matter.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Foreign Trading of Chinese Bonds via Hong Kong Hits Record High",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/foreign-trading-of-chinese-bonds-via-hong-kong-hits-record-high",
+      "pub_date": "Fri, 17 Apr 2026 03:18:48 GMT",
+      "categories": [],
+      "description": "Overseas funds’ trading of Chinese onshore bonds via Hong Kong hit a record last month, underscoring growing interest for yuan assets amid escalating Middle East tensions.",
+      "content": "Overseas funds’ trading of Chinese onshore bonds via Hong Kong hit a record last month, underscoring growing interest for yuan assets amid escalating Middle East tensions.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "China to Commission Seven Nuclear Reactors in 2026, CCTV Says",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/china-to-commission-seven-nuclear-reactors-in-2026-cctv-says",
+      "pub_date": "Fri, 17 Apr 2026 03:14:12 GMT",
+      "categories": [],
+      "description": "Seven nuclear power reactors are scheduled to be completed and commissioned in China this year, state broadcaster China Central Television reported, citing the nation’s atomic energy organization’s annual report.",
+      "content": "Seven nuclear power reactors are scheduled to be completed and commissioned in China this year, state broadcaster China Central Television reported, citing the nation’s atomic energy organization’s annual report.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "What’s Next for Manycore After Blockbuster HK Debut",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-17/what-s-next-for-manycore-after-blockbuster-hk-debut-video",
+      "pub_date": "Fri, 17 Apr 2026 02:52:03 GMT",
+      "categories": [
+        "NMS:NVDA"
+      ],
+      "description": "Hangzhou-based Manycore Tech, one of the so-called \"Six Little Dragons\" of Chinese AI startups, surged as much as 187% during its trading debut in Hong Kong. Its co-founder and chairman Victor Huang, who previously worked at Nvidia, says Manycore plans to integrate new technologies and expand into new markets. (Source: Bloomberg)",
+      "content": "Hangzhou-based Manycore Tech, one of the so-called \"Six Little Dragons\" of Chinese AI startups, surged as much as 187% during its trading debut in Hong Kong. Its co-founder and chairman Victor Huang, who previously worked at Nvidia, says Manycore plans to integrate new technologies and expand into new markets. (Source: Bloomberg)",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Indian Stocks Risk Deeper Underperformance as Tech-Led North Asia Draws Funds",
+      "link": "https://www.bloomberg.com/news/newsletters/2026-04-17/indian-stocks-underperformance-versus-tech-heavy-asia-peers-is-likely-to-extend",
+      "pub_date": "Fri, 17 Apr 2026 02:48:23 GMT",
+      "categories": [],
+      "description": "Market’s appeal among Asia money managers has eroded.",
+      "content": "Market’s appeal among Asia money managers has eroded.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "OCBC Is Said to Emerge as Lead Bidder for HSBC Indonesia Assets",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/ocbc-is-said-to-emerge-as-lead-bidder-for-hsbc-indonesia-assets",
+      "pub_date": "Fri, 17 Apr 2026 02:47:56 GMT",
+      "categories": [
+        "LSE:HSBA",
+        "SES:OCBC"
+      ],
+      "description": "Oversea-Chinese Banking Corp. has emerged as the preferred bidder to buy HSBC Holdings Plc’s retail assets in Indonesia, people familiar with the matter said, as the Singaporean lender seeks to boost its presence in Southeast Asia’s largest economy.",
+      "content": "Oversea-Chinese Banking Corp. has emerged as the preferred bidder to buy HSBC Holdings Plc’s retail assets in Indonesia, people familiar with the matter said, as the Singaporean lender seeks to boost its presence in Southeast Asia’s largest economy.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Investors Should 'Look Under the Hood' of Markets: IG International",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-17/investors-should-look-under-the-hood-of-markets-ig-video",
+      "pub_date": "Fri, 17 Apr 2026 02:47:52 GMT",
+      "categories": [],
+      "description": "IG International's Fabien Yip says that while the stock market \"is striking new highs,\" it's important for investors to \"look under the hood\" as some corporate earnings and news \"could potentially give a shock to the rally that we're seeing.\" (Source: Bloomberg)",
+      "content": "IG International's Fabien Yip says that while the stock market \"is striking new highs,\" it's important for investors to \"look under the hood\" as some corporate earnings and news \"could potentially give a shock to the rally that we're seeing.\" (Source: Bloomberg)",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Military Drone Maker Aevex Raises $320 Million in US IPO",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/military-drone-maker-aevex-raises-320-million-in-us-ipo",
+      "pub_date": "Fri, 17 Apr 2026 02:40:46 GMT",
+      "categories": [
+        "NYS:AVEX"
+      ],
+      "description": "Aevex Corp., a maker of military drones, raised $320 million in its initial public offering, as investment in modern defense and autonomous systems rises.",
+      "content": "Aevex Corp., a maker of military drones, raised $320 million in its initial public offering, as investment in modern defense and autonomous systems rises.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Australia’s Treasurer Flags Inflation Risk Before Budget",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-17/australia-s-treasurer-flags-inflation-risk-before-budget-video",
+      "pub_date": "Fri, 17 Apr 2026 02:40:45 GMT",
+      "categories": [],
+      "description": "Australian Treasurer Jim Chalmers tells Bloomberg TV that the global economy faces a “really dangerous moment” as the Middle East conflict threatens to accelerate inflation and drag on activity. (Source: Bloomberg)",
+      "content": "Australian Treasurer Jim Chalmers tells Bloomberg TV that the global economy faces a “really dangerous moment” as the Middle East conflict threatens to accelerate inflation and drag on activity. (Source: Bloomberg)",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "UBS’ Senior Indonesia Wealth Banker Leaves Amid Several Exits",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/ubs-senior-indonesia-wealth-banker-leaves-amid-several-exits",
+      "pub_date": "Fri, 17 Apr 2026 02:11:05 GMT",
+      "categories": [
+        "VTX:UBSG"
+      ],
+      "description": "UBS Group AG’s senior wealth banker Lionel Yoong has left the Swiss firm, adding to several recent departures from the group covering Indonesia from Singapore.",
+      "content": "UBS Group AG’s senior wealth banker Lionel Yoong has left the Swiss firm, adding to several recent departures from the group covering Indonesia from Singapore.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Credit Growth to Lift India Bank Profits Despite Likely FX Losses",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/credit-growth-to-lift-india-bank-profits-despite-likely-fx-losses",
+      "pub_date": "Fri, 17 Apr 2026 02:07:57 GMT",
+      "categories": [
+        "NSE:ICICIBC",
+        "NSE:HDFCB"
+      ],
+      "description": "Strong credit growth should have kept fourth-quarter numbers healthy at Indian banks including HDFC Bank Ltd. and ICICI Bank Ltd., though earnings may have been dented by trading losses linked to the central bank’s rupee derivatives curbs.",
+      "content": "Strong credit growth should have kept fourth-quarter numbers healthy at Indian banks including HDFC Bank Ltd. and ICICI Bank Ltd., though earnings may have been dented by trading losses linked to the central bank’s rupee derivatives curbs.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Trump Says Deal With Iran ‘Looking Very Good’ Amid Ceasefire",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/pakistan-boosts-mediation-efforts-as-us-iran-weigh-longer-truce",
+      "pub_date": "Thu, 16 Apr 2026 08:37:33 GMT",
+      "categories": [],
+      "description": "President Donald Trump struck an optimistic tone for prospects that the US and Iran could clinch a permanent ceasefire as the two sides discuss an extended truce ahead of its expiration next week.",
+      "content": "President Donald Trump struck an optimistic tone for prospects that the US and Iran could clinch a permanent ceasefire as the two sides discuss an extended truce ahead of its expiration next week.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Pemex Undersea Pipeline Found to Cause Gulf Oil Spill",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/pemex-undersea-pipeline-found-to-cause-gulf-oil-spill",
+      "pub_date": "Fri, 17 Apr 2026 02:01:58 GMT",
+      "categories": [],
+      "description": "An oil spill in the Gulf of Mexico that soiled beaches, killed wildlife and sparked outrage from environmental groups was caused by a leaky pipeline owned by state oil company Petroleos Mexicanos, the company said.",
+      "content": "An oil spill in the Gulf of Mexico that soiled beaches, killed wildlife and sparked outrage from environmental groups was caused by a leaky pipeline owned by state oil company Petroleos Mexicanos, the company said.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Henry Paulson Suggests US Make a Break-Glass Treasuries Plan",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/paulson-says-us-should-prepare-for-vicious-crash-in-treasuries",
+      "pub_date": "Thu, 16 Apr 2026 16:49:42 GMT",
+      "categories": [],
+      "description": "Former Treasury Secretary Henry Paulson suggested US authorities prepare a back-up plan in order to avert a potential future collapse in demand for Treasuries resulting from long-running concerns over the federal debt load &mdash; an event that he warned would have “vicious” effects.",
+      "content": "Former Treasury Secretary Henry Paulson suggested US authorities prepare a back-up plan in order to avert a potential future collapse in demand for Treasuries resulting from long-running concerns over the federal debt load &mdash; an event that he warned would have “vicious” effects.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Medical Device Maker Alamar Bio Boosts IPO to Raise $191 Million",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/medical-device-maker-alamar-bio-boosts-ipo-to-raise-191-million",
+      "pub_date": "Fri, 17 Apr 2026 01:26:03 GMT",
+      "categories": [
+        "NMS:ILMN"
+      ],
+      "description": "Alamar Biosciences Inc., a maker of medical devices that detect protein biomarkers to diagnose diseases, raised $191 million in an upsized US initial public offering that priced at the top of a marketed range.",
+      "content": "Alamar Biosciences Inc., a maker of medical devices that detect protein biomarkers to diagnose diseases, raised $191 million in an upsized US initial public offering that priced at the top of a marketed range.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Trump Says Iran Deal ‘Looking Very Good’ Amid Ceasefire",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-17/trump-says-iran-deal-looking-very-good-amid-ceasefire",
+      "pub_date": "Fri, 17 Apr 2026 01:03:36 GMT",
+      "categories": [],
+      "description": "President Donald Trump says the US and Iran could clinch a permanent ceasefire, with talks between Washington and Tehran possibly resuming this weekend. Bloomberg's Laura Davison breaks down the latest. (Source: Bloomberg)",
+      "content": "President Donald Trump says the US and Iran could clinch a permanent ceasefire, with talks between Washington and Tehran possibly resuming this weekend. Bloomberg's Laura Davison breaks down the latest. (Source: Bloomberg)",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Wall Street Turns Gloomy on the Dollar as Haven Demand Fades",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/wall-street-turns-gloomy-on-the-dollar-as-haven-demand-fades",
+      "pub_date": "Fri, 17 Apr 2026 00:00:00 GMT",
+      "categories": [
+        "NYS:WFC",
+        "GER:DBK"
+      ],
+      "description": "Deutsche Bank AG and Wells Fargo &amp; Co. are among banks declaring the dollar’s war-driven haven rally is likely over as the fragile ceasefire between the US and Iran prompts investors to seek riskier assets.",
+      "content": "Deutsche Bank AG and Wells Fargo &amp; Co. are among banks declaring the dollar’s war-driven haven rally is likely over as the fragile ceasefire between the US and Iran prompts investors to seek riskier assets.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "China Fund Beating 98% of Peers Bets on AI Chain, Healthcare",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/china-fund-beating-98-of-peers-bets-on-ai-chain-healthcare",
+      "pub_date": "Thu, 16 Apr 2026 23:52:10 GMT",
+      "categories": [],
+      "description": "A top-performing China Asset Management Co. fund manager says the country’s artificial intelligence stocks are far from bubble territory and is bullish on opportunities across the value chain.",
+      "content": "A top-performing China Asset Management Co. fund manager says the country’s artificial intelligence stocks are far from bubble territory and is bullish on opportunities across the value chain.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Obesity Treatment Firm Kailera Upsizes IPO to Raise $625 Million",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/obesity-treatment-firm-kailera-upsizes-ipo-to-raise-625-million",
+      "pub_date": "Thu, 16 Apr 2026 23:44:10 GMT",
+      "categories": [],
+      "description": "Kailera Therapeutics Inc., a clinical-stage biotechnology company focused on obesity, raised $625 million in an upsized initial public offering, marking the sector’s biggest US listing since 2021.",
+      "content": "Kailera Therapeutics Inc., a clinical-stage biotechnology company focused on obesity, raised $625 million in an upsized initial public offering, marking the sector’s biggest US listing since 2021.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "QVC Shopping Channel Files Bankruptcy to Cut $5 Billion of Debt",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/qvc-shopping-channel-files-bankruptcy-to-cut-5-billion-of-debt",
+      "pub_date": "Thu, 16 Apr 2026 23:36:59 GMT",
+      "categories": [],
+      "description": "Television shopping network QVC Group filed for bankruptcy Thursday as part of a plan to cut more than $5 billion of debt, as declining viewership and a shift to online retail weighed on sales and squeezed margins.",
+      "content": "Television shopping network QVC Group filed for bankruptcy Thursday as part of a plan to cut more than $5 billion of debt, as declining viewership and a shift to online retail weighed on sales and squeezed margins.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Permian Landowner EagleRock Files for Initial Public Offering",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/permian-landowner-eaglerock-files-for-initial-public-offering",
+      "pub_date": "Thu, 16 Apr 2026 23:15:19 GMT",
+      "categories": [
+        "NYS:TPL"
+      ],
+      "description": "EagleRock Land LLC filed for an initial public offering as the Permian Basin landowner and management company seeks to expand holdings and attract power generation, data centers and other industrial developments that could benefit from being near energy sources.",
+      "content": "EagleRock Land LLC filed for an initial public offering as the Permian Basin landowner and management company seeks to expand holdings and attract power generation, data centers and other industrial developments that could benefit from being near energy sources.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "SEC Looks to Reform Trading Database Loathed by Wall Street",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/sec-asks-for-input-on-slimming-cat-trade-data-collection-costs",
+      "pub_date": "Thu, 16 Apr 2026 14:52:15 GMT",
+      "categories": [],
+      "description": "The US Securities and Exchange Commission asked for public input on how to trim down the cost and scope of trading data that exchanges and brokers report to a controversial market-tracking system.",
+      "content": "The US Securities and Exchange Commission asked for public input on how to trim down the cost and scope of trading data that exchanges and brokers report to a controversial market-tracking system.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Netflix Misses Estimate, Stocks Hold Record Highs | The Close 4/16/2026",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/the-close-4-16-2026-video",
+      "pub_date": "Thu, 16 Apr 2026 22:09:59 GMT",
+      "categories": [
+        "NMS:NFLX"
+      ],
+      "description": "Bloomberg Television brings you the latest news and analysis leading up to the final minutes and seconds before and after the closing bell on Wall Street. Today's guests are Barings’ David Mihalick, PNC Financial Services CEO Bill Demchak, Ariel Investments’ John Rogers, Gabelli Funds’ John Belton, Seaport Research Partners’ David Joyce, Gerber Kawasaki’s Ross Gerber, AlixPartners’ Jeff Goldstein, MNTN CEO Mark Douglas, & EDO President & CEO Kevin Krim. (Source: Bloomberg)",
+      "content": "Bloomberg Television brings you the latest news and analysis leading up to the final minutes and seconds before and after the closing bell on Wall Street. Today's guests are Barings’ David Mihalick, PNC Financial Services CEO Bill Demchak, Ariel Investments’ John Rogers, Gabelli Funds’ John Belton, Seaport Research Partners’ David Joyce, Gerber Kawasaki’s Ross Gerber, AlixPartners’ Jeff Goldstein, MNTN CEO Mark Douglas, & EDO President & CEO Kevin Krim. (Source: Bloomberg)",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Century Aluminum Sees Expansion Delivering 10% Lift to US Output",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/century-aluminum-sees-expansion-delivering-10-lift-to-us-output",
+      "pub_date": "Thu, 16 Apr 2026 21:49:17 GMT",
+      "categories": [
+        "NMS:CENX"
+      ],
+      "description": "Century Aluminum Co. started producing metal from an expansion at its South Carolina smelter in a rare increase in US aluminum output.",
+      "content": "Century Aluminum Co. started producing metal from an expansion at its South Carolina smelter in a rare increase in US aluminum output.",
+      "source_name": "Bloomberg Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Apple Marketing Chief for Watch, AirPods, Home and Health Retires",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/apple-watch-airpods-home-and-health-marketing-chief-stan-ng-retires",
+      "pub_date": "Fri, 17 Apr 2026 04:14:06 GMT",
+      "categories": [
+        "NMS:AAPL"
+      ],
+      "description": "Apple Inc.’s marketing executive in charge of the Apple Watch, AirPods, health and smart home initiatives said he’s retiring, marking a changing of the guard for a series of key product lines.",
+      "content": "Apple Inc.’s marketing executive in charge of the Apple Watch, AirPods, health and smart home initiatives said he’s retiring, marking a changing of the guard for a series of key product lines.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "GIC-Backed Envision AESC Is Said to Mull Up to $2 Billion HK IPO",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/gic-backed-envision-aesc-is-said-to-mull-up-to-2-billion-hk-ipo",
+      "pub_date": "Fri, 17 Apr 2026 02:37:14 GMT",
+      "categories": [],
+      "description": "Envision AESC, a major global manufacturer of lithium-ion batteries for electric vehicles and energy storage systems, is considering an initial public offering in Hong Kong as soon as this year, according to people familiar with the situation.",
+      "content": "Envision AESC, a major global manufacturer of lithium-ion batteries for electric vehicles and energy storage systems, is considering an initial public offering in Hong Kong as soon as this year, according to people familiar with the situation.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Flow Capital Puts $150 Million Private Credit Fund on Blockchain",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/flow-capital-puts-150-million-private-credit-fund-on-blockchain",
+      "pub_date": "Fri, 17 Apr 2026 02:13:47 GMT",
+      "categories": [],
+      "description": "Flow Capital Partners plans to offer its $150 million private credit fund on a Singapore-based blockchain platform by month end, positioning itself among the first Asian managers to tap growing stablecoin liquidity.",
+      "content": "Flow Capital Partners plans to offer its $150 million private credit fund on a Singapore-based blockchain platform by month end, positioning itself among the first Asian managers to tap growing stablecoin liquidity.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Nvidia Alum Rides China’s Robotics Wave to 187% Debut Pop",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/nvidia-alum-rides-china-s-robotics-wave-to-150-million-debut",
+      "pub_date": "Thu, 16 Apr 2026 23:00:00 GMT",
+      "categories": [
+        "NMS:NVDA"
+      ],
+      "description": "Manycore Tech Inc. built a billion-dollar valuation in China’s once-sizzling real estate market. Now, the software unicorn is betting on robotics and AI for its second act.",
+      "content": "Manycore Tech Inc. built a billion-dollar valuation in China’s once-sizzling real estate market. Now, the software unicorn is betting on robotics and AI for its second act.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Sequoia’s New Leaders Raise About $7 Billion for Firm’s Biggest Bets",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/sequoia-s-new-leaders-raise-about-7-billion-for-firm-s-biggest-bets",
+      "pub_date": "Thu, 16 Apr 2026 23:35:50 GMT",
+      "categories": [],
+      "description": "Sequoia Capital, one of the largest and most prominent venture capital firms, has raised about $7 billion for a new fund according to people familiar with the discussions &mdash; the first fresh fundraising under Sequoia’s new leadership.",
+      "content": "Sequoia Capital, one of the largest and most prominent venture capital firms, has raised about $7 billion for a new fund according to people familiar with the discussions &mdash; the first fresh fundraising under Sequoia’s new leadership.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Permian Landowner EagleRock Files for Initial Public Offering",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/permian-landowner-eaglerock-files-for-initial-public-offering",
+      "pub_date": "Thu, 16 Apr 2026 23:15:19 GMT",
+      "categories": [
+        "NYS:TPL"
+      ],
+      "description": "EagleRock Land LLC filed for an initial public offering as the Permian Basin landowner and management company seeks to expand holdings and attract power generation, data centers and other industrial developments that could benefit from being near energy sources.",
+      "content": "EagleRock Land LLC filed for an initial public offering as the Permian Basin landowner and management company seeks to expand holdings and attract power generation, data centers and other industrial developments that could benefit from being near energy sources.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Netflix Earnings Forecast Misses, Reed Hastings Steps Down",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/netflix-revenue-beats-estimates-as-hastings-steps-down",
+      "pub_date": "Thu, 16 Apr 2026 20:03:30 GMT",
+      "categories": [
+        "NMS:NFLX"
+      ],
+      "description": "Netflix Inc. gave a forecast for the second quarter that fell short of analysts’ expectations, sending the shares tumbling in extended trading.",
+      "content": "Netflix Inc. gave a forecast for the second quarter that fell short of analysts’ expectations, sending the shares tumbling in extended trading.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Musk Asks Suppliers to Move at ‘Light Speed’ on Terafab Plan",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/musk-asks-suppliers-to-move-fast-on-terafab-plan-video",
+      "pub_date": "Thu, 16 Apr 2026 21:32:04 GMT",
+      "categories": [
+        "NMS:LRCX",
+        "NMS:AMAT",
+        "KSC:005930",
+        "NMS:TSLA"
+      ],
+      "description": "Elon Musk’s lieutenants have reached out to chip industry suppliers including Applied Materials Inc., Tokyo Electron Ltd. and Lam Research Corp. for his envisioned Terafab, early steps in an audacious and likely arduous attempt to break into the production of cutting-edge chips. \nStaff working for the joint venture between Tesla Inc. and SpaceX have sought price quotes and delivery times for an array of chipmaking gear, people familiar with the matter said. In past weeks, they’ve contacted makers of photomasks, substrates, etchers, depositors, cleaning devices, testers and other tools, according to the people, who asked not to be named disclosing private discussions. Bloomberg's Ed Ludlow joins to discuss. (Source: Bloomberg)",
+      "content": "Elon Musk’s lieutenants have reached out to chip industry suppliers including Applied Materials Inc., Tokyo Electron Ltd. and Lam Research Corp. for his envisioned Terafab, early steps in an audacious and likely arduous attempt to break into the production of cutting-edge chips. \nStaff working for the joint venture between Tesla Inc. and SpaceX have sought price quotes and delivery times for an array of chipmaking gear, people familiar with the matter said. In past weeks, they’ve contacted makers of photomasks, substrates, etchers, depositors, cleaning devices, testers and other tools, according to the people, who asked not to be named disclosing private discussions. Bloomberg's Ed Ludlow joins to discuss. (Source: Bloomberg)",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Netflix Will Be Top Player in Entertainment Forever, Ross Gerber Says",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/netflix-is-in-a-phenomenal-position-ross-gerber-says-video",
+      "pub_date": "Thu, 16 Apr 2026 21:14:26 GMT",
+      "categories": [
+        "NMS:NFLX"
+      ],
+      "description": "Ross Gerber, Gerber Kawasaki Wealth and Investment Management co-founder, president and CEO, says Netflix is in a phenomenal position and just \"keeps printing money.\" Netflix gave a forecast for the second quarter that fell short of analysts expectations. Gerber speaks on \"Bloomberg The Close.\" (Source: Bloomberg)",
+      "content": "Ross Gerber, Gerber Kawasaki Wealth and Investment Management co-founder, president and CEO, says Netflix is in a phenomenal position and just \"keeps printing money.\" Netflix gave a forecast for the second quarter that fell short of analysts expectations. Gerber speaks on \"Bloomberg The Close.\" (Source: Bloomberg)",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "SpaceX Moves Up Vesting Schedule for Employee Shares Before IPO",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/spacex-moves-up-vesting-schedule-for-employee-shares-before-ipo",
+      "pub_date": "Thu, 16 Apr 2026 21:16:49 GMT",
+      "categories": [],
+      "description": "SpaceX has moved up a scheduled vesting date for shares awarded to employees to as soon as next week, according to people familiar with the matter, ahead of an IPO targeted to value the company at more than $2 trillion.",
+      "content": "SpaceX has moved up a scheduled vesting date for shares awarded to employees to as soon as next week, according to people familiar with the matter, ahead of an IPO targeted to value the company at more than $2 trillion.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "How AI Is Being Used To Detect Cancer at The Earliest Stage",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/how-ai-is-being-used-to-detect-cancer-at-early-stages-video",
+      "pub_date": "Thu, 16 Apr 2026 21:06:21 GMT",
+      "categories": [],
+      "description": "Dr. Bea Bakshi, CEO & Co-Founder of C the Signs joins Bloomberg Businessweek to discuss the future of cancer detection and how AI is part of the solution even in the early stages.  (Source: Bloomberg)",
+      "content": "Dr. Bea Bakshi, CEO & Co-Founder of C the Signs joins Bloomberg Businessweek to discuss the future of cancer detection and how AI is part of the solution even in the early stages.  (Source: Bloomberg)",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "The $10 Billion Startup Training AI to Replace the White-Collar Workforce",
+      "link": "https://www.bloomberg.com/news/features/2026-04-16/ai-company-hiring-on-linkedin-wants-to-train-your-replacement-at-work",
+      "pub_date": "Thu, 16 Apr 2026 21:00:10 GMT",
+      "categories": [],
+      "description": "<p>Mercor is promising to replicate most professional work. It was also co-founded by twentysomethings who previously never held a real job.</p>",
+      "content": "<p>Mercor is promising to replicate most professional work. It was also co-founded by twentysomethings who previously never held a real job.</p>",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Emerging Stocks Extend Gains in 2026 as Risk Appetite Holds Firm",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/ai-trade-fuels-emerging-markets-stock-rally-after-tsmc-results",
+      "pub_date": "Thu, 16 Apr 2026 10:19:07 GMT",
+      "categories": [],
+      "description": "Emerging-market stocks rose for a third straight day, with a key index nearly erasing losses triggered by the Middle East conflict as investors snapped up artificial intelligence-linked shares in Asia and commodity companies in Latin America.",
+      "content": "Emerging-market stocks rose for a third straight day, with a key index nearly erasing losses triggered by the Middle East conflict as investors snapped up artificial intelligence-linked shares in Asia and commodity companies in Latin America.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Anthropic Unveils Updated Opus 4.7 Model | Bloomberg Tech 4/16/2026",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/bloomberg-tech-4-16-2026-video",
+      "pub_date": "Thu, 16 Apr 2026 20:51:21 GMT",
+      "categories": [],
+      "description": "Bloomberg’s Caroline Hyde and Ed Ludlow discuss Anthropic's updated version of its AI model, Opus 4.7, released just a week after its limited release of Mythos. Plus, Elon Musk is kicking his Terafab plan into high gear, even as skepticism grows from the semiconductor industry. And, TSMC reports a big surge in profit and raises its revenue outlook for 2026, driven by strong demand for AI chips. (Source: Bloomberg)",
+      "content": "Bloomberg’s Caroline Hyde and Ed Ludlow discuss Anthropic's updated version of its AI model, Opus 4.7, released just a week after its limited release of Mythos. Plus, Elon Musk is kicking his Terafab plan into high gear, even as skepticism grows from the semiconductor industry. And, TSMC reports a big surge in profit and raises its revenue outlook for 2026, driven by strong demand for AI chips. (Source: Bloomberg)",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Netflix Is Still a Growth Stock Despite Q2 Forecast, Seaport's Joyce Says",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/netflix-is-still-a-growth-stock-seaport-s-joyce-says-video",
+      "pub_date": "Thu, 16 Apr 2026 20:42:31 GMT",
+      "categories": [
+        "NMS:NFLX"
+      ],
+      "description": "David Joyce, Seaport Research Partners senior analyst, says Netflix's full-year forecast reinforces that the company is still a growth stock, despite giving a forecast for the second quarter that fell short of analysts expectations. He speaks on \"Bloomberg The Close.\" (Source: Bloomberg)",
+      "content": "David Joyce, Seaport Research Partners senior analyst, says Netflix's full-year forecast reinforces that the company is still a growth stock, despite giving a forecast for the second quarter that fell short of analysts expectations. He speaks on \"Bloomberg The Close.\" (Source: Bloomberg)",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Anthropic’s Mythos a ‘Potent’ Tool for Cyber, Early Testers Say",
+      "link": "https://www.bloomberg.com/news/newsletters/2026-04-16/anthropic-s-mythos-a-potent-tool-for-cyber-early-testers-say",
+      "pub_date": "Thu, 16 Apr 2026 20:38:19 GMT",
+      "categories": [],
+      "description": "The new AI model represents a sharp improvement from prior offerings, according to people who’ve tried it.",
+      "content": "The new AI model represents a sharp improvement from prior offerings, according to people who’ve tried it.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Madison Air Soars After Raising $2.23 Billion in IPO",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/madison-air-soars-after-raising-2-23-billion-in-ipo-video",
+      "pub_date": "Thu, 16 Apr 2026 20:28:16 GMT",
+      "categories": [],
+      "description": "Jill Wyant, president and CEO of Madison Air, talks about the company’s IPO and the growing opportunity in data center infrastructure, including the buildout of Terafabs. The provider of ventilation and filtration systems raised $2.23 billion. Wyant speaks with Ed Ludlow on \"Bloomberg Tech.\"\n (Source: Bloomberg)",
+      "content": "Jill Wyant, president and CEO of Madison Air, talks about the company’s IPO and the growing opportunity in data center infrastructure, including the buildout of Terafabs. The provider of ventilation and filtration systems raised $2.23 billion. Wyant speaks with Ed Ludlow on \"Bloomberg Tech.\"\n (Source: Bloomberg)",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Musk Asks Suppliers to Move at \"Light Speed\" on Terafab Plan",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/musk-asks-suppliers-to-move-at-light-speed-for-terafab-video",
+      "pub_date": "Thu, 16 Apr 2026 20:03:34 GMT",
+      "categories": [
+        "KSC:005930"
+      ],
+      "description": "Elon Musk’s lieutenants have reached out to chip industry suppliers for his envisioned Terafab, early steps in an audacious and likely arduous attempt to break into the production of cutting-edge chips. Ed Ludlow has more. (Source: Bloomberg)",
+      "content": "Elon Musk’s lieutenants have reached out to chip industry suppliers for his envisioned Terafab, early steps in an audacious and likely arduous attempt to break into the production of cutting-edge chips. Ed Ludlow has more. (Source: Bloomberg)",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Goldman Sachs' Bordlemay on AI Investment and Inflation Caused by Market Uncertainty",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/bordlemay-on-inflation-caused-by-market-uncertainty-video",
+      "pub_date": "Thu, 16 Apr 2026 19:36:34 GMT",
+      "categories": [
+        "NYS:GS"
+      ],
+      "description": "Katherine Bordlemay, Goldman Sachs Asset Management Co-Head of Equity Client Portfolio Management, discussed the current equity market environment at all-time highs. She emphasized that equities are benefiting from upward earnings revisions, supported by significant and durable AI investment spending projected to reach $1 trillion over the next three to four years. (Source: Bloomberg)",
+      "content": "Katherine Bordlemay, Goldman Sachs Asset Management Co-Head of Equity Client Portfolio Management, discussed the current equity market environment at all-time highs. She emphasized that equities are benefiting from upward earnings revisions, supported by significant and durable AI investment spending projected to reach $1 trillion over the next three to four years. (Source: Bloomberg)",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Tiger Global-Backed Upscale AI in Talks for $2 Billion Valuation",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/tiger-global-backed-upscale-ai-in-talks-for-2-billion-valuation",
+      "pub_date": "Thu, 16 Apr 2026 19:32:33 GMT",
+      "categories": [],
+      "description": "Artificial intelligence startup Upscale AI is in talks to raise a new round of funding at a valuation of about $2 billion, according to people with knowledge of the efforts.",
+      "content": "Artificial intelligence startup Upscale AI is in talks to raise a new round of funding at a valuation of about $2 billion, according to people with knowledge of the efforts.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "OpenAI Takes on Google With New AI Model Aimed at Drug Discovery",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/openai-takes-on-google-with-new-ai-model-aimed-at-drug-discovery",
+      "pub_date": "Thu, 16 Apr 2026 19:00:10 GMT",
+      "categories": [
+        "NMS:GOOGL"
+      ],
+      "description": "OpenAI is rolling out an early version of an artificial intelligence model meant to speed up drug discoveries, joining a field of growing interest for tech companies eager to prove AI can pave the way for more scientific breakthroughs.",
+      "content": "OpenAI is rolling out an early version of an artificial intelligence model meant to speed up drug discoveries, joining a field of growing interest for tech companies eager to prove AI can pave the way for more scientific breakthroughs.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "UK AI Minister Hits Back at OpenAI for Pausing Stargate Project",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/uk-ai-minister-hits-back-at-openai-for-pausing-stargate-project",
+      "pub_date": "Thu, 16 Apr 2026 19:20:20 GMT",
+      "categories": [],
+      "description": "Britain’s AI minister dinged OpenAI for halting a major data center project in the UK and blaming the decision on the country’s energy costs and regulation.",
+      "content": "Britain’s AI minister dinged OpenAI for halting a major data center project in the UK and blaming the decision on the country’s energy costs and regulation.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Slash CEO on Displacing ‘Legacy’ Banks With AI Agents",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/slash-ceo-on-displacing-legacy-banks-with-ai-agents-video",
+      "pub_date": "Thu, 16 Apr 2026 19:18:18 GMT",
+      "categories": [],
+      "description": "Slash Financial recently raised $100 million to expand its hyper-tailored banking services into new global markets and industries. With $300 million in ARR, Slash is using AI agents to automate back-office tasks like document parsing and dispute processing. Co-founder and CEO Victor Cardenas speaks with Caroline Hyde and Ed Ludlow on “Bloomberg Tech.” (Source: Bloomberg)",
+      "content": "Slash Financial recently raised $100 million to expand its hyper-tailored banking services into new global markets and industries. With $300 million in ARR, Slash is using AI agents to automate back-office tasks like document parsing and dispute processing. Co-founder and CEO Victor Cardenas speaks with Caroline Hyde and Ed Ludlow on “Bloomberg Tech.” (Source: Bloomberg)",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Vista, Elliott’s Cloud Software Speeds Results to Calm AI Fears",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/vista-elliott-s-cloud-software-speeds-results-to-calm-ai-fears",
+      "pub_date": "Thu, 16 Apr 2026 19:18:17 GMT",
+      "categories": [],
+      "description": "Cloud Software Group Inc., formed after a leveraged buyout by Vista Equity Partners and Elliott Investment Management, has released several key earnings figures ahead of schedule amid fears around AI disruption.",
+      "content": "Cloud Software Group Inc., formed after a leveraged buyout by Vista Equity Partners and Elliott Investment Management, has released several key earnings figures ahead of schedule amid fears around AI disruption.",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "AI Cyber Race Is a Fight for Governance, Says Redpoint’s Brescia",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/ai-cyber-race-a-fight-for-governance-redpoint-s-brescia-video",
+      "pub_date": "Thu, 16 Apr 2026 19:11:31 GMT",
+      "categories": [],
+      "description": "OpenAI is doubling down on security with the rollout of GPT-5.4 \"Cyber,\" aiming to solve the trust and governance issues currently slowing enterprise adoption. Erica Brescia, managing director at Redpoint Ventures and OpenAI backer, speaks with Caroline Hyde and Ed Ludlow on “Bloomberg Tech.” (Source: Bloomberg)",
+      "content": "OpenAI is doubling down on security with the rollout of GPT-5.4 \"Cyber,\" aiming to solve the trust and governance issues currently slowing enterprise adoption. Erica Brescia, managing director at Redpoint Ventures and OpenAI backer, speaks with Caroline Hyde and Ed Ludlow on “Bloomberg Tech.” (Source: Bloomberg)",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "The Daily Wire Is Still Very, Very Popular",
+      "link": "https://www.bloomberg.com/news/newsletters/2026-04-16/the-daily-wire-backs-trump-on-iran-war-and-remains-very-very-popular",
+      "pub_date": "Thu, 16 Apr 2026 19:00:00 GMT",
+      "categories": [],
+      "description": "The latest podcast rankings from Edison Research show a surprising riser",
+      "content": "The latest podcast rankings from Edison Research show a surprising riser",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Anthropic Releases AI Model With Weaker Cyber Skills Than Mythos",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/anthropic-releases-updated-opus-ai-model-video",
+      "pub_date": "Thu, 16 Apr 2026 18:55:27 GMT",
+      "categories": [],
+      "description": "Anthropic has launched an updated version of its AI model Opus, enhancing its software engineering and computer vision capabilities just one week after the limited release of its \"Mythos\" model. Bloomberg’s Rachel Metz discusses the company's staggering $800 billion valuation with Caroline Hyde and Ed Ludlow on “Bloomberg Tech.” (Source: Bloomberg)",
+      "content": "Anthropic has launched an updated version of its AI model Opus, enhancing its software engineering and computer vision capabilities just one week after the limited release of its \"Mythos\" model. Bloomberg’s Rachel Metz discusses the company's staggering $800 billion valuation with Caroline Hyde and Ed Ludlow on “Bloomberg Tech.” (Source: Bloomberg)",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Software Deals to Come Back This Year: Citi's Goel",
+      "link": "https://www.bloomberg.com/news/videos/2026-04-16/software-deals-to-come-back-this-year-citi-s-goel-video",
+      "pub_date": "Thu, 16 Apr 2026 18:52:44 GMT",
+      "categories": [],
+      "description": "Pankaj Goel, co-head of technology investment banking at Citi, joins Scarlet Fu on \"Bloomberg Markets.\" They discuss the rise of AI and the difficulties in the software industry.   (Source: Bloomberg)",
+      "content": "Pankaj Goel, co-head of technology investment banking at Citi, joins Scarlet Fu on \"Bloomberg Markets.\" They discuss the rise of AI and the difficulties in the software industry.   (Source: Bloomberg)",
+      "source_name": "Bloomberg Tech",
+      "source_category": "科技",
+      "source_priority": "high"
+    },
+    {
+      "title": "Flow Capital Puts $150 Million Private Credit Fund on Blockchain",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-17/flow-capital-puts-150-million-private-credit-fund-on-blockchain",
+      "pub_date": "Fri, 17 Apr 2026 02:13:47 GMT",
+      "categories": [],
+      "description": "Flow Capital Partners plans to offer its $150 million private credit fund on a Singapore-based blockchain platform by month end, positioning itself among the first Asian managers to tap growing stablecoin liquidity.",
+      "content": "Flow Capital Partners plans to offer its $150 million private credit fund on a Singapore-based blockchain platform by month end, positioning itself among the first Asian managers to tap growing stablecoin liquidity.",
+      "source_name": "Bloomberg Crypto",
+      "source_category": "Crypto",
+      "source_priority": "high"
+    },
+    {
+      "title": "Permissionless Becomes a Policy Problem as Crypto Goes Mainstream",
+      "link": "https://www.bloomberg.com/news/newsletters/2026-04-16/permissionless-becomes-a-policy-problem-as-crypto-goes-mainstream",
+      "pub_date": "Thu, 16 Apr 2026 21:00:00 GMT",
+      "categories": [],
+      "description": "A window into a broader discussion on regulating crypto.",
+      "content": "A window into a broader discussion on regulating crypto.",
+      "source_name": "Bloomberg Crypto",
+      "source_category": "Crypto",
+      "source_priority": "high"
+    },
+    {
+      "title": "A $285 Million Crypto Hack and Falling Rates Rock DeFi World",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/a-285-million-crypto-hack-and-falling-yields-rock-defi-industry",
+      "pub_date": "Thu, 16 Apr 2026 12:15:43 GMT",
+      "categories": [],
+      "description": "Decentralized finance, once among the most dynamic corners of the digital-asset industry, is under pressure from almost every direction.",
+      "content": "Decentralized finance, once among the most dynamic corners of the digital-asset industry, is under pressure from almost every direction.",
+      "source_name": "Bloomberg Crypto",
+      "source_category": "Crypto",
+      "source_priority": "high"
+    },
+    {
+      "title": "French Authorities Shield Crypto Execs After Kidnapping Spree",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/french-authorities-shield-crypto-execs-after-kidnapping-spree",
+      "pub_date": "Thu, 16 Apr 2026 16:31:07 GMT",
+      "categories": [],
+      "description": "Authorities in France are trying to reassure jittery digital-asset executives and investors, as a spate of kidnappings and attempted abductions threatens to upend the country’s crypto hub ambitions.",
+      "content": "Authorities in France are trying to reassure jittery digital-asset executives and investors, as a spate of kidnappings and attempted abductions threatens to upend the country’s crypto hub ambitions.",
+      "source_name": "Bloomberg Crypto",
+      "source_category": "Crypto",
+      "source_priority": "high"
+    },
+    {
+      "title": "Hacked Crypto Platform to Relaunch After Securing New Funding",
+      "link": "https://www.bloomberg.com/news/articles/2026-04-16/hacked-crypto-platform-to-relaunch-after-securing-new-funding",
+      "pub_date": "Thu, 16 Apr 2026 14:32:18 GMT",
+      "categories": [],
+      "description": "Decentralized finance platform Drift Protocol, the victim of an exploit earlier this month where hackers stole approximately $285 million of users’ cryptocurrency, plans to relaunch after securing around $150 million in funding from a consortium led by stablecoin issuer Tether Holdings SA.",
+      "content": "Decentralized finance platform Drift Protocol, the victim of an exploit earlier this month where hackers stole approximately $285 million of users’ cryptocurrency, plans to relaunch after securing around $150 million in funding from a consortium led by stablecoin issuer Tether Holdings SA.",
+      "source_name": "Bloomberg Crypto",
+      "source_category": "Crypto",
+      "source_priority": "high"
+    },
+    {
+      "title": "New York Fed President Williams worries war will slow growth, aggravate inflation",
+      "link": "https://www.cnbc.com/2026/04/16/new-york-fed-president-williams-worries-war-will-slow-growth-aggravate-inflation.html",
+      "pub_date": "Thu, 16 Apr 2026 13:58:42 GMT",
+      "categories": [],
+      "description": "Williams noted that the conflict has \"intensified the uncertainty\" around national and local conditions.",
+      "content": "Williams noted that the conflict has \"intensified the uncertainty\" around national and local conditions.",
+      "source_name": "CNBC Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "UK economy grew 0.5% in February, beating economists' expectations by a long shot",
+      "link": "https://www.cnbc.com/2026/04/16/uk-gdp-march-2026-iran-war.html",
+      "pub_date": "Thu, 16 Apr 2026 07:00:17 GMT",
+      "categories": [],
+      "description": "Economists polled by Reuters expected U.K. gross domestic product (GDP) to have expanded by 0.1% month-on-month.",
+      "content": "Economists polled by Reuters expected U.K. gross domestic product (GDP) to have expanded by 0.1% month-on-month.",
+      "source_name": "CNBC Markets",
+      "source_category": "美股",
+      "source_priority": "high"
+    },
+    {
+      "title": "Michael Burry buys the dip in Salesforce and other software stocks after AI-fueled sell-off",
+      "link": "https://www.cnbc.com/2026/04/16/burry-buys-the-dip-in-salesforce-and-other-software-stocks-after-sell-off.html",
+      "pub_date": "Thu, 16 Apr 2026 18:49:00 GMT",
+      "categories": [],
+      "description": "\"I do not believe the technical pressures brought on by the private credit/software debt issues are big enough to affect these stocks for much longer,\" he said.",
+      "content": "\"I do not believe the technical pressures brought on by the private credit/software debt issues are big enough to affect these stocks for much longer,\" he said.",
+      "source_name": "CNBC Finance",
+      "source_category": "宏观",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Retail traders pile into Allbirds after odd AI pivot. History shows it won't end well",
+      "link": "https://www.cnbc.com/2026/04/16/retail-traders-pile-into-allbirds-after-odd-ai-pivot-history-shows-it-wont-end-well.html",
+      "pub_date": "Thu, 16 Apr 2026 17:04:59 GMT",
+      "categories": [],
+      "description": "This surge of speculative buying reflects a broader return of animal spirits among small traders.",
+      "content": "This surge of speculative buying reflects a broader return of animal spirits among small traders.",
+      "source_name": "CNBC Finance",
+      "source_category": "宏观",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Stocks making the biggest moves premarket: PepsiCo, Taiwan Semiconductor, Voyager Technologies, PPG & more",
+      "link": "https://www.cnbc.com/2026/04/16/stocks-making-the-biggest-moves-premarket-.html",
+      "pub_date": "Thu, 16 Apr 2026 12:22:09 GMT",
+      "categories": [],
+      "description": "These are the stocks posting the largest moves in the premarket.",
+      "content": "These are the stocks posting the largest moves in the premarket.",
+      "source_name": "CNBC Finance",
+      "source_category": "宏观",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Regulators are reportedly zeroing in on suspicious trades ahead of market-moving Trump post",
+      "link": "https://www.cnbc.com/2026/04/15/regulators-reportedly-zeroing-in-on-suspicious-trades-ahead-of-trump-post.html",
+      "pub_date": "Thu, 16 Apr 2026 11:08:33 GMT",
+      "categories": [],
+      "description": "The information sought includes so-called Tag 50 identifiers, which can be used to determine who was behind the trades.",
+      "content": "The information sought includes so-called Tag 50 identifiers, which can be used to determine who was behind the trades.",
+      "source_name": "CNBC Finance",
+      "source_category": "宏观",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Abbott Laboratories: This Dividend Growth King Has Rarely Been So Cheap",
+      "link": "https://seekingalpha.com/article/4891320-abbott-laboratories-this-dividend-growth-king-has-rarely-been-so-cheap?source=feed_tag_editors_picks",
+      "pub_date": "Thu, 16 Apr 2026 12:52:49 -0400",
+      "categories": [
+        "ABT",
+        "ABT:CA",
+        "Brendan O'Boyle"
+      ],
+      "description": "",
+      "content": "",
+      "source_name": "Seeking Alpha Editors' Picks",
+      "source_category": "深度洞察",
+      "source_priority": "high"
+    },
+    {
+      "title": "Latest AI models could threaten world banking system, financial officials warn",
+      "link": "https://www.ft.com/content/5760b56a-ec83-46da-a301-4b0e8c73c238",
+      "pub_date": "Fri, 17 Apr 2026 04:00:40 GMT",
+      "categories": [],
+      "description": "Anthropic’s new Claude Mythos Preview model could expose vulnerabilities in lenders’ cyber defences",
+      "content": "Anthropic’s new Claude Mythos Preview model could expose vulnerabilities in lenders’ cyber defences",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Humanoid robot chases wild boars off the streets of Warsaw",
+      "link": "https://www.ft.com/content/69730377-19cc-43e3-94d9-e3f0246654f6",
+      "pub_date": "Fri, 17 Apr 2026 04:00:32 GMT",
+      "categories": [],
+      "description": "Video of Rolex-wearing robot goes viral as it becomes Poland’s first robotic influencer on social media",
+      "content": "Video of Rolex-wearing robot goes viral as it becomes Poland’s first robotic influencer on social media",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Why we must shield our children from social media",
+      "link": "https://www.ft.com/content/128b2e15-eb46-4083-80be-704b170d9600",
+      "pub_date": "Fri, 17 Apr 2026 04:00:32 GMT",
+      "categories": [],
+      "description": "Protecting kids from techno-oligarchs is a legal and moral duty — and other governments should follow Spain’s example",
+      "content": "Protecting kids from techno-oligarchs is a legal and moral duty — and other governments should follow Spain’s example",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Inside China’s probe of Meta’s ‘conspiratorial’ $2bn Manus deal",
+      "link": "https://www.ft.com/content/30383351-763e-4863-a8aa-12cac1dec4c2",
+      "pub_date": "Fri, 17 Apr 2026 04:00:22 GMT",
+      "categories": [],
+      "description": "The landmark tech exit has quickly become central to China’s national security agenda",
+      "content": "The landmark tech exit has quickly become central to China’s national security agenda",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Data centre delays threaten to choke AI expansion",
+      "link": "https://www.ft.com/content/f2bae708-f5c3-49b0-99c0-e4a11552427b",
+      "pub_date": "Fri, 17 Apr 2026 04:00:12 GMT",
+      "categories": [],
+      "description": "Almost 40% of such builds in US risk hold-ups, including projects tied to Microsoft and OpenAI",
+      "content": "Almost 40% of such builds in US risk hold-ups, including projects tied to Microsoft and OpenAI",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Netflix founder Reed Hastings to step down from board",
+      "link": "https://www.ft.com/content/1c89d041-f46f-4190-b9b0-3565c0cdd079",
+      "pub_date": "Fri, 17 Apr 2026 00:08:13 GMT",
+      "categories": [],
+      "description": "Shares fall more than 9% as streamer posts weak profit forecast and chair announces plans to leave in June",
+      "content": "Shares fall more than 9% as streamer posts weak profit forecast and chair announces plans to leave in June",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Anthropic in talks to give US government access to its Mythos model",
+      "link": "https://www.ft.com/content/c9f5b690-a10e-4c66-9245-017f8bfbc7b4",
+      "pub_date": "Thu, 16 Apr 2026 23:30:36 GMT",
+      "categories": [],
+      "description": "Discussions come despite federal lawsuits over whether the start-up is a national security risk",
+      "content": "Discussions come despite federal lawsuits over whether the start-up is a national security risk",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "OnlyFans-style age checks should be social media standard, says Starmer",
+      "link": "https://www.ft.com/content/482a3067-602e-4111-931c-eaa8b1edc8dc",
+      "pub_date": "Thu, 16 Apr 2026 17:45:44 GMT",
+      "categories": [],
+      "description": "Prime minister says ‘things can’t go on like this’ in meeting with technology companies",
+      "content": "Prime minister says ‘things can’t go on like this’ in meeting with technology companies",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "UK firms ‘should be worried’ about Anthropic’s latest AI model, minister says",
+      "link": "https://www.ft.com/content/450cd25e-a9de-445d-98e3-725ca1092792",
+      "pub_date": "Thu, 16 Apr 2026 17:30:05 GMT",
+      "categories": [],
+      "description": "Kanishka Narayan says Britain needs to ‘make most of opportunities’ as government launches £500mn unit",
+      "content": "Kanishka Narayan says Britain needs to ‘make most of opportunities’ as government launches £500mn unit",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "The Mythos cyber scare signals the economics of AI scarcity",
+      "link": "https://www.ft.com/content/53f9bb30-3abc-4f4d-bf0d-99410d0ab77f",
+      "pub_date": "Thu, 16 Apr 2026 17:05:35 GMT",
+      "categories": [],
+      "description": "As the capabilities of frontier models advance, gaining access to the technology could become critically important",
+      "content": "As the capabilities of frontier models advance, gaining access to the technology could become critically important",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "AI has an Awful Image problem",
+      "link": "https://www.ft.com/content/221470bd-ac17-4aa5-a8df-92e454f47c28",
+      "pub_date": "Thu, 16 Apr 2026 16:27:06 GMT",
+      "categories": [],
+      "description": "Modern-day Luddites are gaining ground because tech titans haven’t shown people how innovation will improve their lives",
+      "content": "Modern-day Luddites are gaining ground because tech titans haven’t shown people how innovation will improve their lives",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Crypto and AI Pacs raise $250mn ahead of US midterm elections",
+      "link": "https://www.ft.com/content/addbcf9e-d352-417b-af1c-ab1acae35771",
+      "pub_date": "Thu, 16 Apr 2026 13:47:14 GMT",
+      "categories": [],
+      "description": "Investors Marc Andreessen and Ben Horowitz gave $25mn to pro-AI Super Pac in first quarter of year",
+      "content": "Investors Marc Andreessen and Ben Horowitz gave $25mn to pro-AI Super Pac in first quarter of year",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "How (un)reliable are AI agents?",
+      "link": "https://www.ft.com/content/52b15e28-e4d2-4694-8f34-f1c30de7e9d8",
+      "pub_date": "Thu, 16 Apr 2026 11:30:04 GMT",
+      "categories": [],
+      "description": "Consistency matters more than average accuracy in safety-critical domains",
+      "content": "Consistency matters more than average accuracy in safety-critical domains",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "It’s clear we won’t regulate AI for safety’s sake",
+      "link": "https://www.ft.com/content/7e092197-1671-490f-8adc-2df91d8d039f",
+      "pub_date": "Thu, 16 Apr 2026 10:00:04 GMT",
+      "categories": [],
+      "description": "As usual, governments will barely affect the trends that most affect our lives",
+      "content": "As usual, governments will barely affect the trends that most affect our lives",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Taiwan overtakes UK in stock market value on AI chip boom",
+      "link": "https://www.ft.com/content/4e647b69-f130-4864-944c-3b4c0fcb1dbc",
+      "pub_date": "Thu, 16 Apr 2026 07:03:36 GMT",
+      "categories": [],
+      "description": "Crossover comes as chipmaker TSMC reports record first-quarter profit",
+      "content": "Crossover comes as chipmaker TSMC reports record first-quarter profit",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "China’s surging chip tool imports from south-east Asia",
+      "link": "https://www.ft.com/content/708c0fe1-fd67-430d-93ff-027248d0e132",
+      "pub_date": "Thu, 16 Apr 2026 06:39:42 GMT",
+      "categories": [],
+      "description": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
+      "content": "The inside story on the Asia tech trends that matter, from Nikkei Asia and the Financial Times",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Does AI want to be free?",
+      "link": "https://www.ft.com/content/4ce24508-b146-417f-a0ca-749c2ed39ffa",
+      "pub_date": "Thu, 16 Apr 2026 05:30:01 GMT",
+      "categories": [],
+      "description": "Plus, global imbalances and global crises",
+      "content": "Plus, global imbalances and global crises",
+      "source_name": "FT Tech",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Global imbalances are back. Who’s to blame?",
+      "link": "https://www.economist.com/finance-and-economics/2026/04/16/global-imbalances-are-back-whos-to-blame",
+      "pub_date": "Thu, 16 Apr 2026 09:58:29 +0000",
+      "categories": [],
+      "description": "The suspects look familiar",
+      "content": "The suspects look familiar",
+      "source_name": "The Economist Finance",
+      "source_category": "宏观",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Pakistan’s deft diplomacy is an economic blessing. And a curse",
+      "link": "https://www.economist.com/finance-and-economics/2026/04/16/pakistans-deft-diplomacy-is-an-economic-blessing-and-a-curse",
+      "pub_date": "Thu, 16 Apr 2026 09:58:04 +0000",
+      "categories": [],
+      "description": "It allows the country’s rulers to put off necessary reforms",
+      "content": "It allows the country’s rulers to put off necessary reforms",
+      "source_name": "The Economist Finance",
+      "source_category": "宏观",
+      "source_priority": "medium"
+    },
+    {
+      "title": "New leaders, new fund: Sequoia has raised $7B to expand its AI bets",
+      "link": "https://techcrunch.com/2026/04/16/new-leaders-new-fund-sequoia-has-raised-7b-to-expand-its-ai-bets/",
+      "pub_date": "Fri, 17 Apr 2026 02:55:06 +0000",
+      "categories": [
+        "Venture",
+        "alfred lin",
+        "factory",
+        "Pat Grady",
+        "Physical Intelligence",
+        "Sequoia Capital"
+      ],
+      "description": "The fundraise is the first major capital raise under Sequoia's new leadership, with Alfred Lin and Pat Grady now serving as co-stewards of the 54-year-old firm.",
+      "content": "The fundraise is the first major capital raise under Sequoia's new leadership, with Alfred Lin and Pat Grady now serving as co-stewards of the 54-year-old firm.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Factory hits $1.5B valuation to build AI coding for enterprises",
+      "link": "https://techcrunch.com/2026/04/16/factory-hits-1-5b-valuation-to-build-ai-coding-for-enterprises/",
+      "pub_date": "Thu, 16 Apr 2026 22:55:30 +0000",
+      "categories": [
+        "AI",
+        "Startups",
+        "Khosla Ventures",
+        "Sequioa",
+        "In Brief",
+        "AI coding tools"
+      ],
+      "description": "The three-year-old startup raised $150 million led by Khosla Ventures.",
+      "content": "The three-year-old startup raised $150 million led by Khosla Ventures.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Luma launches AI-powered production studio with faith-focused Wonder Project",
+      "link": "https://techcrunch.com/2026/04/16/luma-launches-ai-powered-production-studio-with-faith-focused-wonder-project/",
+      "pub_date": "Thu, 16 Apr 2026 21:58:08 +0000",
+      "categories": [
+        "AI",
+        "Media & Entertainment",
+        "Startups",
+        "AI video generation",
+        "film",
+        "Hollywood",
+        "innovative dreams",
+        "Luma",
+        "wonder project"
+      ],
+      "description": "The studio's first project will be about Moses and star Academy Award-winner Ben Kingsley, to be released this spring on Prime Video.",
+      "content": "The studio's first project will be about Moses and star Academy Award-winner Ben Kingsley, to be released this spring on Prime Video.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Netflix co-founder and chair Reed Hastings to leave board",
+      "link": "https://techcrunch.com/2026/04/16/netflix-co-founder-and-chair-reed-hastings-to-leave-board/",
+      "pub_date": "Thu, 16 Apr 2026 21:22:14 +0000",
+      "categories": [
+        "Media & Entertainment",
+        "Netflix",
+        "Reed Hastings",
+        "streaming"
+      ],
+      "description": "Hastings helped to transform the video rental industry — first with physical, then digital, delivery.",
+      "content": "Hastings helped to transform the video rental industry — first with physical, then digital, delivery.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Upscale AI in talks to raise at $2B valuation, says report",
+      "link": "https://techcrunch.com/2026/04/16/upscale-ai-in-talks-to-raise-at-2b-valuation-says-report/",
+      "pub_date": "Thu, 16 Apr 2026 20:41:13 +0000",
+      "categories": [
+        "AI",
+        "Startups",
+        "Venture",
+        "In Brief",
+        "upscale"
+      ],
+      "description": "AI infrastructure company Upscale AI is reportedly in talks to raise its third funding round since launching just seven months ago.",
+      "content": "AI infrastructure company Upscale AI is reportedly in talks to raise its third funding round since launching just seven months ago.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Physical Intelligence, a hot robotics startup, says its new robot brain can figure out tasks it was never taught",
+      "link": "https://techcrunch.com/2026/04/16/physical-intelligence-a-hot-robotics-startup-says-its-new-robot-brain-can-figure-out-tasks-it-was-never-taught/",
+      "pub_date": "Thu, 16 Apr 2026 20:26:44 +0000",
+      "categories": [
+        "AI",
+        "Robotics",
+        "Exclusive",
+        "Physical Intelligence"
+      ],
+      "description": "The new model, called π0.7, represents what the company describes as an early but meaningful step toward the long-sought goal of a general-purpose robot brain.",
+      "content": "The new model, called π0.7, represents what the company describes as an early but meaningful step toward the long-sought goal of a general-purpose robot brain.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "From the Startup Battlefield stage to the International Space Station: geCKo Materials built a sticky product",
+      "link": "https://techcrunch.com/2026/04/16/from-the-startup-battlefield-stage-to-the-international-space-station-gecko-materials-built-a-sticky-product/",
+      "pub_date": "Thu, 16 Apr 2026 19:50:10 +0000",
+      "categories": [
+        "Startups",
+        "Academia",
+        "Build Mode",
+        "Build Mode Video",
+        "founder advice",
+        "hardware",
+        "podcast"
+      ],
+      "description": "This week on Build Mode, Isabelle Johannessen speaks with Capella Kerst, founder and CEO of geCKo Materials.",
+      "content": "This week on Build Mode, Isabelle Johannessen speaks with Capella Kerst, founder and CEO of geCKo Materials.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Slash, a Ramp competitor founded by teenagers, raises $100M at $1.4B valuation",
+      "link": "https://techcrunch.com/2026/04/16/slash-a-ramp-competitor-founded-by-teenagers-raises-100m-at-1-4b-valuation/",
+      "pub_date": "Thu, 16 Apr 2026 19:20:46 +0000",
+      "categories": [
+        "Fintech",
+        "Startups",
+        "TC",
+        "In Brief",
+        "Khosla Ventures",
+        "Ribbit Capital",
+        "slash financial",
+        "spend management"
+      ],
+      "description": "Five years later the founders, now 24 years old, say their startup has achieved $300 million in annualized revenue.",
+      "content": "Five years later the founders, now 24 years old, say their startup has achieved $300 million in annualized revenue.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "OpenAI takes aim at Anthropic with beefed-up Codex that gives it more power over your desktop",
+      "link": "https://techcrunch.com/2026/04/16/openai-takes-aim-at-anthropic-with-beefed-up-codex-that-gives-it-more-power-over-your-desktop/",
+      "pub_date": "Thu, 16 Apr 2026 19:18:41 +0000",
+      "categories": [
+        "AI",
+        "Enterprise",
+        "agents",
+        "Anthropic",
+        "claude code",
+        "codex",
+        "OpenAI"
+      ],
+      "description": "OpenAI's agentic coding tool has gotten a major makeover, with a variety of new powers and abilities.",
+      "content": "OpenAI's agentic coding tool has gotten a major makeover, with a variety of new powers and abilities.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "European police email 75,000 people asking them to stop DDoS attacks",
+      "link": "https://techcrunch.com/2026/04/16/european-police-email-75000-people-asking-them-to-stop-ddos-attacks/",
+      "pub_date": "Thu, 16 Apr 2026 18:53:09 +0000",
+      "categories": [
+        "Security",
+        "cybercrime",
+        "cybersecurity",
+        "ddos",
+        "DDoS attacks",
+        "distributed denial of service",
+        "Europol",
+        "In Brief",
+        "law enforcement"
+      ],
+      "description": "Europol coordinated an operation against for-hire distributed denial-of-service (DDoS) services, including the arrest of four people and the takedown of 53 domains.",
+      "content": "Europol coordinated an operation against for-hire distributed denial-of-service (DDoS) services, including the arrest of four people and the takedown of 53 domains.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Anthropic CPO leaves Figma’s board after reports he will offer a competing product",
+      "link": "https://techcrunch.com/2026/04/16/anthropic-cpo-leaves-figmas-board-after-reports-he-will-offer-a-competing-product/",
+      "pub_date": "Thu, 16 Apr 2026 18:28:42 +0000",
+      "categories": [
+        "AI",
+        "Figma",
+        "mike krieger",
+        "Anthropic",
+        "In Brief"
+      ],
+      "description": "Krieger's departure and any forthcoming design tools will be another data point for investors who fear the SaaSpocalypse — that the largest AI labs will come to dominate software businesses, a thesis that has rocked public markets at times this year.",
+      "content": "Krieger's departure and any forthcoming design tools will be another data point for investors who fear the SaaSpocalypse — that the largest AI labs will come to dominate software businesses, a thesis that has rocked public markets at times this year.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "It’s not just you — Bluesky is (sorta) down",
+      "link": "https://techcrunch.com/2026/04/16/its-not-just-you-bluesky-is-sorta-down/",
+      "pub_date": "Thu, 16 Apr 2026 17:11:20 +0000",
+      "categories": [
+        "Security",
+        "Social",
+        "Bluesky",
+        "cybersecurity",
+        "denial of service",
+        "In Brief"
+      ],
+      "description": "Bluesky has been experiencing ongoing service disruptions since just before 3 a.m. ET.",
+      "content": "Bluesky has been experiencing ongoing service disruptions since just before 3 a.m. ET.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Everything we like is a psyop",
+      "link": "https://techcrunch.com/2026/04/16/everything-we-like-is-a-psyop/",
+      "pub_date": "Thu, 16 Apr 2026 17:03:18 +0000",
+      "categories": [
+        "Media & Entertainment",
+        "Social",
+        "TikTok",
+        "geese",
+        "katseye",
+        "chaotic good"
+      ],
+      "description": "If culture is shaped by TikTok's algorithmic feed, then it's time for us to decide where we draw the line between necessary marketing and inauthentic growth hacking.",
+      "content": "If culture is shaped by TikTok's algorithmic feed, then it's time for us to decide where we draw the line between necessary marketing and inauthentic growth hacking.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Google now lets you explore the web side-by-side with AI Mode",
+      "link": "https://techcrunch.com/2026/04/16/google-now-lets-you-explore-the-web-side-by-side-with-ai-mode/",
+      "pub_date": "Thu, 16 Apr 2026 17:00:00 +0000",
+      "categories": [
+        "AI",
+        "Apps",
+        "ai mode",
+        "Google"
+      ],
+      "description": "Now, when you're using AI Mode on Chrome desktop, clicking a link will open the web page side-by-side with AI Mode.",
+      "content": "Now, when you're using AI Mode on Chrome desktop, clicking a link will open the web page side-by-side with AI Mode.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Two Americans sentenced for helping North Korea steal $5 million in fake IT worker scheme",
+      "link": "https://techcrunch.com/2026/04/16/two-americans-sentenced-for-helping-north-korea-steal-5-million-in-fake-it-worker-scheme/",
+      "pub_date": "Thu, 16 Apr 2026 16:16:51 +0000",
+      "categories": [
+        "Security",
+        "department of justice",
+        "DPRK",
+        "Kim Jong-un",
+        "North Korea"
+      ],
+      "description": "The U.S. Department of Justice announced that two Americans were sentenced to years in prison for helping the North Korean government place fake IT workers in U.S. companies.",
+      "content": "The U.S. Department of Justice announced that two Americans were sentenced to years in prison for helping the North Korean government place fake IT workers in U.S. companies.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "InsightFinder raises $15M to help companies figure out where AI agents go wrong",
+      "link": "https://techcrunch.com/2026/04/16/insightfinder-raises-15m-to-help-companies-figure-out-where-ai-agents-go-wrong/",
+      "pub_date": "Thu, 16 Apr 2026 16:15:00 +0000",
+      "categories": [
+        "AI",
+        "Enterprise",
+        "Fundraising",
+        "data observability",
+        "Datadog",
+        "Dynatrace",
+        "Grafana Labs",
+        "InsightFinder"
+      ],
+      "description": "According to CEO Helen Gu, the biggest problem facing the industry today is not just monitoring and diagnosing where AI models go wrong — it's also diagnosing how the entire tech stack operates now that AI is part of it.",
+      "content": "According to CEO Helen Gu, the biggest problem facing the industry today is not just monitoring and diagnosing where AI models go wrong — it's also diagnosing how the entire tech stack operates now that AI is part of it.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "AI traffic to US retailers rose 393% in Q1, and it’s boosting their revenue too",
+      "link": "https://techcrunch.com/2026/04/16/ai-traffic-to-us-retailers-rose-393-in-q1-and-its-boosting-their-revenue-too/",
+      "pub_date": "Thu, 16 Apr 2026 16:14:03 +0000",
+      "categories": [
+        "AI",
+        "Commerce",
+        "Adobe",
+        "agentic commerce",
+        "eCommerce",
+        "online shopping"
+      ],
+      "description": "Adobe says AI traffic to U.S. retail sites also jumped 269% in March, with visitors converting better and generating more revenue than non-AI shoppers.",
+      "content": "Adobe says AI traffic to U.S. retail sites also jumped 269% in March, with visitors converting better and generating more revenue than non-AI shoppers.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Roblox’s AI assistant gets new agentic tools to plan, build, and test games",
+      "link": "https://techcrunch.com/2026/04/16/robloxs-ai-assistant-gets-new-agentic-tools-to-plan-build-and-test-games/",
+      "pub_date": "Thu, 16 Apr 2026 16:00:00 +0000",
+      "categories": [
+        "AI",
+        "Gaming",
+        "Social",
+        "Exclusive",
+        "game design",
+        "game development",
+        "Roblox"
+      ],
+      "description": "The new tools are designed to help creators throughout the entire development process.",
+      "content": "The new tools are designed to help creators throughout the entire development process.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Google adds Nano Banana-powered image generation to Gemini’s Personal Intelligence",
+      "link": "https://techcrunch.com/2026/04/16/google-adds-nano-banana-powered-image-generation-to-geminis-personal-intelligence/",
+      "pub_date": "Thu, 16 Apr 2026 16:00:00 +0000",
+      "categories": [
+        "Apps",
+        "gemini",
+        "Google",
+        "image generation",
+        "Nano Banana 2"
+      ],
+      "description": "That means its AI images can be created using Gemini's understanding of your likes and interests, without those having to be explicitly noted in the prompt.",
+      "content": "That means its AI images can be created using Gemini's understanding of your likes and interests, without those having to be explicitly noted in the prompt.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "Google is now targeting bad ads over bad actors",
+      "link": "https://techcrunch.com/2026/04/16/google-blocked-more-ads-but-banned-fewer-advertisers-as-ai-reshapes-enforcement/",
+      "pub_date": "Thu, 16 Apr 2026 15:00:00 +0000",
+      "categories": [
+        "AI",
+        "ad fraud",
+        "Google",
+        "Google Ads"
+      ],
+      "description": "Google blocked 8.3 billion ads in 2025 but suspended fewer advertisers.",
+      "content": "Google blocked 8.3 billion ads in 2025 but suspended fewer advertisers.",
+      "source_name": "TechCrunch",
+      "source_category": "科技",
+      "source_priority": "medium"
+    },
+    {
+      "title": "American Express to acquire AI expense startup Hyper",
+      "link": "https://www.techinasia.com/news/american-express-to-acquire-ai-expense-startup-hyper",
+      "pub_date": "Fri, 17 Apr 2026 04:07:32 +0000",
+      "categories": [
+        "Acquisitions",
+        "Artificial Intelligence",
+        "News",
+        "ai",
+        "american express",
+        "hyper",
+        "sam altman"
+      ],
+      "description": "Hyper’s software uses AI agents to categorize expenses tracking and reporting.",
+      "content": "Hyper’s software uses AI agents to categorize expenses tracking and reporting.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "The end of fragmented data",
+      "link": "https://www.techinasia.com/video/end-fragmented",
+      "pub_date": "Fri, 17 Apr 2026 04:00:47 +0000",
+      "categories": [
+        "Paid Content Partnerships",
+        "Studios",
+        "Videos",
+        "ai",
+        "analytics",
+        "data",
+        "data agent",
+        "data infrastructure",
+        "enterprise",
+        "super insight",
+        "unstructured data"
+      ],
+      "description": "Singdata’s Ethan Yu shares how an AI-native data platform helps organizations process unstructured \"dark data\" to create more effective AI solutions.",
+      "content": "Singdata’s Ethan Yu shares how an AI-native data platform helps organizations process unstructured \"dark data\" to create more effective AI solutions.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Banks pour billions into AI, but most see no ROI. Here’s why",
+      "link": "https://www.techinasia.com/banks-pour-billions-ai-roi-heres",
+      "pub_date": "Fri, 17 Apr 2026 04:00:07 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "Insights",
+        "Opinion",
+        "Premium Content",
+        "banking",
+        "banks",
+        "digital banks",
+        "dyna.ai",
+        "fintech",
+        "private banking",
+        "wealth management"
+      ],
+      "description": "AI copilots promise scale, but most never reach the frontline. The difference comes down to workflow and revenue impact.",
+      "content": "AI copilots promise scale, but most never reach the frontline. The difference comes down to workflow and revenue impact.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "OpenAI to spend over $20b on Cerebras chips",
+      "link": "https://www.techinasia.com/news/openai-spend-20b-cerebras-chips",
+      "pub_date": "Fri, 17 Apr 2026 04:00:00 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "Investments",
+        "News",
+        "ai",
+        "Cerebras",
+        "openai",
+        "United States"
+      ],
+      "description": "OpenAI may gain up to a 10% stake in Cerebras if spending hits US$30 billion.",
+      "content": "OpenAI may gain up to a 10% stake in Cerebras if spending hits US$30 billion.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "SG cloud startup OrtCloud raises $1.7m pre-seed",
+      "link": "https://www.techinasia.com/news/sg-cloud-startup-ortcloud-raises-1-7m-pre-seed",
+      "pub_date": "Fri, 17 Apr 2026 03:47:13 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "News",
+        "Startups",
+        "cloud infrastructure",
+        "Golden Gate Ventures",
+        "OrtCloud",
+        "Singapore"
+      ],
+      "description": "OrtCloud said has reached seven-figure annual recurring revenue and has customers including OpenAI and Samsung.",
+      "content": "OrtCloud said has reached seven-figure annual recurring revenue and has customers including OpenAI and Samsung.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Sequoia Capital raises $7b for new fund",
+      "link": "https://www.techinasia.com/news/sequoia-capital-raises-7b-fund",
+      "pub_date": "Fri, 17 Apr 2026 03:12:25 +0000",
+      "categories": [
+        "Investments",
+        "News",
+        "ai",
+        "Anthropic",
+        "openai",
+        "Sequoia Capital"
+      ],
+      "description": "The fund gives Sequoia Capital more room to back large private companies.",
+      "content": "The fund gives Sequoia Capital more room to back large private companies.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Japan to give Sony $380m subsidy for sensor plant",
+      "link": "https://www.techinasia.com/news/japan-to-give-sony-380m-subsidy-for-sensor-plant",
+      "pub_date": "Fri, 17 Apr 2026 03:10:58 +0000",
+      "categories": [
+        "News",
+        "autonomous driving",
+        "image sensors",
+        "Japan",
+        "sony"
+      ],
+      "description": "It aims to secure a stable supply for uses including autonomous driving and physical AI, Industry Minister Ryosei Akazawa said.",
+      "content": "It aims to secure a stable supply for uses including autonomous driving and physical AI, Industry Minister Ryosei Akazawa said.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Chinese Industrial AI firm Minyue raises pre-B+ round",
+      "link": "https://www.techinasia.com/news/chinese-industrial-ai-firm-minyue-raises-preb",
+      "pub_date": "Fri, 17 Apr 2026 03:06:22 +0000",
+      "categories": [
+        "Investments",
+        "News",
+        "China",
+        "industrial AI",
+        "Minyue Technology",
+        "Yonghua Capital"
+      ],
+      "description": "The funds will be used to develop welding and cutting systems, build data infrastructure, and support overseas expansion.",
+      "content": "The funds will be used to develop welding and cutting systems, build data infrastructure, and support overseas expansion.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Chinese design software firm Manycore bags $156m in HK debut",
+      "link": "https://www.techinasia.com/news/chinese-design-software-maker-manycore-bags-156m-in-hk-debut",
+      "pub_date": "Fri, 17 Apr 2026 02:48:18 +0000",
+      "categories": [
+        "News",
+        "ai",
+        "China",
+        "Manycore Tech",
+        "robotics"
+      ],
+      "description": "The company still gets most of its sales from Kujiale, its home renovation tool, but it is pushing to sell AI services.",
+      "content": "The company still gets most of its sales from Kujiale, its home renovation tool, but it is pushing to sell AI services.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "TSMC expands 3nm chip production in Taiwan, US, Japan",
+      "link": "https://www.techinasia.com/news/tsmc-expands-3nm-chip-production-taiwan-japan",
+      "pub_date": "Fri, 17 Apr 2026 02:46:34 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "News",
+        "3nm chip production",
+        "Japan",
+        "Taiwan",
+        "TSMC"
+      ],
+      "description": "TSMC's second Japan fab will start 3nm chip production in 2028 with government approval.",
+      "content": "TSMC's second Japan fab will start 3nm chip production in 2028 with government approval.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Tesla hires chip engineers in Taiwan for Terafab project",
+      "link": "https://www.techinasia.com/news/tesla-hires-chip-engineers-taiwan-terafab-project",
+      "pub_date": "Fri, 17 Apr 2026 02:41:10 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "News",
+        "ai",
+        "semiconductor",
+        "Taiwan",
+        "Tesla"
+      ],
+      "description": "Tesla's Terafab aims to integrate logic, memory, packaging, test, and lithography mask production.",
+      "content": "Tesla's Terafab aims to integrate logic, memory, packaging, test, and lithography mask production.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Crypto lending loses appeal after $285m hack",
+      "link": "https://www.techinasia.com/news/crypto-lending-loses-appeal-after-285m-hack",
+      "pub_date": "Fri, 17 Apr 2026 02:40:50 +0000",
+      "categories": [
+        "Crypto",
+        "News",
+        "defi",
+        "Drift",
+        "North Korea",
+        "Solana"
+      ],
+      "description": "Firms are moving toward blockchain versions of traditional assets, while the around US$97 billion sector faces headwinds.",
+      "content": "Firms are moving toward blockchain versions of traditional assets, while the around US$97 billion sector faces headwinds.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Google adds personalized image generation to Gemini app",
+      "link": "https://www.techinasia.com/news/google-adds-personalized-image-generation-to-gemini-app",
+      "pub_date": "Fri, 17 Apr 2026 02:32:23 +0000",
+      "categories": [
+        "News",
+        "ai",
+        "Gemini",
+        "Google",
+        "US"
+      ],
+      "description": "Google said Gemini does not directly train its models on private Google Photos libraries.",
+      "content": "Google said Gemini does not directly train its models on private Google Photos libraries.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Circle CEO sees China launching yuan stablecoin in 5 years",
+      "link": "https://www.techinasia.com/news/circle-ceo-sees-china-launching-yuan-stablecoin-in-5-years",
+      "pub_date": "Fri, 17 Apr 2026 02:29:04 +0000",
+      "categories": [
+        "Crypto",
+        "News",
+        "China",
+        "circle",
+        "Jeremy Allaire",
+        "Stablecoin"
+      ],
+      "description": "Experts said a yuan stablecoin would require Beijing to make the renminbi fully convertible.",
+      "content": "Experts said a yuan stablecoin would require Beijing to make the renminbi fully convertible.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Meta raises Quest headset prices on higher chip costs",
+      "link": "https://www.techinasia.com/news/meta-raises-quest-headset-prices-on-higher-chip-costs",
+      "pub_date": "Fri, 17 Apr 2026 02:22:28 +0000",
+      "categories": [
+        "Gadgets",
+        "News",
+        "hardware prices",
+        "Meta",
+        "Quest 3",
+        "VR"
+      ],
+      "description": "The Quest 3S will cost US$349.99 to US$449.99, while the Quest 3 will cost US$599.99.",
+      "content": "The Quest 3S will cost US$349.99 to US$449.99, while the Quest 3 will cost US$599.99.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Shinsegae signs AI data center deal with US AI firm Reflection",
+      "link": "https://www.techinasia.com/news/shinsegae-signs-ai-data-center-deal-reflection",
+      "pub_date": "Fri, 17 Apr 2026 02:21:04 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "News",
+        "ai",
+        "Reflection AI",
+        "Shinsegae Group",
+        "South Korea"
+      ],
+      "description": "The agreement covers the construction and operation of an AI data center and the application of AI across its distribution operations, centered on E-Mart",
+      "content": "The agreement covers the construction and operation of an AI data center and the application of AI across its distribution operations, centered on E-Mart",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "White House plans US agency access to Anthropic Mythos AI",
+      "link": "https://www.techinasia.com/news/white-house-plans-agency-access-anthropic-mythos-ai",
+      "pub_date": "Fri, 17 Apr 2026 02:19:14 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "News",
+        "ai",
+        "Anthropic",
+        "cybersecurity",
+        "United States"
+      ],
+      "description": "Mythos was announced on April 7 under Anthropic's Project Glasswing for cybersecurity use.",
+      "content": "Mythos was announced on April 7 under Anthropic's Project Glasswing for cybersecurity use.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "India’s Wipro misses Q4 estimates as clients cut tech spending",
+      "link": "https://www.techinasia.com/news/indias-wipro-misses-q4-estimates-as-clients-cut-tech-spending",
+      "pub_date": "Fri, 17 Apr 2026 02:17:46 +0000",
+      "categories": [
+        "News",
+        "Estée Lauder",
+        "India",
+        "IT services",
+        "Wipro"
+      ],
+      "description": "Consolidated sales rose 7.7% year-on-year to 242.4 billion rupees, or about US$2.6 billion, for the three months.",
+      "content": "Consolidated sales rose 7.7% year-on-year to 242.4 billion rupees, or about US$2.6 billion, for the three months.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "OpenAI launches AI model GPT-Rosalind for life sciences research",
+      "link": "https://www.techinasia.com/news/openai-launches-ai-model-gptrosalind-life-sciences-research",
+      "pub_date": "Fri, 17 Apr 2026 02:11:06 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "News",
+        "Amgen",
+        "life sciences",
+        "moderna",
+        "openai"
+      ],
+      "description": "OpenAI's GPT-Rosalind supports tasks in chemistry, protein engineering, and genomics.",
+      "content": "OpenAI's GPT-Rosalind supports tasks in chemistry, protein engineering, and genomics.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "PH digital bank GoTyme adds stock trading to its banking app",
+      "link": "https://www.techinasia.com/news/ph-digital-bank-gotyme-adds-stock-trading-to-its-banking-app",
+      "pub_date": "Fri, 17 Apr 2026 02:10:46 +0000",
+      "categories": [
+        "News",
+        "digital bank",
+        "gotyme bank",
+        "investing",
+        "Philippines"
+      ],
+      "description": "GoTyme said users can fund instantly from the app, place orders there, and withdraw money within the app.",
+      "content": "GoTyme said users can fund instantly from the app, place orders there, and withdraw money within the app.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Netflix co-founder to exit in June",
+      "link": "https://www.techinasia.com/news/netflix-cofounder-exit-june",
+      "pub_date": "Fri, 17 Apr 2026 02:06:10 +0000",
+      "categories": [
+        "Management",
+        "News",
+        "Netflix",
+        "Reed Hastings",
+        "Streaming",
+        "Warner Bros Discovery"
+      ],
+      "description": "Netflix's Q1 earnings per share rose to US$1.23, with revenue climbing 16% to US$12.25 billion.",
+      "content": "Netflix's Q1 earnings per share rose to US$1.23, with revenue climbing 16% to US$12.25 billion.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Glasswall: The things anonymous founders say about VCs",
+      "link": "https://www.techinasia.com/visual-story/glasswall-vc-investors-founders-reviews",
+      "pub_date": "Fri, 17 Apr 2026 02:00:00 +0000",
+      "categories": [
+        "Investments",
+        "glasswall",
+        "No Hard Paywall"
+      ],
+      "description": "Check out the recent anonymous reviews for these VC firms.",
+      "content": "Check out the recent anonymous reviews for these VC firms.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "US fintech firm Candescent expands in India, hits 1,000 staff",
+      "link": "https://www.techinasia.com/news/us-fintech-firm-candescent-expands-in-india-hits-1000-staff",
+      "pub_date": "Fri, 17 Apr 2026 01:50:03 +0000",
+      "categories": [
+        "Fintech",
+        "News",
+        "ai",
+        "Candescent",
+        "fintech",
+        "India"
+      ],
+      "description": "India now houses about two-thirds of its engineering team and 80% of its designers.",
+      "content": "India now houses about two-thirds of its engineering team and 80% of its designers.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Drift taps Tether for $147m post-hack relaunch",
+      "link": "https://www.techinasia.com/news/drift-taps-tether-for-147m-post-hack-relaunch",
+      "pub_date": "Fri, 17 Apr 2026 01:44:51 +0000",
+      "categories": [
+        "Crypto",
+        "News",
+        "decentralized finance",
+        "Drift Protocol",
+        "Solana",
+        "tether"
+      ],
+      "description": "The package includes up to US$127.5 million from Tether, the issuer of USDT, and US$20 million from other backers.",
+      "content": "The package includes up to US$127.5 million from Tether, the issuer of USDT, and US$20 million from other backers.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "TSMC, ASML signal more AI spending from Big Tech",
+      "link": "https://www.techinasia.com/news/tsmc-asml-signal-more-ai-spending-from-big-tech",
+      "pub_date": "Fri, 17 Apr 2026 01:39:10 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "News",
+        "AI chips",
+        "ASML",
+        "Microsoft",
+        "TSMC"
+      ],
+      "description": "TSMC, the world’s dominant producer of cutting-edge processors, said it will raise capital spending to expand its tight capacity.",
+      "content": "TSMC, the world’s dominant producer of cutting-edge processors, said it will raise capital spending to expand its tight capacity.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Alibaba debuts AI world model Happy Oyster",
+      "link": "https://www.techinasia.com/news/alibaba-debuts-ai-world-model-happy-oyster",
+      "pub_date": "Fri, 17 Apr 2026 01:36:16 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "News",
+        "ai",
+        "Alibaba",
+        "China",
+        "Li Fei-Fei"
+      ],
+      "description": "Alibaba said Happy Oyster lets users build scenes from text and image prompts or explore them in a wandering mode.",
+      "content": "Alibaba said Happy Oyster lets users build scenes from text and image prompts or explore them in a wandering mode.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Anthropic to grow London team to 800 in AI push",
+      "link": "https://www.techinasia.com/news/anthropic-to-grow-london-team-to-800-in-ai-push",
+      "pub_date": "Fri, 17 Apr 2026 01:33:49 +0000",
+      "categories": [
+        "News",
+        "ai",
+        "Anthropic",
+        "london",
+        "openai"
+      ],
+      "description": "The office will place Anthropic near other AI firms in the area, including OpenAI, Google DeepMind, Meta, Synthesia, and Wayve.",
+      "content": "The office will place Anthropic near other AI firms in the area, including OpenAI, Google DeepMind, Meta, Synthesia, and Wayve.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Intel jumps on Google AI deal, Musk chip project",
+      "link": "https://www.techinasia.com/news/intel-jumps-on-google-ai-deal-musk-chip-project",
+      "pub_date": "Fri, 17 Apr 2026 01:24:03 +0000",
+      "categories": [
+        "News",
+        "ai",
+        "elon musk",
+        "Google",
+        "Intel"
+      ],
+      "description": "Intel said Google will use its Xeon 6 processors for AI training and inference..",
+      "content": "Intel said Google will use its Xeon 6 processors for AI training and inference..",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Google in talks with Pentagon over classified Gemini use",
+      "link": "https://www.techinasia.com/news/google-talks-pentagon-classified-gemini",
+      "pub_date": "Fri, 17 Apr 2026 01:08:57 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "News",
+        "ai",
+        "Google",
+        "government",
+        "US Department of Defense"
+      ],
+      "description": "A Pentagon agreement would deepen Google’s work with the US government as federal agencies add AI tools to cut costs and speed administrative work.",
+      "content": "A Pentagon agreement would deepen Google’s work with the US government as federal agencies add AI tools to cut costs and speed administrative work.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "US AI startup Upscale eyes $200m raise at $2b valuation",
+      "link": "https://www.techinasia.com/news/ai-startup-upscale-eyes-200m-raise-2b-valuation",
+      "pub_date": "Fri, 17 Apr 2026 01:01:21 +0000",
+      "categories": [
+        "News",
+        "ai",
+        "Tiger Global Management",
+        "Upscale AI",
+        "xora innovation"
+      ],
+      "description": "The company announced a US$100 million seed round in September and a US$200 million series A in January.",
+      "content": "The company announced a US$100 million seed round in September and a US$200 million series A in January.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Anthropic unveils Claude Opus 4.7 AI model with safeguards",
+      "link": "https://www.techinasia.com/news/anthropic-unveils-claude-opus-47-safeguards",
+      "pub_date": "Fri, 17 Apr 2026 01:00:19 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "News",
+        "ai",
+        "Anthropic",
+        "Claude Opus",
+        "cybersecurity"
+      ],
+      "description": "The company said Opus 4.7 improves on Claude Opus 4.6, which was announced in February.",
+      "content": "The company said Opus 4.7 improves on Claude Opus 4.6, which was announced in February.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "The data center rush reshaping Batam",
+      "link": "https://www.techinasia.com/data-center-rush-reshaping-batam",
+      "pub_date": "Fri, 17 Apr 2026 00:30:01 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "Newsletters",
+        "Batam",
+        "daily newsletter",
+        "data center",
+        "data center industry",
+        "Indonesia",
+        "Nongsa Digital Park",
+        "Southeast Asia"
+      ],
+      "description": "Inside the data center boom in Batam, which raises questions on power, water, and sustainability. Plus, Southeast Asia’s uneven hiring rebound.",
+      "content": "Inside the data center boom in Batam, which raises questions on power, water, and sustainability. Plus, Southeast Asia’s uneven hiring rebound.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Tracking startup closures across Southeast Asia",
+      "link": "https://www.techinasia.com/visual-story/startup-failures-closures-southeast-asia",
+      "pub_date": "Fri, 17 Apr 2026 00:00:00 +0000",
+      "categories": [
+        "Investments",
+        "Startups",
+        "Visual Stories",
+        "#StartupAsia",
+        "Southeast Asia",
+        "startup shutdowns",
+        "visual stories team",
+        "Visual story"
+      ],
+      "description": "There are several reasons why startups in Southeast Asia go bust, but we lack data about it. This piece helps you track the region's macro-level trends.",
+      "content": "There are several reasons why startups in Southeast Asia go bust, but we lack data about it. This piece helps you track the region's macro-level trends.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Nas Daily creator raises $27m for his digital business builder",
+      "link": "https://www.techinasia.com/news/nas-daily-creator-raises-27m-his-digital-business-builder",
+      "pub_date": "Thu, 16 Apr 2026 14:43:57 +0000",
+      "categories": [
+        "Investments",
+        "News",
+        "Startups",
+        "Funding",
+        "khosla ventures",
+        "nas daily",
+        "Nas.com",
+        "Nuseir Yassin",
+        "series a"
+      ],
+      "description": "Khosla Ventures led this funding; 500 Global, V Ventures, Factorial Capital, and other investors also participated in the round.",
+      "content": "Khosla Ventures led this funding; 500 Global, V Ventures, Factorial Capital, and other investors also participated in the round.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Nvidia CEO thinks US AI export limits are backfiring",
+      "link": "https://www.techinasia.com/nvidia-ceo-thinks-us-ai-export-limits-are-backfiring",
+      "pub_date": "Thu, 16 Apr 2026 09:30:13 +0000",
+      "categories": [
+        "Artificial Intelligence",
+        "Opinion",
+        "Jensen Huang",
+        "NVIDIA",
+        "TL;DL"
+      ],
+      "description": "Nvidia CEO Jensen Huang says US AI export limits may push rivals to build faster, as the real race shifts to energy, software, and scale.",
+      "content": "Nvidia CEO Jensen Huang says US AI export limits may push rivals to build faster, as the real race shifts to energy, software, and scale.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Brazilian fintech firm Ebanx expands into Asia",
+      "link": "https://www.techinasia.com/news/brazilian-payments-firm-ebanx-expands-asia",
+      "pub_date": "Thu, 16 Apr 2026 09:13:49 +0000",
+      "categories": [
+        "Fintech",
+        "News",
+        "brazil",
+        "cross-border payments",
+        "Ebanx",
+        "Southeast Asia"
+      ],
+      "description": "Ebanx said 65% of its gross profit in 2025 came from outside Brazil, up from 32% in 2021, including 20% from markets beyond Latin America.",
+      "content": "Ebanx said 65% of its gross profit in 2025 came from outside Brazil, up from 32% in 2021, including 20% from markets beyond Latin America.",
+      "source_name": "TechInAsia",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "No Need for Space Gear — Capcom’s ‘PRAGMATA’ Joins GeForce NOW on Launch Day",
+      "link": "https://blogs.nvidia.com/blog/geforce-now-thursday-pragmata/",
+      "pub_date": "Thu, 16 Apr 2026 13:00:11 +0000",
+      "categories": [
+        "Gaming",
+        "Cloud Gaming",
+        "GeForce NOW"
+      ],
+      "description": "Head straight for orbit with GeForce NOW — no space helmet required.  PRAGMATA, Capcom’s long-awaited sci-fi action adventure, touches down on GeForce NOW the same day it launches worldwide. The futuristic journey through a cold lunar station in the near future can be streamed instantly from the cloud to almost any device, no console or [&#8230;]",
+      "content": "<div id=\"bsf_rt_marker\"></div><p><span style=\"font-weight: 400\">Head straight for orbit with </span><a target=\"_blank\" href=\"https://www.nvidia.com/en-us/geforce-now/\"><span style=\"font-weight: 400\">GeForce NOW</span></a><span style=\"font-weight: 400\"> — no space helmet required. </span></p>\n<p><i><span style=\"font-weight: 400\">PRAGMATA</span></i><span style=\"font-weight: 400\">, Capcom’s long-awaited sci-fi action adventure, touches down on GeForce NOW the same day it launches worldwide. The futuristic journey through a cold lunar station in the near future can be streamed instantly from the cloud to almost any device, no console or heavy hardware needed.</span></p>\n<p><span style=\"font-weight: 400\">That’s only the beginning. </span><span style=\"font-weight: 400\">Five </span><span style=\"font-weight: 400\">new titles join the cloud this week, expanding April’s gaming galaxy with fresh adventures and endless possibilities</span><i><span style=\"font-weight: 400\">.</span></i><span style=\"font-weight: 400\"> </span></p>\n<p><span style=\"font-weight: 400\">Plus, the GeForce NOW Ultimate membership </span><a target=\"_blank\" href=\"https://x.com/NVIDIAGFN/status/2043894514570379303\"><span style=\"font-weight: 400\">comes to gamers in India</span></a><span style=\"font-weight: 400\"> for the first time, with the service now available in beta and operated by NVIDIA. </span><span style=\"font-weight: 400\">              </span></p>\n<p><span style=\"font-weight: 400\">Time to see what’s landing on GeForce NOW.</span></p>\n<h2><b>A Mission Gone Wrong</b></h2>\n<p><i><span style=\"font-weight: 400\">PRAGMATA </span></i><span style=\"font-weight: 400\">is Capcom’s newest sci-fi action adventure that blends heart, high-tech and a hauntingly quiet world set in the near future. Step into the boots of Hugh Williams, an investigator navigating a lunar research station gone silent and Diana, a young android. Armed with an arsenal of weapons and the ability to hack, every corridor and console becomes part of a cinematic experience filled with tense exploration and fast-paced action.</span></p>\n<p><span style=\"font-weight: 400\">The story unfolds amid the cold vacuum of the moon after a massive quake hits the station researching Lunafilament — a material said to be able to create anything given enough data. Awake, injured and disoriented, Hugh crosses paths with Diana, the mysterious android girl known as a Pragmata. Now, they must work together as they face the rogue station on their way back to Earth.</span></p>\n<p><i><span style=\"font-weight: 400\">PRAGMATA</span></i><span style=\"font-weight: 400\"> shines in stunning clarity with ray-traced lighting and </span><a target=\"_blank\" href=\"https://www.nvidia.com/en-us/geforce/technologies/dlss/\"><span style=\"font-weight: 400\">NVIDIA DLSS 4</span></a><span style=\"font-weight: 400\"> technology boosting frame rates and image quality. Stream it on launch day at full fidelity, even without the latest hardware — no need to wait on a large install or worry about hardware specs. Hugh and Diana’s lunar mystery is ready when the moment strikes.</span></p>\n<h2><b>Let’s Play Today</b></h2>\n<figure id=\"attachment_92378\" aria-describedby=\"caption-attachment-92378\" style=\"width: 1200px\" class=\"wp-caption aligncenter\"><img fetchpriority=\"high\" decoding=\"async\" class=\"size-large wp-image-92378\" src=\"https://blogs.nvidia.com/wp-content/uploads/2026/04/GFN_Thursday-Fornite_Save_The_World-1680x840.jpg\" alt=\"fortnite save the world on geforce now\" width=\"1200\" height=\"600\" srcset=\"https://blogs.nvidia.com/wp-content/uploads/2026/04/GFN_Thursday-Fornite_Save_The_World-1680x840.jpg 1680w, https://blogs.nvidia.com/wp-content/uploads/2026/04/GFN_Thursday-Fornite_Save_The_World-960x480.jpg 960w, https://blogs.nvidia.com/wp-content/uploads/2026/04/GFN_Thursday-Fornite_Save_The_World-1280x640.jpg 1280w, https://blogs.nvidia.com/wp-content/uploads/2026/04/GFN_Thursday-Fornite_Save_The_World-1536x768.jpg 1536w, https://blogs.nvidia.com/wp-content/uploads/2026/04/GFN_Thursday-Fornite_Save_The_World-630x315.jpg 630w, https://blogs.nvidia.com/wp-content/uploads/2026/04/GFN_Thursday-Fornite_Save_The_World.jpg 2048w\" sizes=\"(max-width: 1200px) 100vw, 1200px\" /><figcaption id=\"caption-attachment-92378\" class=\"wp-caption-text\"><em>Heroes in the cloud don’t have to wait for updates.</em></figcaption></figure>\n<p><i><span style=\"font-weight: 400\">Fortnite: Save the World</span></i><span style=\"font-weight: 400\"> is now free and ready to stream instantly on GeForce NOW. The storm hits hard and the heroes hit harder — jump into a co-op adventure that mixes base-building, looting and all-out action against waves of Husks. Craft the ultimate fort, set sneaky traps and team up to protect what’s left of the world — no waiting for updates or patches, just pure fight-and-build mayhem. The storm’s closing in, but thanks to the cloud, the party’s jumping right into the action. “Save the World” </span><a target=\"_blank\" href=\"https://nvidia.custhelp.com/app/answers/detail/a_id/5235/\"><span style=\"font-weight: 400\">isn’t available on mobile devices</span></a><span style=\"font-weight: 400\">, including tablets.</span></p>\n<p><span style=\"font-weight: 400\">In addition, members can look for the following:</span><i></i></p>\n<ul>\n<li><i><span style=\"font-weight: 400\">REPLACED </span></i><span style=\"font-weight: 400\">(New release on </span><a target=\"_blank\" href=\"https://store.steampowered.com/app/1663850/REPLACED/\"><span style=\"font-weight: 400\">Steam</span></a><span style=\"font-weight: 400\"> and </span><a target=\"_blank\" href=\"https://www.xbox.com/en-us/games/store/replaced/9nv3l234vgxd\"><span style=\"font-weight: 400\">Xbox</span></a><span style=\"font-weight: 400\">, available on Game Pass, April 14, GeForce RTX 5080-ready)</span></li>\n<li><i><span style=\"font-weight: 400\">Windrose </span></i><span style=\"font-weight: 400\">(New release on </span><a target=\"_blank\" href=\"https://store.steampowered.com/app/3041230/Windrose/\"><span style=\"font-weight: 400\">Steam</span></a><span style=\"font-weight: 400\">, April 14, GeForce RTX 5080-ready)</span></li>\n<li><i><span style=\"font-weight: 400\">Cthulhu: The Cosmic Abyss </span></i><span style=\"font-weight: 400\">(New release on </span><a target=\"_blank\" href=\"https://store.steampowered.com/app/2760560/Cthulhu_The_Cosmic_Abyss/\"><span style=\"font-weight: 400\">Steam</span></a><span style=\"font-weight: 400\">, April 16, GeForce RTX 5080-ready)</span></li>\n<li><i><span style=\"font-weight: 400\">PRAGMATA </span></i><span style=\"font-weight: 400\">(New release on </span><a target=\"_blank\" href=\"https://store.steampowered.com/app/3357650?utm_source=nvidia&amp;utm_campaign=geforce_now\"><span style=\"font-weight: 400\">Steam</span></a><span style=\"font-weight: 400\">, April 16, GeForce RTX 5080-ready)</span></li>\n<li><i><span style=\"font-weight: 400\">PRAGMATA SKETCHBOOK &#8211; DEMO</span></i><span style=\"font-weight: 400\"> (</span><a target=\"_blank\" href=\"https://store.steampowered.com/app/4003800?utm_source=nvidia&amp;utm_campaign=geforce_now\"><span style=\"font-weight: 400\">Steam</span></a><span style=\"font-weight: 400\">, GeForce RTX 5080-ready)</span></li>\n</ul>\n<p><span style=\"font-weight: 400\">What are you planning to play this weekend? Let us know on </span><a target=\"_blank\" href=\"https://www.twitter.com/nvidiagfn\"><span style=\"font-weight: 400\">X</span></a><span style=\"font-weight: 400\"> or in the comments below.</span></p>\n<blockquote class=\"twitter-tweet\" data-width=\"550\" data-dnt=\"true\">\n<p lang=\"en\" dir=\"ltr\">You’re loading into a game and can invite ONE person to your squad…</p>\n<p>Who’s your pick?</p>\n<p>&mdash; <img src=\"https://s.w.org/images/core/emoji/17.0.2/72x72/1f329.png\" alt=\"🌩\" class=\"wp-smiley\" style=\"height: 1em; max-height: 1em;\" /> NVIDIA GeForce NOW (@NVIDIAGFN) <a target=\"_blank\" href=\"https://twitter.com/NVIDIAGFN/status/2044445644815818811?ref_src=twsrc%5Etfw\">April 15, 2026</a></p></blockquote>\n<p><script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script></p>",
+      "source_name": "Nvidia Blog",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "YouTube’s mobile app finally lets you share timestamped videos",
+      "link": "https://www.theverge.com/streaming/913611/youtube-mobile-app-share-at-timestamp-clips",
+      "pub_date": "2026-04-16T19:32:16-04:00",
+      "categories": [
+        "News",
+        "Streaming",
+        "YouTube"
+      ],
+      "description": "YouTube is making some changes that might affect how you share videos from the mobile app. From the app, you can finally share videos from a specific timestamp, which will make it easier to point someone to a part of a video you might want them to see while you're on your phone. However, this [&#8230;]",
+      "content": "YouTube is making some changes that might affect how you share videos from the mobile app. From the app, you can finally share videos from a specific timestamp, which will make it easier to point someone to a part of a video you might want them to see while you're on your phone. However, this [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Gucci-branded Google smart glasses are coming next year",
+      "link": "https://www.theverge.com/gadgets/913523/google-gucci-ai-smart-glasses-2027",
+      "pub_date": "2026-04-16T16:31:31-04:00",
+      "categories": [
+        "Gadgets",
+        "Google",
+        "News",
+        "Tech",
+        "Wearable"
+      ],
+      "description": "Google is reportedly partnering with Gucci to make a pair of AI smart glasses stylish enough people might actually want to wear them. According to Reuters, Gucci parent company Kering is planning to launch the glasses sometime in 2027. Google's first pair of Android XR glasses, \"Project Aura,\" are expected to launch this year. They [&#8230;]",
+      "content": "Google is reportedly partnering with Gucci to make a pair of AI smart glasses stylish enough people might actually want to wear them. According to Reuters, Gucci parent company Kering is planning to launch the glasses sometime in 2027. Google's first pair of Android XR glasses, \"Project Aura,\" are expected to launch this year. They [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Ballmer gives $80 million to NPR, with strings attached",
+      "link": "https://www.theverge.com/news/913518/ballmer-gives-80-million-to-npr-with-strings-attached",
+      "pub_date": "2026-04-16T16:30:55-04:00",
+      "categories": [
+        "News",
+        "Policy"
+      ],
+      "description": "Connie Ballmer, wife of former Microsoft CEO Steve Ballmer and co-founder of the Ballmer Group, has given $80 million to NPR. That's roughly seven years' worth of government funding ($11.2m) after Trump and Congress cut funds for public media, but only a fraction of NPR's full annual budget of $300 million. NPR may still cut [&#8230;]",
+      "content": "Connie Ballmer, wife of former Microsoft CEO Steve Ballmer and co-founder of the Ballmer Group, has given $80 million to NPR. That's roughly seven years' worth of government funding ($11.2m) after Trump and Congress cut funds for public media, but only a fraction of NPR's full annual budget of $300 million. NPR may still cut [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Netflix embraces vertical video with major mobile app update",
+      "link": "https://www.theverge.com/streaming/913539/netflix-mobile-app-update-vertical-video",
+      "pub_date": "2026-04-16T16:29:56-04:00",
+      "categories": [
+        "Apps",
+        "Netflix",
+        "News",
+        "Streaming",
+        "Tech"
+      ],
+      "description": "Netflix announced on Thursday that it will be launching a redesigned mobile app, which will include a vertical video feed, at the end of April. \"This redesign will better reflect our expanding entertainment offering and make it easier for members to engage how and when they want,\" the company said in its Q1 2026 earnings [&#8230;]",
+      "content": "Netflix announced on Thursday that it will be launching a redesigned mobile app, which will include a vertical video feed, at the end of April. \"This redesign will better reflect our expanding entertainment offering and make it easier for members to engage how and when they want,\" the company said in its Q1 2026 earnings [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Netflix cofounder Reed Hastings is officially leaving the company",
+      "link": "https://www.theverge.com/streaming/913201/netflix-reed-hastings-earnings-q1-2026",
+      "pub_date": "2026-04-16T16:23:00-04:00",
+      "categories": [
+        "Entertainment",
+        "Netflix",
+        "Streaming"
+      ],
+      "description": "Netflix cofounder and chairman Reed Hastings plans to leave the company after nearly 30 years. The news comes as part of Netflix's Q1 2026 earnings results released on Thursday, which says Hastings \"will not stand for re-election to our Board when his current term expires at the Annual Meeting in June.\" After co-founding Netflix in [&#8230;]",
+      "content": "Netflix cofounder and chairman Reed Hastings plans to leave the company after nearly 30 years. The news comes as part of Netflix's Q1 2026 earnings results released on Thursday, which says Hastings \"will not stand for re-election to our Board when his current term expires at the Annual Meeting in June.\" After co-founding Netflix in [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Live Nation says it will fight monopoly suit loss",
+      "link": "https://www.theverge.com/policy/913494/live-nation-ticketmaster-fight-state-monopoly-jury-verdict",
+      "pub_date": "2026-04-16T15:02:12-04:00",
+      "categories": [
+        "Antitrust",
+        "Entertainment",
+        "News",
+        "Policy"
+      ],
+      "description": "After a jury found that Live Nation-Ticketmaster violated antitrust law on several counts, the company warns in a blog post that the verdict \"is not the last word on this matter.\" The company plans to renew a motion for the judge to issue a ruling against the states, claiming that they did not prove their [&#8230;]",
+      "content": "After a jury found that Live Nation-Ticketmaster violated antitrust law on several counts, the company warns in a blog post that the verdict \"is not the last word on this matter.\" The company plans to renew a motion for the judge to issue a ruling against the states, claiming that they did not prove their [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Ozlo’s comfy Sleepbuds are nearly 30 percent off in the run-up to Mother’s Day",
+      "link": "https://www.theverge.com/gadgets/913352/ozlo-sleepbuds-mothers-day-deal-sale",
+      "pub_date": "2026-04-16T15:00:00-04:00",
+      "categories": [
+        "Deals",
+        "Gadgets",
+        "Headphones",
+        "Tech",
+        "Verge Shopping"
+      ],
+      "description": "If you’re struggling to get a full night of rest, a good pair of sleep earbuds can help you tune out unwanted distractions. The Ozlo Sleepbuds are one such option, and they’re currently available for $249 ($100 off) in the run-up to Mother’s Day at Amazon and Ozlo’s online storefront, which is easily the lowest [&#8230;]",
+      "content": "If you’re struggling to get a full night of rest, a good pair of sleep earbuds can help you tune out unwanted distractions. The Ozlo Sleepbuds are one such option, and they’re currently available for $249 ($100 off) in the run-up to Mother’s Day at Amazon and Ozlo’s online storefront, which is easily the lowest [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Teenage Engineering might be getting into instrument amps next",
+      "link": "https://www.theverge.com/gadgets/913396/teenage-engineering-ko-amp-35-leak",
+      "pub_date": "2026-04-16T14:57:16-04:00",
+      "categories": [
+        "Design",
+        "Entertainment",
+        "Gadgets",
+        "Music",
+        "News",
+        "Tech"
+      ],
+      "description": "An unannounced Teenage Engineering device, the KO-Amp 35, can be found over at the FCC in a new filing. The label clearly marks it as a member of the mid-range EP family instruments, which currently includes the KO-II and its spinoffs, the Riddim and the Medieval. The name suggests that TE could be getting into [&#8230;]",
+      "content": "An unannounced Teenage Engineering device, the KO-Amp 35, can be found over at the FCC in a new filing. The label clearly marks it as a member of the mid-range EP family instruments, which currently includes the KO-II and its spinoffs, the Riddim and the Medieval. The name suggests that TE could be getting into [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "The only way to fight deepfakes is by making deepfakes",
+      "link": "https://www.theverge.com/report/913445/deepfake-detection-reality-defender-pindrop-ai",
+      "pub_date": "2026-04-16T14:45:00-04:00",
+      "categories": [
+        "Privacy",
+        "Report",
+        "Tech"
+      ],
+      "description": "I was unsure if my parents would notice that the voice on the other end wasn't mine - or that it was mine, sort of, but it wasn't me. The voice said hello, asked my dad how he was doing, and asked again when he didn't respond quickly enough. \"What is that, Gaby?\" He realized [&#8230;]",
+      "content": "I was unsure if my parents would notice that the voice on the other end wasn't mine - or that it was mine, sort of, but it wasn't me. The voice said hello, asked my dad how he was doing, and asked again when he didn't respond quickly enough. \"What is that, Gaby?\" He realized [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    },
+    {
+      "title": "Casely has reannounced a power bank recall from 2025 following a fatality",
+      "link": "https://www.theverge.com/tech/913177/casely-recall-power-pods-wireless-bank-lithium-ion-battery-fire-explosion-uscpsc",
+      "pub_date": "2026-04-16T14:40:03-04:00",
+      "categories": [
+        "Gadgets",
+        "News",
+        "Tech"
+      ],
+      "description": "Casely first recalled over 429,000 of its 5,000mAh Power Pods wireless power banks in April 2025 following 51 reports of their lithium-ion batteries \"overheating, expanding or catching fire,\" resulting in six minor burn injuries. Both the company and the US Consumer Product Safety Commission (USCPSC) are reannouncing the same recall today following 28 additional reports [&#8230;]",
+      "content": "Casely first recalled over 429,000 of its 5,000mAh Power Pods wireless power banks in April 2025 following 51 reports of their lithium-ion batteries \"overheating, expanding or catching fire,\" resulting in six minor burn injuries. Both the company and the US Consumer Product Safety Commission (USCPSC) are reannouncing the same recall today following 28 additional reports [&#8230;]",
+      "source_name": "The Verge",
+      "source_category": "科技",
+      "source_priority": "low"
+    }
+  ]
+}
