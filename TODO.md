@@ -9,13 +9,13 @@
 
 > 心跳发现 [A] 项 → 在对话中发起确认请求
 
-- [A] Memory Maintenance | 优先级:P2 | 创建:2026-04-18 | 待确认原因: 系统定期整理，请确认是否执行
+- （无待确认项）
 
 ---
 
 ## 待执行 [P]（可自动执行）
 
-> 心跳发现 [P] 项 → 判断是否可执行 → 执行后移至 [D]
+> 心跳发现 [P] 项 → 判断是否可以执行 → 执行后移至 [D]
 
 - [P] Memory Maintenance | 优先级:P2 | 创建:2026-04-18 | 到期:2026-04-21 | 备注: 每3天整理一次 memory/*.md → MEMORY.md
 
@@ -25,7 +25,8 @@
 
 > 心跳发现 [D] 项 → 跳过执行 → 首次发现时写入当日 memory 日志
 
-- [D] | 完成时间:2026-04-18 | 结果: 系统初始化，建立 TODO.md + HEARTBEAT.md 更新
+- [D] Memory Maintenance | 完成时间:2026-04-18 16:43 | 结果: 完成首次 Memory Maintenance，MEMORY.md 新增：市场现状持仓速记 / TODO系统建立记录 / OpenClaw 问题遗留
+- [D] 系统初始化 | 完成时间:2026-04-18 | 结果: 建立 TODO.md + HEARTBEAT.md 更新
 
 ---
 
@@ -35,3 +36,10 @@
 |:---|:---|:---|
 | Memory Maintenance | 每3天 | 2026-04-21 |
 
+---
+
+## 待处理技术问题（长期）
+
+- [ ] memory_search chunks 空洞问题（chunks 表 0 行）—— OpenClaw 索引失效
+- [ ] openclaw CLI 挂起问题（gateway 可能仍有问题）
+- [ ] CoinGecko API 间歇性故障（04-15 / 04-18 均出现 $0 数据）
