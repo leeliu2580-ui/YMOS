@@ -1,4 +1,13 @@
-# Finnhub Skill
+---
+name: finnhub
+description: |
+  Finnhub 美股数据技能。当工作区在 .env 中配置了 FINNHUB_API_KEY 时，使用 Finnhub 获取美股和加密货币市场数据。
+  触发方式：美股行情、NVDA财报、个股分析、美股新闻
+  Fetch US stock and crypto market data via Finnhub API.
+  Trigger: US stock quote, NVDA, AAPL, TSLA, company profile, stock news
+---
+
+# Finnhub Skill | Finnhub 美股数据技能
 
 Use Finnhub to fetch US stock and crypto market data when the workspace has `FINNHUB_API_KEY` configured in `.env`.
 

@@ -1,6 +1,10 @@
 ---
 name: wan-image-video-gen-edit
-description: Image and Video Generation and Editting wiht Wan series models. It offers text2image, image editting(with prompt), text2video, image2video and reference(image or video)2video capabiliteis.
+description: |
+  万图生成与编辑技能（阿里万德模型）。支持文生图、图生图、文生视频、图生视频、参考图/视频生视频。
+  触发方式：生成图片、生成视频、图片生成视频、图生视频
+  Image and Video Generation skill using Alibaba Wan series models. Supports text2image, image edit, text2video, image2video, and reference2video.
+  Trigger: generate image, generate video, text2video, image2video, reference2video, Wan models
 homepage: https://bailian.console.aliyun.com/cn-beijing?tab=model#/model-market
 metadata: {"clawdbot":{"emoji":"🔍","requires":{"bins":["python3"],"env":["DASHSCOPE_API_KEY"]},"primaryEnv":"DASHSCOPE_API_KEY"},"author":"KrisYe"}
 ---

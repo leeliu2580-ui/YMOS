@@ -1,6 +1,10 @@
 ---
 name: brainstorming
-description: "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
+description: |
+  头脑风暴技能。任何创意工作（创建功能、构建组件、添加功能或修改行为）之前必须使用——在实施之前探索用户意图、需求和设计。
+  触发方式：头脑风暴、创意、设计方案、想做新功能
+  Must use before any creative work - explores user intent, requirements, and design before implementation.
+  Trigger: brainstorm, creative work, new feature, design, make a plan
 ---
 
 # Brainstorming Ideas Into Designs

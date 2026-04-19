@@ -1,6 +1,10 @@
 ---
 name: dispatching-parallel-agents
-description: Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
+description: |
+  并行代理分发技能。处理2个或以上相互独立、无共享状态或顺序依赖的任务时使用。
+  触发方式：并行任务、独立任务、多个任务同时、同时处理
+  Dispatch parallel agents for 2+ independent tasks without shared state or sequential dependencies.
+  Trigger: parallel tasks, independent tasks, multiple tasks, simultaneous work
 ---
 
 # Dispatching Parallel Agents

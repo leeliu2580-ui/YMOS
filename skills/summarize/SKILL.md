@@ -1,6 +1,10 @@
 ---
 name: summarize
-description: Use when you need to compress long webpages, documents, transcripts, notes, or research materials into concise summaries, structured takeaways, or executive digests for content work, planning, or investment research.
+description: |
+  内容摘要技能。将长网页、文档、访谈记录、笔记或研报材料压缩为简洁摘要、结构化要点或决策简报。
+  触发方式：摘要、总结、提炼、研报、文档压缩
+  Compress long webpages, documents, transcripts, notes, or research into concise summaries.
+  Trigger: summarize, summary, digest, compress, abstract, key takeaways
 ---
 
 # Summarize

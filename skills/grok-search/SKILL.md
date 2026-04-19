@@ -1,6 +1,10 @@
 ---
 name: grok-search
-description: Real-time web research and live synthesis with sources. Use when the question depends on freshness, community chatter, X/Twitter dynamics, breaking updates, or broad multi-source summaries. Prefer this over source-first search when you need fast situational awareness. Prefer exa-search instead for official docs, API references, pricing pages, canonical source retrieval, or direct page-text extraction.
+description: |
+  Grok 实时搜索技能。需要实时动态、社区讨论、突发新闻、舆情扫描或多源综述时使用。
+  触发方式：最新消息、舆情、推特、社区讨论、实时动态
+  Grok real-time web research for breaking news, X/Twitter dynamics, and live synthesis.
+  Trigger: breaking news, realtime, X/Twitter, community chatter, live synthesis
 ---
 
 # Grok Search

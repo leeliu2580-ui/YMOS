@@ -1,105 +1,77 @@
 ---
 name: requesting-code-review
-description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements
+description: |
+  请求代码审查技能。完成任务、实现重要功能或合并之前，请求审查以验证工作满足需求。
+  触发方式：审查代码、review、请求审查、代码审查
+  Request code review skill. Before merging, request review to verify work meets requirements.
+  Trigger: code review, review request, request review, review
 ---
 
-# Requesting Code Review
+# Requesting Code Review：请求代码审查
 
-Dispatch superpowers:code-reviewer subagent to catch issues before they cascade. The reviewer gets precisely crafted context for evaluation — never your session's history. This keeps the reviewer focused on the work product, not your thought process, and preserves your own context for continued work.
+## 概述
 
-**Core principle:** Review early, review often.
+派遣 superpowers:code-reviewer 子代理来在级联之前发现问题。审查者获得精确构建的评估上下文——而不是你 session 的历史。这保持审查者专注于工作产出，而不是你的思维过程，并为你保持自己的上下文以持续工作。
 
-## When to Request Review
+**核心原则：** 尽早审查，经常审查。
 
-**Mandatory:**
-- After each task in subagent-driven development
-- After completing major feature
-- Before merge to main
+## 何时请求审查 | When to Request Review
 
-**Optional but valuable:**
-- When stuck (fresh perspective)
-- Before refactoring (baseline check)
-- After fixing complex bug
+**强制：**
+- subagent-driven development 中每个任务之后
+- 完成重要功能之后
+- Merge 到 main 之前
 
-## How to Request
+**可选但有价值：**
+- 卡住时（新的视角）
+- 重构之前（基线检查）
+- 修复复杂 Bug 之后
 
-**1. Get git SHAs:**
+## 如何请求 | How to Request
+
+**1. 获取 git SHA：**
 ```bash
-BASE_SHA=$(git rev-parse HEAD~1)  # or origin/main
+BASE_SHA=$(git rev-parse HEAD~1)  # 或 origin/main
 HEAD_SHA=$(git rev-parse HEAD)
 ```
 
-**2. Dispatch code-reviewer subagent:**
+**2. 派遣 code-reviewer 子代理：**
 
-Use Task tool with superpowers:code-reviewer type, fill template at `code-reviewer.md`
+使用 Task 工具，类型为 superpowers:code-reviewer，填写 `code-reviewer.md` 中的模板。
 
-**Placeholders:**
-- `{WHAT_WAS_IMPLEMENTED}` - What you just built
-- `{PLAN_OR_REQUIREMENTS}` - What it should do
-- `{BASE_SHA}` - Starting commit
-- `{HEAD_SHA}` - Ending commit
-- `{DESCRIPTION}` - Brief summary
+**占位符：**
+- `{WHAT_WAS_IMPLEMENTED}` - 刚刚构建的内容
+- `{PLAN_OR_REQUIREMENTS}` - 它应该做什么
+- `{BASE_SHA}` - 起始提交
+- `{HEAD_SHA}` - 结束提交
+- `{DESCRIPTION}` - 简要总结
 
-**3. Act on feedback:**
-- Fix Critical issues immediately
-- Fix Important issues before proceeding
-- Note Minor issues for later
-- Push back if reviewer is wrong (with reasoning)
+**3. 处理反馈：**
+- 立即修复 Critical 问题
+- 继续之前修复 Important 问题
+- 记录 Minor 问题稍后处理
+- 如果审查者错了，用推理反驳
 
-## Example
+## 整合关系 | Integration
 
-```
-[Just completed Task 2: Add verification function]
+**Subagent-Driven Development：**
+- 每个任务之后审查
+- 在问题级联之前捕获
+- 修复后再继续
 
-You: Let me request code review before proceeding.
+**Executing Plans：**
+- 每个批次（3 个任务）后审查
+- 获取反馈，应用，继续
 
-BASE_SHA=$(git log --oneline | grep "Task 1" | head -1 | awk '{print $1}')
-HEAD_SHA=$(git rev-parse HEAD)
+## 红牌警告 | Red Flags
 
-[Dispatch superpowers:code-reviewer subagent]
-  WHAT_WAS_IMPLEMENTED: Verification and repair functions for conversation index
-  PLAN_OR_REQUIREMENTS: Task 2 from docs/superpowers/plans/deployment-plan.md
-  BASE_SHA: a7981ec
-  HEAD_SHA: 3df7661
-  DESCRIPTION: Added verifyIndex() and repairIndex() with 4 issue types
+**永远不要：**
+- 因为"简单"跳过审查
+- 忽略 Critical 问题
+- 在未修复 Important 问题的情况下继续
+- 对有效技术反馈争论
 
-[Subagent returns]:
-  Strengths: Clean architecture, real tests
-  Issues:
-    Important: Missing progress indicators
-    Minor: Magic number (100) for reporting interval
-  Assessment: Ready to proceed
-
-You: [Fix progress indicators]
-[Continue to Task 3]
-```
-
-## Integration with Workflows
-
-**Subagent-Driven Development:**
-- Review after EACH task
-- Catch issues before they compound
-- Fix before moving to next task
-
-**Executing Plans:**
-- Review after each batch (3 tasks)
-- Get feedback, apply, continue
-
-**Ad-Hoc Development:**
-- Review before merge
-- Review when stuck
-
-## Red Flags
-
-**Never:**
-- Skip review because "it's simple"
-- Ignore Critical issues
-- Proceed with unfixed Important issues
-- Argue with valid technical feedback
-
-**If reviewer wrong:**
-- Push back with technical reasoning
-- Show code/tests that prove it works
-- Request clarification
-
-See template at: requesting-code-review/code-reviewer.md
+**如果审查者错了：**
+- 用技术推理反驳
+- 显示证明它 work 的代码/测试
+- 请求澄清

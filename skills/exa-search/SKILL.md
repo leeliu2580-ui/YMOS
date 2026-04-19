@@ -1,6 +1,10 @@
 ---
 name: exa-search
-description: Neural web search for source-first research, especially official docs, API references, pricing pages, product specs, company pages, and any task where low-noise results and direct text extraction matter. Use when you need precise, high-quality, non-SEO-biased web results or extracted page text/highlights. Prefer this over generic web search for official documentation and structured source retrieval. Prefer grok-search instead for breaking news, X/Twitter dynamics, real-time sentiment, or broad multi-source live synthesis.
+description: |
+  Exa 源头搜索技能。用于官方文档、API参考、定价页、产品规格等源头信息检索，需要低噪音高质量结果或页面正文提取时使用。
+  触发方式：查文档、API文档、官方说明、源头信息
+  Exa neural web search for official docs, API references, pricing pages, and source-first research.
+  Trigger: official docs, API reference, pricing, source-first, official documentation
 ---
 
 # Exa Search

@@ -1,6 +1,10 @@
 ---
 name: writing-skills
-description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
+description: |
+  编写新技能技能。用于从零创建新技能、编辑现有技能或验证技能在部署前是否正常工作。
+  触发方式：创建技能、编辑技能、验证技能、编写新skill
+  Create new skills, edit existing skills, or verify skills work before deployment.
+  Trigger: create skill, edit skill, verify skill, write new skill
 ---
 
 # Writing Skills
