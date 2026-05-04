@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YMOS 投资看板 2026-05-03</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    background: #f5f5f0;
+    color: #1a1a1a;
+    padding: 24px;
+  }
+  .container { max-width: 1200px; margin: 0 auto; }
+
+  /* Topbar */
+  .topbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 24px; background: #1a1a2e; color: #fff;
+    border-radius: 12px 12px 0 0; margin-bottom: 2px;
+  }
+  .topbar-title { font-size: 18px; font-weight: 700; letter-spacing: 0.05em; }
+  .topbar-date { font-size: 14px; opacity: 0.75; }
+
+  /* Status bar */
+  .status-bar {
+    display: flex; gap: 12px; align-items: center;
+    background: #fff; padding: 16px 24px; border-radius: 0 0 0 0; margin-bottom: 16px;
+    border-bottom: 1px solid #e8e8e0;
+  }
+  .status-lamp {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: #f5a623; box-shadow: 0 0 8px rgba(245,166,35,0.5);
+    flex-shrink: 0;
+  }
+  .status-lamp.red { background: #d0021b; box-shadow: 0 0 8px rgba(208,2,27,0.5); }
+  .status-lamp.green { background: #7ed321; box-shadow: 0 0 8px rgba(126,211,33,0.5); }
+  .status-text { font-size: 15px; }
+  .status-meta { margin-left: auto; font-size: 13px; color: #666; }
+  .warning-badge {
+    background: #fff3e0; color: #e65100; padding: 2px 10px;
+    border-radius: 12px; font-size: 12px; font-weight: 600;
+    margin-left: 12px;
+  }
+
+  /* Card */
+  .card {
+    background: #fff; border-radius: 12px; padding: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 16px;
+  }
+  .card-title {
+    font-size: 15px; font-weight: 700; color: #1a1a2e;
+    border-left: 4px solid #4a6fa5; padding-left: 12px; margin-bottom: 16px;
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .card-title.red { border-color: #d0021b; }
+  .card-title.orange { border-color: #f5a623; }
+
+  /* Workflow */
+  .workflow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .wf-step {
+    padding: 14px 16px; border-radius: 10px;
+    background: #f0f0eb; text-align: center; font-size: 14px; color: #888;
+    border: 2px solid transparent;
+  }
+  .wf-step.done {
+    background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7;
+  }
+  .wf-step .wf-num { font-size: 20px; font-weight: 700; }
+  .wf-step.done .wf-num::before { content: "✅ "; }
+  .wf-label { margin-top: 4px; font-size: 12px; opacity: 0.8; }
+  .wf-footer { text-align: center; margin-top: 12px; font-size: 13px; color: #666; }
+
+  /* Signal table */
+  .signal-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .signal-table th {
+    background: #f5f5f0; padding: 10px 12px; text-align: left;
+    font-weight: 600; border-bottom: 2px solid #e8e8e0;
+  }
+  .signal-table td { padding: 10px 12px; border-bottom: 1px solid #f0f0eb; }
+  .signal-table tr:last-child td { border-bottom: none; }
+  .tag-red { background: #ffebee; color: #c62828; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+  .tag-orange { background: #fff3e0; color: #e65100; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+  .tag-green { background: #e8f5e9; color: #2e7d32; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+
+  /* Morning meeting */
+  .morning-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .morning-col { padding: 16px; border-radius: 8px; }
+  .morning-col.do { background: #e8f5e9; }
+  .morning-col.dont { background: #ffebee; }
+  .morning-col h4 { font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+  .morning-col.do h4 { color: #2e7d32; }
+  .morning-col.dont h4 { color: #c62828; }
+  .morning-col li { font-size: 14px; margin-left: 16px; margin-bottom: 4px; }
+
+  /* Action queue */
+  .action-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .action-table th {
+    background: #f5f5f0; padding: 10px 12px; text-align: left; font-weight: 600;
+    border-bottom: 2px solid #e8e8e0;
+  }
+  .action-table td { padding: 10px 12px; border-bottom: 1px solid #f0f0eb; vertical-align: middle; }
+  .p0-badge { background: #ffebee; color: #c62828; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 700; }
+  .p1-badge { background: #fff3e0; color: #e65100; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+  .p2-badge { background: #f5f5f0; color: #555; padding: 3px 10px; border-radius: 12px; font-size: 12px; }
+
+  /* Positions */
+  .pos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .pos-card {
+    border: 2px solid #e8e8e0; border-radius: 10px; padding: 16px;
+    border-left-width: 5px;
+  }
+  .pos-card.core { border-left-color: #4a6fa5; }
+  .pos-card.hedge { border-left-color: #f5a623; }
+  .pos-card.dormant { border-left-color: #aaa; }
+  .pos-card.satellite { border-left-color: #7ed321; }
+  .pos-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+  .pos-name { font-size: 16px; font-weight: 700; }
+  .pos-ticker { font-size: 12px; color: #888; background: #f5f5f0; padding: 2px 8px; border-radius: 4px; }
+  .pos-price { font-size: 18px; font-weight: 700; color: #1a1a2e; }
+  .pos-pnl { font-size: 12px; margin-top: 2px; }
+  .pos-pnl.up { color: #2e7d32; }
+  .pos-pnl.down { color: #c62828; }
+  .pos-pnl.neutral { color: #888; }
+  .pos-phase { font-size: 12px; color: #555; background: #f5f5f0; padding: 2px 8px; border-radius: 4px; display: inline-block; margin-bottom: 6px; }
+  .pos-status { font-size: 13px; color: #444; }
+  .pos-warn { font-size: 12px; color: #e65100; margin-top: 4px; font-weight: 600; }
+
+  /* Footer */
+  .footer {
+    text-align: center; font-size: 12px; color: #aaa;
+    padding: 16px; margin-top: 8px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .workflow { grid-template-columns: repeat(2, 1fr); }
+    .morning-grid { grid-template-columns: 1fr; }
+    .pos-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <span class="topbar-title">YMOS │ 投资操作系统</span>
+    <span class="topbar-date">2026-05-03 09:30 CST</span>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="status-bar">
+    <div class="status-lamp"></div>
+    <span class="status-text">有待确认 — HYPE 解锁前操作决策待确认</span>
+    <span class="status-meta">4 持仓 │ 3 Watchlist</span>
+    <span class="warning-badge">⚠️ HYPE 5/6 解锁 2 天</span>
+  </div>
+
+  <!-- Workflow -->
+  <div class="card">
+    <div class="card-title">今日工作流</div>
+    <div class="workflow">
+      <div class="wf-step done"><div class="wf-num">1</div><div>市场洞察</div><div class="wf-label">今天已完成</div></div>
+      <div class="wf-step done"><div class="wf-num">2</div><div>投资雷达</div><div class="wf-label">今天已完成</div></div>
+      <div class="wf-step done"><div class="wf-num">3</div><div>策略分析</div><div class="wf-label">今天已完成</div></div>
+      <div class="wf-step done"><div class="wf-num">4</div><div>持仓收口</div><div class="wf-label">刚刚完成</div></div>
+    </div>
+    <div class="wf-footer">已完成 4/4</div>
+  </div>
+
+  <!-- Strategic Briefing -->
+  <div class="card">
+    <div class="card-title">战略简报</div>
+    <div style="margin-bottom:12px;">
+      <span style="background:#ffebee;color:#c62828;padding:3px 12px;border-radius:12px;font-size:13px;font-weight:700;">Risk Off</span>
+      <span style="margin-left:12px;font-size:14px;color:#444;">美伊冲突骤然升温；科技 CapEx 验证长线逻辑</span>
+    </div>
+    <table class="signal-table">
+      <tr>
+        <th style="width:100px">信号类型</th>
+        <th>核心主题</th>
+        <th style="width:320px">研判结论</th>
+      </tr>
+      <tr>
+        <td><span class="tag-red">高影响异常</span></td>
+        <td>美伊冲突升级</td>
+        <td>霍尔木兹海峡风险溢价急升，短期 Risk Off，地缘持续性待观察</td>
+      </tr>
+      <tr>
+        <td><span class="tag-orange">主题收敛</span></td>
+        <td>科技七巨头 CapEx $7,250 亿</td>
+        <td>谷歌 Q1 $185 亿/季度，算力/电力/光通信产业链长线验证</td>
+      </tr>
+      <tr>
+        <td><span class="tag-orange">风险窗口</span></td>
+        <td>HYPE 5/6 解锁 $421M</td>
+        <td>≈流通量 10%，2 天倒计时；第二批止盈已完成，剩余 376 个 ~16.5%</td>
+      </tr>
+      <tr>
+        <td><span class="tag-green">底部信号</span></td>
+        <td>Fear & Greed 低位</td>
+        <td>BTC $78K 企稳，市场过度悲观，超卖修复中</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Morning Meeting -->
+  <div class="card">
+    <div class="card-title">晨会速览</div>
+    <div class="morning-grid">
+      <div class="morning-col do">
+        <h4>今天必须做的事</h4>
+        <ul>
+          <li>确认 HYPE 解锁前操作：冲高 $42+ 减 100-150 个？</li>
+          <li>ETH 空头按计划持有，不主动平仓</li>
+          <li>HYPE 止损 $33 不变，任何时候跌破执行纪律</li>
+        </ul>
+      </div>
+      <div class="morning-col dont">
+        <h4>今天不要做的事</h4>
+        <ul>
+          <li>不因解锁恐惧在 $33 以上恐慌性全部出清</li>
+          <li>HYPE 不加仓（高风险窗口）</li>
+          <li>不追高 GOLD（已有地缘溢价）</li>
+          <li>不追高 NVDA（等待 $155-165 建仓区间）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Queue -->
+  <div class="card">
+    <div class="card-title red">需要你做的事</div>
+    <table class="action-table">
+      <tr>
+        <th style="width:80px">优先级</th>
+        <th>动作</th>
+        <th style="width:100px">标的</th>
+        <th style="width:80px">状态</th>
+      </tr>
+      <tr>
+        <td><span class="p0-badge">P0 🟠</span></td>
+        <td><strong>HYPE 解锁前操作决策：</strong>冲高 $42+ 再减 100-150 个，还是持有等解锁后 TVL 确认？</td>
+        <td>HYPE</td>
+        <td style="color:#e65100;font-weight:600;">待确认</td>
+      </tr>
+      <tr>
+        <td><span class="p2-badge">P2</span></td>
+        <td>HLP 建仓成本补充（用户提供）</td>
+        <td>HLP</td>
+        <td style="color:#888;">待补充</td>
+      </tr>
+      <tr>
+        <td><span class="p2-badge">P2</span></td>
+        <td>BTC 止损 $71K；ETH 空头按计划持有</td>
+        <td>BTC / ETH</td>
+        <td style="color:#2e7d32;">按计划</td>
+      </tr>
+      <tr>
+        <td><span class="p2-badge">P2</span></td>
+        <td>NVDA 等待 $155-165 建仓区间（Q1 财报 5 月是关键催化）</td>
+        <td>NVDA</td>
+        <td style="color:#888;">观察</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Positions Overview -->
+  <div class="card">
+    <div class="card-title">持仓一览</div>
+    <div class="pos-grid">
+
+      <div class="pos-card core">
+        <div class="pos-header">
+          <div><span class="pos-name">BTC</span> <span class="pos-ticker">BTC</span></div>
+          <div style="text-align:right"><div class="pos-price">$78,459</div><div class="pos-pnl up">+12.9% 浮盈</div></div>
+        </div>
+        <div class="pos-phase">PVE 趋势 │ 核心仓 ~27%</div>
+        <div class="pos-status">成本 $69,487；止损 $71K；$75K 阶段目标；ETF 流入支撑</div>
+      </div>
+
+      <div class="pos-card satellite">
+        <div class="pos-header">
+          <div><span class="pos-name">HYPE</span> <span class="pos-ticker">HYPE</span></div>
+          <div style="text-align:right"><div class="pos-price">$41.04</div><div class="pos-pnl up">+1,008% 浮盈</div></div>
+        </div>
+        <div class="pos-phase">PVE 趋势 │ 卫星仓 ~16.5%</div>
+        <div class="pos-status">376 个；第二批止盈完成；TVL $5B+；<strong>5/6 解锁 2 天倒计时</strong></div>
+        <div class="pos-warn">🟠 解锁风险高；冲高 $42+ 建议减 100-150 个；止损 $33</div>
+      </div>
+
+      <div class="pos-card dormant">
+        <div class="pos-header">
+          <div><span class="pos-name">HLP</span> <span class="pos-ticker">HLP</span></div>
+          <div style="text-align:right"><div class="pos-price">—</div><div class="pos-pnl neutral">无报价</div></div>
+        </div>
+        <div class="pos-phase">休眠 │ 底仓 ~29%</div>
+        <div class="pos-status">成本待补；无实时报价；关注平台风险</div>
+      </div>
+
+      <div class="pos-card hedge">
+        <div class="pos-header">
+          <div><span class="pos-name">ETH 空头</span> <span class="pos-ticker">ETH-PERP-SHORT</span></div>
+          <div style="text-align:right"><div class="pos-price">$2,313</div><div class="pos-pnl down">空头浮亏 -5.1%</div></div>
+        </div>
+        <div class="pos-phase">对冲仓 ~7% │ 成本 $2,200</div>
+        <div class="pos-status">美伊冲突压制 ETH 逻辑成立；长持对冲按计划不主动平仓；$2,400 压力位</div>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Data Gaps -->
+  <div class="card">
+    <div class="card-title">缺口清单（新鲜度检查）</div>
+    <table class="signal-table">
+      <tr><th style="width:140px">标的</th><th>缺口类型</th><th>缺口内容</th><th style="width:80px">优先级</th></tr>
+      <tr><td>HYPE_HYPE</td><td><span class="tag-red">数据过期</span></td><td>P4 关注点已过期（最后更新于 2026-04-02）；P2/P4 需同步至 2026-05-03</td><td>🟠 高</td></tr>
+      <tr><td>BTC_BTC</td><td><span class="tag-orange">数据过期</span></td><td>P4 关注点已过期（最后更新于 2026-04-03）；ETF 流入数据缺失</td><td>🟡 中</td></tr>
+      <tr><td>GOLD_GOLD</td><td><span class="tag-orange">数据过期</span></td><td>P4 关注点已过期（最后更新于 2026-04-03）；地缘逻辑需更新</td><td>🟡 中</td></tr>
+      <tr><td>NVDA_NVDA</td><td><span class="tag-orange">数据过期</span></td><td>P4 关注点已过期（最后更新于 2026-04-03）；Q1 财报前需补全</td><td>🟡 中</td></tr>
+      <tr><td>HLP</td><td><span class="tag-red">结构缺失</span></td><td>建仓成本缺失；P1/P2/P4 全部缺失；买入卖出备忘录不存在</td><td>🟠 高</td></tr>
+      <tr><td>CoreWeave</td><td><span class="tag-orange">格式错误</span></td><td>P4 关注点从未更新或格式错误</td><td>🟡 中</td></tr>
+    </table>
+  </div>
+
+</div>
+
+</body>
+</html>
