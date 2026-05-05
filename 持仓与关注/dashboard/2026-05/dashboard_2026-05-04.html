@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YMOS Dashboard · 2026-05-04</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f5f5f0;
+  color: #222;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 24px; background: #1a1a2e; color: #fff;
+  border-radius: 12px; margin-bottom: 24px;
+}
+.topbar h1 { font-size: 18px; font-weight: 600; letter-spacing: 0.5px; }
+.topbar h1 span { color: #e94560; }
+.topbar .date { font-size: 14px; color: #aaa; }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.card {
+  background: #fff; border-radius: 12px; padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.card h2 { font-size: 15px; color: #888; margin-bottom: 16px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
+.card.wide { grid-column: 1 / -1; }
+.tag-red { background: #ffe0e0; color: #c0392b; padding: 2px 8px; border-radius: 4px; font-size: 13px; font-weight: 600; }
+.tag-orange { background: #fff3e0; color: #e65100; padding: 2px 8px; border-radius: 4px; font-size: 13px; font-weight: 600; }
+.tag-green { background: #e8f5e9; color: #2e7d32; padding: 2px 8px; border-radius: 4px; font-size: 13px; font-weight: 600; }
+.tag-gray { background: #f5f5f5; color: #666; padding: 2px 8px; border-radius: 4px; font-size: 13px; }
+
+.status-lamp { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.lamp-red { background: #e74c3c; box-shadow: 0 0 8px #e74c3c; }
+.lamp-yellow { background: #f39c12; box-shadow: 0 0 8px #f39c12; }
+.lamp-green { background: #27ae60; box-shadow: 0 0 8px #27ae60; }
+
+.lamp-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.big-status { font-size: 24px; font-weight: 700; color: #1a1a2e; }
+.risk-box { background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 12px 16px; margin-top: 12px; font-size: 14px; color: #856404; }
+.risk-box strong { display: block; margin-bottom: 4px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; color: #888; font-weight: 400; padding: 8px 12px; border-bottom: 2px solid #f0f0f0; }
+td { padding: 10px 12px; border-bottom: 1px solid #f5f5f5; vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+
+.workflow { display: flex; gap: 12px; flex-wrap: wrap; }
+.step {
+  flex: 1; min-width: 120px; padding: 14px 16px; border-radius: 10px;
+  text-align: center; font-size: 14px; font-weight: 600;
+}
+.step-done { background: #e8f5e9; color: #2e7d32; border: 2px solid #a5d6a7; }
+.step-done::before { content: '✅ '; }
+.step-current { background: #e3f2fd; color: #1565c0; border: 2px solid #90caf9; }
+.step-wait { background: #f5f5f5; color: #aaa; border: 2px solid #e0e0e0; }
+
+.action-table td:first-child { width: 80px; }
+.action-high { color: #c0392b; font-weight: 600; }
+.action-mid { color: #e65100; font-weight: 600; }
+
+.warn-stripe {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: #fff; border-radius: 10px; padding: 16px 20px;
+  font-size: 15px; margin-bottom: 16px; font-weight: 600; text-align: center;
+}
+.warn-stripe span { display: block; font-size: 12px; font-weight: 400; opacity: 0.9; margin-top: 4px; }
+
+.footer { text-align: center; color: #aaa; font-size: 12px; margin-top: 24px; }
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .container { padding: 16px; }
+  .workflow .step { min-width: 45%; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="topbar">
+    <h1>YMOS <span>│</span> 投资操作系统</h1>
+    <div class="date">2026-05-04 · 下午版</div>
+  </div>
+
+  <div class="warn-stripe">
+    🔴 今日紧急动作：HYPE $421M 代币解锁（5/6）| ⚠️ BTC 做T 5X杠杆，强平价 $43,618，止损 $74,400 已设置
+    <span>霍尔木兹冲突升级，市场体温 Chaos（混乱）</span>
+  </div>
+
+  <div class="grid">
+
+    <!-- 状态概览 -->
+    <div class="card">
+      <h2>状态概览</h2>
+      <div class="lamp-row">
+        <span class="status-lamp lamp-red"></span>
+        <span class="big-status">🔴 红灯</span>
+      </div>
+      <div style="font-size:14px; color:#555; margin-top:8px;">有紧急动作需今日执行</div>
+      <div style="margin-top:16px; font-size:14px;">
+        <div><strong>Active 持仓：</strong>4 只（HYPE / ETH-PERP-SHORT / HLP / BTC-T）</div>
+        <div><strong>Watchlist：</strong>3 只（GOLD / NVDA / 300308.SZ）</div>
+        <div><strong>杠杆状态：</strong><span class="tag-red">超过 1.7x 预警线</span></div>
+      </div>
+      <div class="risk-box">
+        <strong>⚠️ 杠杆风险提示</strong>
+        BTC 做T 5X 杠杆，强平价 $43,618（距离开仓 -45%）。<br>
+        止损 $74,400 已设置（距强平价 +69%），安全边际较大。
+      </div>
+    </div>
+
+    <!-- 每日工作流 -->
+    <div class="card">
+      <h2>每日工作流</h2>
+      <div class="workflow">
+        <div class="step step-done">市场洞察<br><small>今天已完成</small></div>
+        <div class="step step-done">投资雷达<br><small>今天已完成</small></div>
+        <div class="step step-done">策略分析<br><small>今天已完成</small></div>
+        <div class="step step-current">持仓收口<br><small>正在执行</small></div>
+      </div>
+      <div style="text-align:center; margin-top:14px; font-size:13px; color:#888;">已完成 3/4</div>
+    </div>
+
+    <!-- 战略简报 -->
+    <div class="card wide">
+      <h2>战略简报（来自市场洞察 2026-05-04）</h2>
+      <div style="margin-bottom:12px;">
+        <span class="tag-red">Chaos（混乱）</span>
+        <span style="font-size:14px; color:#555; margin-left:12px;">霍尔木兹海峡冲突升级，油价脉冲，全球市场避险骤升</span>
+      </div>
+      <table>
+        <thead><tr><th>信号类型</th><th>核心主题</th><th>研判结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="tag-red">高影响异常</span></td>
+            <td>伊朗封锁霍尔木兹</td>
+            <td>20% 原油过境通道受威胁，油价 +3%，Fed 丧失利率指引能力</td>
+          </tr>
+          <tr>
+            <td><span class="tag-orange">主题收敛</span></td>
+            <td>油价冲击 + 通胀 + 加息受阻</td>
+            <td>三条信息指向滞胀风险重现（餐厅销售下滑 / Kashkari 发声）</td>
+          </tr>
+          <tr>
+            <td><span class="tag-gray">认知温差</span></td>
+            <td>美股新高 vs 衰退警告</td>
+            <td>策略师警告市场"错配的 euphoria"，情绪与基本面背离加剧</td>
+          </tr>
+          <tr>
+            <td><span class="tag-green">深度基石</span></td>
+            <td>Big Tech 资本开支获市场奖励</td>
+            <td>财报验证智能 CapEx 路线，泡沫论证伪，AI 基建长线逻辑强化</td>
+          </tr>
+          <tr>
+            <td><span class="tag-red">🔴 极高风险</span></td>
+            <td>HYPE 今日 5/6 解锁 $421M</td>
+            <td>一次性大规模解锁，Chaos 市场体温使冲击环境更差于 4/6</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 晨会速览 -->
+    <div class="card">
+      <h2>今天必须做的事 🔴</h2>
+      <ul style="font-size:14px; padding-left:20px; color:#c0392b; font-weight:600;">
+        <li>HYPE 解锁后冲高 $42+ → <strong>减仓至 20% 以下</strong>（376个，约15%）</li>
+        <li>HYPE 跌破 $33 → <strong>无条件止损</strong></li>
+        <li>BTC 做T 止损 $74,400 已设置（✅ 已完成）；5X杠杆，强平价 $43,618</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>今天不要做的事 🚫</h2>
+      <ul style="font-size:14px; padding-left:20px; color:#555;">
+        <li>不要在解锁前恐慌性抛售 HYPE</li>
+        <li>不要对 BTC 做T 使用"扛单"心理</li>
+        <li>不要在 Chaos 市场体温下追高买入</li>
+        <li>PVP 仓位（HYPE / BTC-T）禁止变更为长线持有</li>
+      </ul>
+    </div>
+
+    <!-- 需要你做的事 -->
+    <div class="card wide">
+      <h2>需要你做的事（来自持仓备忘录）</h2>
+      <table class="action-table">
+        <thead><tr><th>优先级</th><th>动作</th><th>标的</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="tag-red">P0</span></td>
+            <td class="action-high">解锁后冲高 $42+ → 减仓至 20% 以下</td>
+            <td>HYPE（376个，约15%）</td>
+          </tr>
+          <tr>
+            <td><span class="tag-red">P0</span></td>
+            <td class="action-high">跌破 $33 → 无条件止损</td>
+            <td>HYPE</td>
+          </tr>
+          <tr>
+            <td><span class="tag-green">P0</span></td>
+            <td class="action-high">止损 $74,400 已设置 ✅</td>
+            <td>BTC 做T（5X杠杆，强平$43,618）</td>
+          </tr>
+          <tr>
+            <td><span class="tag-gray">观察</span></td>
+            <td>HYPE 解锁后 24h TVL 是否守得住 $5B+</td>
+            <td>HYPE</td>
+          </tr>
+          <tr>
+            <td><span class="tag-gray">观察</span></td>
+            <td>BTC 能否在 5/8 前后触及 $84K-$85K</td>
+            <td>BTC 做T</td>
+          </tr>
+          <tr>
+            <td><span class="tag-gray">观察</span></td>
+            <td>GOLD $4,550 支撑是否守住</td>
+            <td>GOLD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 持仓一览 -->
+    <div class="card wide">
+      <h2>持仓一览</h2>
+      <table>
+        <thead><tr><th>标的</th><th>Ticker</th><th>阶段</th><th>仓位</th><th>成本 / 现价</th><th>浮盈/亏</th><th>状态 / 关键位</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>HYPE</strong><br><small>Hyperliquid 现货</small></td>
+            <td>HYPE</td>
+            <td><span class="tag-orange">PVP</span></td>
+            <td>~15%（376个）</td>
+            <td>$3.7 / $41.07</td>
+            <td style="color:#27ae60; font-weight:700;">+1,008%</td>
+            <td><span class="tag-red">🔴 今日解锁 $421M</span><br>止损 $33</td>
+          </tr>
+          <tr>
+            <td><strong>ETH 空头</strong><br><small>Hyperliquid 合约</small></td>
+            <td>ETH-PERP-SHORT</td>
+            <td><span class="tag-orange">PVP</span></td>
+            <td>~7%</td>
+            <td>$2,200 / $2,337</td>
+            <td style="color:#e74c3c; font-weight:700;">-6.2%</td>
+            <td>⚠️ 长持对冲<br>压力 $2,400</td>
+          </tr>
+          <tr>
+            <td><strong>HLP</strong><br><small>做市金库</small></td>
+            <td>HLP</td>
+            <td><span class="tag-gray">休眠</span></td>
+            <td><strong>~45%</strong></td>
+            <td>待补 / 参考 $41</td>
+            <td style="color:#888;">-</td>
+            <td>⚠️ 主要仓位<br>关注回撤</td>
+          </tr>
+          <tr>
+            <td><strong>BTC 做T</strong><br><small>两手短线 5X杠杆</small></td>
+            <td>BTC-T</td>
+            <td><span class="tag-orange">PVP</span></td>
+            <td><strong>~67% ⚠️</strong></td>
+            <td>$79,208 / $78,819</td>
+            <td style="color:#e74c3c; font-weight:700;">-0.5%</td>
+            <td><span class="tag-red">🔴 5X杠杆</span><br>止损 $74,400 ✅<br>强平 $43,618</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    YMOS Dashboard · 数据截至 2026-05-04 15:30 CST · 仅供参考，不构成投资建议
+  </div>
+
+</div>
+</body>
+</html>
