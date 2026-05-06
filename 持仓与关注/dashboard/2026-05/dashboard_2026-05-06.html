@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YMOS 投资操作系统 · 持仓看板</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f5f5f0;
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  /* Topbar */
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: #1a1a2e;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+  }
+  .topbar-title { font-weight: 700; font-size: 17px; letter-spacing: 0.5px; }
+  .topbar-date { color: #aaa; }
+
+  /* Cards */
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0ede8;
+  }
+
+  /* Status Overview */
+  .status-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .status-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .status-dot {
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .dot-yellow { background: #f5c518; }
+  .status-warn {
+    font-size: 13px;
+    color: #c0392b;
+    background: #fdf0f0;
+    border: 1px solid #f5baba;
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin-left: 16px;
+  }
+
+  /* Workflow */
+  .workflow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 640px) {
+    .workflow { grid-template-columns: repeat(2, 1fr); }
+  }
+  .wf-step {
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .wf-done {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1.5px solid #a5d6a7;
+  }
+  .wf-done .wf-icon { font-size: 22px; }
+  .wf-pending {
+    background: #f5f5f0;
+    color: #888;
+    border: 1.5px solid #ddd;
+  }
+  .wf-step-title { font-weight: 700; margin-top: 6px; }
+  .wf-sub { font-size: 12px; opacity: 0.8; margin-top: 3px; }
+
+  /* Market temp */
+  .market-temp {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .temp-chaos { background: #fff3e0; color: #e65100; border: 1.5px solid #ffb74d; }
+  .signal-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .signal-table th {
+    background: #f7f4ef;
+    font-weight: 700;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 2px solid #e0d9cc;
+  }
+  .signal-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #f0ede8;
+    vertical-align: top;
+  }
+
+  /* Action queue */
+  .action-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .action-table th {
+    background: #f7f4ef;
+    font-weight: 700;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 2px solid #e0d9cc;
+  }
+  .action-table td { padding: 9px 12px; border-bottom: 1px solid #f0ede8; }
+  .priority-tag {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .tag-p0 { background: #c0392b; }
+  .tag-p1 { background: #e67e22; }
+  .tag-p2 { background: #95a5a6; }
+  .action-desc { font-weight: 600; }
+  .action-src { font-size: 12px; color: #888; }
+  .action-status { font-size: 12px; color: #555; }
+
+  /* Holdings */
+  .holding-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0ede8;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .holding-row:last-child { border-bottom: none; }
+  .holding-left { display: flex; align-items: center; gap: 12px; }
+  .holding-icon { font-size: 24px; }
+  .holding-name { font-weight: 700; font-size: 15px; }
+  .holding-ticker { font-size: 12px; color: #888; }
+  .holding-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+  }
+  .tag-core { background: #e8f5e9; color: #2e7d32; }
+  .tag-hedge { background: #e3f2fd; color: #1565c0; }
+  .tag-sat { background: #fff8e1; color: #f57f17; }
+  .tag-lever { background: #fce4ec; color: #c62828; }
+  .holding-right { text-align: right; font-size: 13px; color: #555; }
+  .holding-price { font-weight: 700; font-size: 15px; color: #1a1a1a; }
+  .holding-pl { font-weight: 600; }
+  .pl-up { color: #2e7d32; }
+  .pl-down { color: #c0392b; }
+
+  /* Morning items */
+  .morning-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 640px) { .morning-two-col { grid-template-columns: 1fr; } }
+  .morning-col-title {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid;
+  }
+  .col-do { border-color: #66bb6a; color: #2e7d32; }
+  .col-dont { border-color: #ef5350; color: #c62828; }
+  .morning-list { list-style: none; font-size: 14px; }
+  .morning-list li { padding: 4px 0; }
+  .morning-list li::before { margin-right: 8px; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+    padding: 20px 0;
+    margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <span class="topbar-title">YMOS │ 投资操作系统</span>
+    <span class="topbar-date">数据截至 2026-05-06 10:30 CST</span>
+  </div>
+
+  <!-- Status Overview -->
+  <div class="card">
+    <div class="status-row">
+      <div class="status-badge">
+        <div class="status-dot dot-yellow"></div>
+        <span>黄灯 — 有待确认</span>
+      </div>
+      <div class="status-warn">⚠️ 杠杆风险：BTC 做T 5X 占比约 67%，超过 1.7x 预警线；HYPE 解锁已发生价格不跌反升</div>
+      <span style="margin-left:auto; font-size:14px; color:#888;">持仓数：<strong>4</strong> 只 Active</span>
+    </div>
+  </div>
+
+  <!-- Daily Workflow -->
+  <div class="card">
+    <div class="card-title">每日工作流</div>
+    <div class="workflow">
+      <div class="wf-step wf-done">
+        <div class="wf-icon">✅</div>
+        <div class="wf-step-title">市场洞察</div>
+        <div class="wf-sub">今天已完成</div>
+      </div>
+      <div class="wf-step wf-done">
+        <div class="wf-icon">✅</div>
+        <div class="wf-step-title">投资雷达</div>
+        <div class="wf-sub">今天已完成</div>
+      </div>
+      <div class="wf-step wf-done">
+        <div class="wf-icon">✅</div>
+        <div class="wf-step-title">策略分析</div>
+        <div class="wf-sub">HYPE 解锁后评估</div>
+      </div>
+      <div class="wf-step wf-done">
+        <div class="wf-icon">✅</div>
+        <div class="wf-step-title">持仓收口</div>
+        <div class="wf-sub">今天已完成</div>
+      </div>
+    </div>
+    <div style="margin-top:12px; text-align:center; font-size:13px; color:#888;">已完成 <strong>4/4</strong></div>
+  </div>
+
+  <!-- Strategic Brief -->
+  <div class="card">
+    <div class="card-title">战略简报</div>
+    <div style="margin-bottom:14px;">
+      <span class="market-temp temp-chaos">Chaos 混乱</span>
+      <span style="margin-left:12px; font-size:14px; color:#555;">霍尔木兹冲突持续，油价承压；BTC 突破 $81K；HYPE $421M 解锁已发生价格不跌反升</span>
+    </div>
+    <table class="signal-table">
+      <thead>
+        <tr>
+          <th>信号类型</th>
+          <th>核心主题</th>
+          <th>研判结论</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span style="background:#ffebee; color:#c62828; padding:2px 8px; border-radius:10px; font-size:12px; font-weight:700;">🔴 高影响异常</span></td>
+          <td>霍尔木兹局势</td>
+          <td>伊朗持续封锁，油价承压，Fed 降息受限，Crypto Beta 偏负</td>
+        </tr>
+        <tr>
+          <td><span style="background:#fff8e1; color:#f57f17; padding:2px 8px; border-radius:10px; font-size:12px; font-weight:700;">🟡 机会观察</span></td>
+          <td>HYPE 解锁验证</td>
+          <td>$421M 解锁已发生，价格不跌反升 $43.97（+6.21%）= 偏利好，关注 TVL 24h 变化</td>
+        </tr>
+        <tr>
+          <td><span style="background:#e8f5e9; color:#2e7d32; padding:2px 8px; border-radius:10px; font-size:12px; font-weight:700;">🟢 突破信号</span></td>
+          <td>BTC $81K</td>
+          <td>今日 BTC $81,276（+1.55%），突破 $80K 大关，做T 浮盈 +2.6%，六爻目标 $84K-$85K（约5/8）</td>
+        </tr>
+        <tr>
+          <td><span style="background:#e3f2fd; color:#1565c0; padding:2px 8px; border-radius:10px; font-size:12px; font-weight:700;">🟡 结构性对冲</span></td>
+          <td>ETH 空头</td>
+          <td>ETH $2,362，空头浮亏 -7.4%，$2,400 未收复，长持对冲逻辑成立</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Morning速览 -->
+  <div class="card">
+    <div class="card-title">晨会速览</div>
+    <div class="morning-two-col">
+      <div>
+        <div class="morning-col-title col-do">今天必须做的事</div>
+        <ul class="morning-list">
+          <li>✅ 市场洞察 — 已完成（霍尔木兹 + HYPE 解锁）</li>
+          <li>✅ 投资雷达 — 已完成</li>
+          <li>✅ 策略分析 — HYPE 解锁后评估</li>
+          <li>⏳ <strong>HYPE $44-$45 区间减仓 50%（约 190 个）</strong></li>
+          <li>⏳ HYPE 止损 $33 维持，不可动摇</li>
+          <li>⏳ BTC 做T 持有不动，目标 $84K-$85K（约5/8）</li>
+        </ul>
+      </div>
+      <div>
+        <div class="morning-col-title col-dont">今天不要做的事</div>
+        <ul class="morning-list">
+          <li>🚫 不要因 HYPE 价格不跌反升而取消减仓计划</li>
+          <li>🚫 不要因为 ETH 空头浮亏 -7.4% 而恐慌平仓</li>
+          <li>🚫 不要动 BTC 做T 止损单（$74,400 已设置）</li>
+          <li>🚫 不要在 Chaos 市场体温下追高 Crypto</li>
+          <li>🚫 不要忽视杠杆风险（BTC 5X，占比 67%）</li>
+          <li>🚫 不要让回本思维影响 ETH 空头对冲决策</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Queue -->
+  <div class="card">
+    <div class="card-title">需要你做的事</div>
+    <table class="action-table">
+      <thead>
+        <tr>
+          <th>优先级</th>
+          <th>动作描述</th>
+          <th>标的</th>
+          <th>来源</th>
+          <th>状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="priority-tag tag-p0">P0</span></td>
+          <td class="action-desc">HYPE $44-$45 区间减仓 50%（约 190 个）</td>
+          <td>HYPE</td>
+          <td class="action-src">策略分析 2026-05-06</td>
+          <td class="action-status">⏳ 待执行</td>
+        </tr>
+        <tr>
+          <td><span class="priority-tag tag-p0">P0</span></td>
+          <td class="action-desc">HYPE 跌破 $33 无条件止损</td>
+          <td>HYPE</td>
+          <td class="action-src">纪律执行</td>
+          <td class="action-status">⚠️ 观察中</td>
+        </tr>
+        <tr>
+          <td><span class="priority-tag tag-p1">P1</span></td>
+          <td class="action-desc">BTC 做T 持有不动，目标 $84K-$85K</td>
+          <td>BTC-T</td>
+          <td class="action-src">六爻推演</td>
+          <td class="action-status">✅ 持仓中</td>
+        </tr>
+        <tr>
+          <td><span class="priority-tag tag-p2">P2</span></td>
+          <td class="action-desc">ETH 空头长持对冲，不主动平仓</td>
+          <td>ETH-PERP-SHORT</td>
+          <td class="action-src">策略分析</td>
+          <td class="action-status">✅ 按计划</td>
+        </tr>
+        <tr>
+          <td><span class="priority-tag tag-p2">P2</span></td>
+          <td class="action-desc">确认 HYPE TVL 实时数据（解锁后24h）</td>
+          <td>HYPE</td>
+          <td class="action-src">策略分析</td>
+          <td class="action-status">⏳ 明日观察</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Holdings Overview -->
+  <div class="card">
+    <div class="card-title">持仓一览</div>
+    <div class="holding-row">
+      <div class="holding-left">
+        <div class="holding-icon">🔵</div>
+        <div>
+          <div class="holding-name">HYPE 现货</div>
+          <div class="holding-ticker">HYPE · 现货 · 15%（376个）</div>
+        </div>
+      </div>
+      <div>
+        <span class="holding-tag tag-sat">卫星仓</span>
+        <span class="holding-tag" style="background:#fff3e0; color:#e65100;">PVP</span>
+      </div>
+      <div class="holding-right">
+        <div class="holding-price">$43.97 <span class="holding-pl pl-up">+6.21%</span></div>
+        <div>成本 $3.7 · 浮盈 <strong class="pl-up">+1,088%</strong></div>
+        <div>止损 $33 · $44-$45 减仓 50%</div>
+      </div>
+    </div>
+    <div class="holding-row">
+      <div class="holding-left">
+        <div class="holding-icon">🔴</div>
+        <div>
+          <div class="holding-name">BTC 做T 两手</div>
+          <div class="holding-ticker">BTC-T · 合约 · ~67%</div>
+        </div>
+      </div>
+      <div>
+        <span class="holding-tag tag-lever">5X杠杆</span>
+        <span class="holding-tag" style="background:#fff8e1; color:#f57f17;">PVP</span>
+      </div>
+      <div class="holding-right">
+        <div class="holding-price">$81,276 <span class="holding-pl pl-up">+2.6%</span></div>
+        <div>成本 $79,208 · <strong class="pl-down">止损 $74,400</strong></div>
+        <div>目标 $84K-$85K（约5/8）· 强平 $43,618</div>
+      </div>
+    </div>
+    <div class="holding-row">
+      <div class="holding-left">
+        <div class="holding-icon">🟡</div>
+        <div>
+          <div class="holding-name">HLP 做市金库</div>
+          <div class="holding-ticker">HLP · 现货 · ~45%</div>
+        </div>
+      </div>
+      <div>
+        <span class="holding-tag tag-core">核心仓</span>
+      </div>
+      <div class="holding-right">
+        <div class="holding-price">参考 $41</div>
+        <div>成本待补 · 占比约 45%（主要仓位）</div>
+        <div>关注回撤 · 平台安全性</div>
+      </div>
+    </div>
+    <div class="holding-row">
+      <div class="holding-left">
+        <div class="holding-icon">🟣</div>
+        <div>
+          <div class="holding-name">ETH 空头</div>
+          <div class="holding-ticker">ETH-PERP-SHORT · 合约 · ~7%</div>
+        </div>
+      </div>
+      <div>
+        <span class="holding-tag tag-hedge">对冲仓</span>
+      </div>
+      <div class="holding-right">
+        <div class="holding-price">$2,362 <span class="holding-pl pl-down">-7.4%</span></div>
+        <div>成本 $2,200 · 空头浮亏 -7.4%</div>
+        <div>压力位 $2,400 · 长持对冲</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="footer">YMOS Dashboard · 数据截至 2026-05-06 10:30 CST · 仅供参考，不构成投资建议</div>
+</body>
+</html>
