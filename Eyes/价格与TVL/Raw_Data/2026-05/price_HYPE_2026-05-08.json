@@ -1,0 +1,35 @@
+[
+  {
+    "symbol": "HYPE",
+    "price_usd": 42.57,
+    "change_24h": -0.5679567964761794,
+    "market_cap": 10141470847.770483,
+    "volume_24h": 223491460.57429862,
+    "timestamp": "2026-05-08T20:06:00.524601",
+    "source": "CoinGecko",
+    "vs_btc_strength": 0.304950530697646,
+    "vs_eth_strength": 1.0620404063695057
+  },
+  {
+    "symbol": "BTC",
+    "price_usd": 80231,
+    "change_24h": -0.8729073271738254,
+    "market_cap": 1606533205588.7615,
+    "volume_24h": 38654703728.34725,
+    "timestamp": "2026-05-08T20:06:00.524601",
+    "source": "CoinGecko",
+    "vs_btc_strength": 0.0,
+    "vs_eth_strength": 0.7570898756718597
+  },
+  {
+    "symbol": "ETH",
+    "price_usd": 2294.08,
+    "change_24h": -1.629997202845685,
+    "market_cap": 277051466447.6049,
+    "volume_24h": 22035038815.373745,
+    "timestamp": "2026-05-08T20:06:00.524601",
+    "source": "CoinGecko",
+    "vs_btc_strength": -0.7570898756718597,
+    "vs_eth_strength": 0.0
+  }
+]

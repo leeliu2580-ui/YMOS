@@ -1,0 +1,46 @@
+{
+  "project": "ENA",
+  "price_snapshot": {
+    "symbol": "ENA",
+    "price_usd": 0.123078,
+    "change_24h": -0.7680710478436322,
+    "market_cap": 1109686088.4761393,
+    "volume_24h": 172450039.29128852,
+    "timestamp": "2026-05-08T20:05:40.865462",
+    "source": "CoinGecko",
+    "vs_btc_strength": 0.0862279463716038,
+    "vs_eth_strength": 0.8402408217175358
+  },
+  "tvl_snapshot": {
+    "protocol": "ena",
+    "tvl_usd": null,
+    "status": "获取失败",
+    "timestamp": "2026-05-08T20:05:42.996532"
+  },
+  "official_updates": {
+    "project": "ENA",
+    "items": [],
+    "timestamp": "2026-05-08T20:05:46.901980",
+    "count": 0
+  },
+  "kline_snapshot": {
+    "symbol": "ENA",
+    "timeframe": "1d",
+    "current_price": 0.1229,
+    "support_levels": [
+      0.086,
+      0.0988
+    ],
+    "resistance_levels": [
+      0.1278,
+      0.1367
+    ],
+    "trend_state": "uptrend",
+    "range_high": 0.1367,
+    "range_low": 0.086,
+    "source": "Binance",
+    "timestamp": "2026-05-08T20:05:44.864201"
+  },
+  "research_links": null,
+  "generated_at": "2026-05-08T20:05:47.084756"
+}

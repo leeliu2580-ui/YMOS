@@ -1,0 +1,34 @@
+{
+  "project": "HYPE",
+  "price_snapshot": {
+    "symbol": "HYPE",
+    "price_usd": 42.57,
+    "change_24h": -0.5679567964761794,
+    "market_cap": 10141470847.770483,
+    "volume_24h": 223491460.57429862,
+    "timestamp": "2026-05-08T20:06:00.524601",
+    "source": "CoinGecko",
+    "vs_btc_strength": 0.304950530697646,
+    "vs_eth_strength": 1.0620404063695057
+  },
+  "tvl_snapshot": {
+    "protocol": "hype",
+    "tvl_usd": null,
+    "status": "获取失败",
+    "timestamp": "2026-05-08T20:06:02.294045"
+  },
+  "official_updates": {
+    "project": "HYPE",
+    "items": [],
+    "timestamp": "2026-05-08T20:06:05.850158",
+    "count": 0
+  },
+  "kline_snapshot": {
+    "symbol": "HYPE",
+    "status": "分析失败",
+    "error": "HTTP Error 400: Bad Request",
+    "timestamp": "2026-05-08T20:06:04.049133"
+  },
+  "research_links": null,
+  "generated_at": "2026-05-08T20:06:06.029209"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "symbol": "ENA",
+    "timeframe": "1d",
+    "current_price": 0.1229,
+    "support_levels": [
+      0.086,
+      0.0988
+    ],
+    "resistance_levels": [
+      0.1278,
+      0.1367
+    ],
+    "trend_state": "uptrend",
+    "range_high": 0.1367,
+    "range_low": 0.086,
+    "source": "Binance",
+    "timestamp": "2026-05-08T20:05:44.864201"
+  }
+]

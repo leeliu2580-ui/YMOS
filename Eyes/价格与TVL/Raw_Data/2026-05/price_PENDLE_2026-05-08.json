@@ -1,0 +1,35 @@
+[
+  {
+    "symbol": "PENDLE",
+    "price_usd": 2.06,
+    "change_24h": 8.233276252996678,
+    "market_cap": 345562153.65837526,
+    "volume_24h": 81333251.7616811,
+    "timestamp": "2026-05-08T20:05:52.534323",
+    "source": "CoinGecko",
+    "vs_btc_strength": 9.105979650733358,
+    "vs_eth_strength": 9.86254171443468
+  },
+  {
+    "symbol": "BTC",
+    "price_usd": 80231,
+    "change_24h": -0.8727033977366803,
+    "market_cap": 1606533205588.7615,
+    "volume_24h": 38654872003.128426,
+    "timestamp": "2026-05-08T20:05:52.534323",
+    "source": "CoinGecko",
+    "vs_btc_strength": 0.0,
+    "vs_eth_strength": 0.7565620637013217
+  },
+  {
+    "symbol": "ETH",
+    "price_usd": 2294.1,
+    "change_24h": -1.629265461438002,
+    "market_cap": 277051466447.6049,
+    "volume_24h": 22035088076.59202,
+    "timestamp": "2026-05-08T20:05:52.534323",
+    "source": "CoinGecko",
+    "vs_btc_strength": -0.7565620637013217,
+    "vs_eth_strength": 0.0
+  }
+]
