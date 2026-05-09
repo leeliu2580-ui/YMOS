@@ -36,7 +36,18 @@ mkdir -p "Eyes/市场洞察/$(date +%Y-%m)"
 
 ### Step 2：拉取市场数据（自动回退）
 
-**方式 A：市场信息 API（优先）**
+**方式 A：BlockBeats 脚本（优先，推荐用于 Crypto/Blockchain 内容）**
+```bash
+python3 Eyes/scripts/fetch_blockbeats_news.py \
+  --days 1 \
+  --limit 50 \
+  --output "Eyes/市场洞察/Raw_Data/$(date +%Y-%m)/blockbeats_news_$(date +%Y%m%d).json"
+```
+
+> BlockBeats 提供深度的 Crypto/Blockchain 行业新闻，覆盖专业 Web3 内容。
+> API Key 配置在 `.env` 的 `BLOCKBEATS_API_KEY` 字段中。
+
+**方式 B：市场信息 API（次优）**
 ```bash
 python3 Eyes/scripts/fetch_market_api.py 1 \
   --output "Eyes/市场洞察/Raw_Data/$(date +%Y-%m)/financial_data_$(date +%Y%m%d).json"
@@ -44,16 +55,17 @@ python3 Eyes/scripts/fetch_market_api.py 1 \
 
 > 脚本会自动加载 `.env` 中的 `YMOS_MARKET_API_KEY`。无 key 时脚本以 exit(0) 退出并提示使用 RSS。
 
-**方式 B：RSS 免费数据源（回退 / 无 API Key 时使用）**
+**方式 C：RSS 免费数据源（回退 / 无 API Key 时使用）**
 ```bash
 python3 Eyes/scripts/fetch_rss.py 1 \
   --output "Eyes/市场洞察/Raw_Data/$(date +%Y-%m)/financial_data_$(date +%Y%m%d).json"
 ```
 
 **Agent 执行规则**：
-1. 先尝试方式 A
-2. 若方式 A 的脚本输出包含"跳过 API 数据源"或未生成输出文件 → 自动回退到方式 B
-3. 用户指定天数时，把 `1` 替换为对应天数
+1. 先尝试方式 A（BlockBeats 脚本）
+2. 若 BlockBeats API 返回空或出错，回退到方式 B
+3. 若方式 B 的脚本输出包含"跳过 API 数据源"或未生成输出文件 → 回退到方式 C
+4. 用户指定天数时，把 `1` 替换为对应天数（BlockBeats 用 `--days` 参数）
 
 ### Step 2.5：CIO 半成品处理（仅 RSS 路径需要）
 
@@ -107,7 +119,7 @@ python3 Eyes/scripts/fetch_rss.py {天数} \
 > 而在于 **信号识别 + 结构化呈现**（战略信号仪表盘 + 势能分析 + 风险警告）。
 
 **P13 分析输入文件（按优先级读取）**：
-1. **主输入**：`financial_data_YYYYMMDD.json`（API 路径）或 `cio_processed_YYYYMMDD.md`（RSS 路径）
+1. **主输入**：`blockbeats_news_YYYYMMDD.json`（BlockBeats）或 `financial_data_YYYYMMDD.json`（方式 B）或 `cio_processed_YYYYMMDD.md`（方式 C RSS）
 2. **补充输入**（如存在）：`finnhub_news_YYYYMMDD.json`
    - `p15_trigger=true` 的条目 → P13 报告中标注「建议跑 P15」
 3. **补充输入**（如存在）：`supplementary_rss_YYYYMMDD.json`（用户自定义 RSS）
@@ -146,7 +158,8 @@ python3 Eyes/scripts/fetch_rss.py {天数} \
 
 | 文件 | 路径 | 命名规则 | 说明 |
 |:---|:---|:---|:---|
-| Raw Data（API/RSS） | `Eyes/市场洞察/Raw_Data/YYYY-MM/` | `financial_data_YYYYMMDD.json` | 必有 |
+| BlockBeats News | `Eyes/市场洞察/Raw_Data/YYYY-MM/` | `blockbeats_news_YYYYMMDD.json` | 方式 A（优先） |
+| Raw Data（Market API） | `Eyes/市场洞察/Raw_Data/YYYY-MM/` | `financial_data_YYYYMMDD.json` | 方式 B |
 | CIO 半成品情报 | `Eyes/市场洞察/Raw_Data/YYYY-MM/` | `cio_processed_YYYYMMDD.md` | 仅 RSS 路径 |
 | Finnhub News | `Eyes/市场洞察/Raw_Data/YYYY-MM/` | `finnhub_news_YYYYMMDD.json` | 有 key 才有 |
 | 市场洞察报告 | `Eyes/市场洞察/YYYY-MM/` | `YYYY-MM-DD_市场洞察.md` | 必有 |
@@ -167,6 +180,7 @@ python3 Eyes/scripts/fetch_rss.py {天数} \
 
 | 内容 | 路径 |
 |:---|:---|
+| BlockBeats 脚本 | `Eyes/scripts/fetch_blockbeats_news.py` |
 | 市场数据脚本（API） | `Eyes/scripts/fetch_market_api.py` |
 | 市场数据脚本（RSS） | `Eyes/scripts/fetch_rss.py` |
 | RSS 源配置 | `Eyes/scripts/rss_sources.json` |
