@@ -2,7 +2,7 @@
   {
     "symbol": "PENDLE",
     "timeframe": "1d",
-    "current_price": 2.05,
+    "current_price": 2.078,
     "support_levels": [
       1.009,
       1.51
@@ -14,23 +14,6 @@
     "range_high": 2.094,
     "range_low": 1.009,
     "source": "Binance",
-    "timestamp": "2026-05-08T20:01:36.147407"
-  },
-  {
-    "symbol": "BTC",
-    "timeframe": "1d",
-    "current_price": 80250.12,
-    "support_levels": [
-      70466.0,
-      78040.0
-    ],
-    "resistance_levels": [
-      82850.0
-    ],
-    "trend_state": "range",
-    "range_high": 82850.0,
-    "range_low": 70466.0,
-    "source": "Binance",
-    "timestamp": "2026-05-08T20:01:36.147407"
+    "timestamp": "2026-05-08T21:01:59.024777"
   }
 ]

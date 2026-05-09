@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YMOS 投资看板</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: #f5f5f0;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.7;
+            padding: 24px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        /* 顶栏 */
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .topbar h1 { font-size: 20px; font-weight: 600; }
+        .topbar .date { opacity: 0.8; font-size: 14px; }
+
+        /* 卡片 */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .card h2 {
+            font-size: 18px;
+            color: #1a1a2e;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f0f0eb;
+        }
+
+        /* 状态概览 */
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+        }
+        .status-item {
+            padding: 20px;
+            background: #fafaf5;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .status-item .value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .status-item .label {
+            color: #666;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        .status-light {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        /* 工作流 */
+        .workflow {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .workflow-step {
+            flex: 1;
+            min-width: 140px;
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .workflow-step.completed {
+            background: #d4edda;
+            color: #155724;
+        }
+        .workflow-step.pending {
+            background: #e9ecef;
+            color: #6c757d;
+        }
+        .workflow-step .step-num {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        .workflow-step .step-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .workflow-summary {
+            margin-top: 16px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* 表格 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0eb;
+        }
+        th {
+            background: #fafaf5;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        /* 持仓卡片 */
+        .holding-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .holding-card h3 {
+            color: #1a1a2e;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .holding-card .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .badge-core { background: #cce5ff; color: #004085; }
+        .badge-satellite { background: #d4edda; color: #155724; }
+        .badge-hedge { background: #fff3cd; color: #856404; }
+        .badge-cash { background: #e9ecef; color: #6c757d; }
+
+        /* 动作队列 */
+        .action-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        .action-item.p0 { background: #f8d7da; }
+        .action-item.p1 { background: #fff3cd; }
+        .action-item.p2 { background: #e9ecef; }
+        .action-item.obs { background: #d1ecf1; }
+        .priority-tag {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 12px;
+        }
+        .tag-p0 { background: #dc3545; color: white; }
+        .tag-p1 { background: #ffc107; color: #333; }
+        .tag-p2 { background: #6c757d; color: white; }
+        .tag-obs { background: #17a2b8; color: white; }
+
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .workflow-step { min-width: 45%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- 顶栏 -->
+        <div class="topbar">
+            <h1>YMOS │ 投资操作系统</h1>
+            <div class="date">2026-05-09</div>
+        </div>
+
+        <!-- 状态概览 -->
+        <div class="card">
+            <h2>状态概览</h2>
+            <div class="status-grid">
+                <div class="status-item">
+                    <div class="status-light">🟢</div>
+                    <div class="value">绿灯</div>
+                    <div class="label">无紧急动作</div>
+                </div>
+                <div class="status-item">
+                    <div class="value">5</div>
+                    <div class="label">Active 持仓数</div>
+                </div>
+                <div class="status-item">
+                    <div class="value">~1.2x</div>
+                    <div class="label">杠杆率（安全）</div>
+                </div>
+                <div class="status-item">
+                    <div class="value">平衡</div>
+                    <div class="label">组合状态</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 每日工作流 -->
+        <div class="card">
+            <h2>每日工作流</h2>
+            <div class="workflow">
+                <div class="workflow-step pending">
+                    <div class="step-num">📊</div>
+                    <div class="step-name">市场洞察</div>
+                    <div style="font-size:12px">点击运行</div>
+                </div>
+                <div class="workflow-step pending">
+                    <div class="step-num">🔭</div>
+                    <div class="step-name">投资雷达</div>
+                    <div style="font-size:12px">点击运行</div>
+                </div>
+                <div class="workflow-step pending">
+                    <div class="step-num">🧠</div>
+                    <div class="step-name">策略分析</div>
+                    <div style="font-size:12px">点击运行</div>
+                </div>
+                <div class="workflow-step completed">
+                    <div class="step-num">✅</div>
+                    <div class="step-name">持仓收口</div>
+                    <div style="font-size:12px">今天已完成</div>
+                </div>
+            </div>
+            <div class="workflow-summary">已完成 1/4</div>
+        </div>
+
+        <!-- 战略简报 -->
+        <div class="card">
+            <h2>战略简报</h2>
+            <table>
+                <tr>
+                    <th>信号类型</th>
+                    <th>核心主题</th>
+                    <th>研判结论</th>
+                </tr>
+                <tr>
+                    <td>🟡 均衡</td>
+                    <td>美伊战争持续 / 股债金三杀</td>
+                    <td>避险资产承压，关注美元走势</td>
+                </tr>
+                <tr>
+                    <td>📈 科技分化</td>
+                    <td>NVDA 销售飙升，股价原地踏步</td>
+                    <td>AI 叙事仍在，等待估值消化</td>
+                </tr>
+                <tr>
+                    <td>🔄 仓位调整</td>
+                    <td>HYPE 已清仓，资金转 HLP</td>
+                    <td>生态集中度降低，风险降低</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 晨会速览 -->
+        <div class="card">
+            <h2>晨会速览</h2>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                <div>
+                    <h3 style="color:#155724; margin-bottom:12px;">✅ 今天必须做的事</h3>
+                    <ul style="padding-left:20px;">
+                        <li>跟踪 PENDLE 走势（首次建仓）</li>
+                        <li>监控 ETH 空头浮亏</li>
+                        <li>关注 HLP 收益率</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color:#dc3545; margin-bottom:12px;">❌ 今天不要做的事</h3>
+                    <ul style="padding-left:20px;">
+                        <li>追高 MU（等待回踩 MA20/MA60）</li>
+                        <li>追高 NVDA（等待 $155-165）</li>
+                        <li>频繁操作已设置止损的仓位</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 持仓一览 -->
+        <div class="card">
+            <h2>持仓一览</h2>
+            <div class="holding-card">
+                <h3><span class="badge badge-core">核心仓</span>HLP — Hyperliquid 做市金库</h3>
+                <p><strong>阶段：</strong>PVE 趋势持有 │ <strong>仓位：</strong>~45% │ <strong>关键位：</strong>关注回撤与收益率</p>
+            </div>
+            <div class="holding-card">
+                <h3><span class="badge badge-satellite">卫星仓</span>BTC 做T两手</h3>
+                <p><strong>阶段：</strong>PVE 趋势持有 │ <strong>仓位：</strong>~22% │ <strong>关键位：</strong>止损 $74,400 / 目标 $84K-85K</p>
+            </div>
+            <div class="holding-card">
+                <h3><span class="badge badge-hedge">对冲仓</span>ETH-PERP-SHORT</h3>
+                <p><strong>阶段：</strong>长持对冲 │ <strong>仓位：</strong>~7% │ <strong>关键位：</strong>压力 $2,400</p>
+            </div>
+            <div class="holding-card">
+                <h3><span class="badge badge-satellite">卫星仓</span>PENDLE</h3>
+                <p><strong>阶段：</strong>PVE 趋势持有 │ <strong>仓位：</strong>~4% │ <strong>关键位：</strong>止损 $1.48-1.57 / 目标 $2.2+</p>
+            </div>
+            <div class="holding-card">
+                <h3><span class="badge badge-cash">现金仓</span>USD</h3>
+                <p><strong>阶段：</strong>待命 │ <strong>仓位：</strong>~22% │ <strong>关键位：</strong>等待下一个机会</p>
+            </div>
+        </div>
+
+        <!-- Watchlist -->
+        <div class="card">
+            <h2>Watchlist</h2>
+            <table>
+                <tr>
+                    <th>标的</th>
+                    <th>优先级</th>
+                    <th>状态</th>
+                    <th>建仓参考</th>
+                </tr>
+                <tr>
+                    <td>GOLD 黄金</td>
+                    <td><span style="color:#ffc107">●</span> A</td>
+                    <td>观察（股债金三杀）</td>
+                    <td>$4,550-$4,700</td>
+                </tr>
+                <tr>
+                    <td>NVDA 英伟达</td>
+                    <td><span style="color:#ffc107">●</span> A</td>
+                    <td>观察（等 $155-165）</td>
+                    <td>$155-$165</td>
+                </tr>
+                <tr>
+                    <td>MU 美光</td>
+                    <td><span style="color:#ffc107">●</span> A</td>
+                    <td>强烈关注（等回踩）</td>
+                    <td>MA20 $509 / MA60 $438</td>
+                </tr>
+                <tr>
+                    <td>300308.SZ 中际旭创</td>
+                    <td><span style="color:#ffc107">●</span> A</td>
+                    <td>观察</td>
+                    <td>¥700+</td>
+                </tr>
+                <tr>
+                    <td>TON Toncoin</td>
+                    <td><span style="color:#6c757d">●</span> B</td>
+                    <td>待建仓信号</td>
+                    <td>$2.0 底仓</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 缺口清单 -->
+        <div class="card">
+            <h2>缺口清单</h2>
+            <table>
+                <tr>
+                    <th>类型</th>
+                    <th>内容</th>
+                    <th>状态</th>
+                </tr>
+                <tr>
+                    <td>结构缺口</td>
+                    <td>BTC_BTC 缺少买入卖出备忘录</td>
+                    <td><span style="color:#ffc107">⚠️ 待补</span></td>
+                </tr>
+                <tr>
+                    <td>数据缺口</td>
+                    <td>BTC 做T 最新价格</td>
+                    <td><span style="color:#6c757d">○ 待扫描</span></td>
+                </tr>
+                <tr>
+                    <td>结构缺口</td>
+                    <td>HYPE Watchlist 已清理</td>
+                    <td><span style="color:#28a745">✓ 已完成</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer">
+            YMOS Dashboard · 数据截至 2026-05-09 01:30
+        </div>
+
+    </div>
+</body>
+</html>

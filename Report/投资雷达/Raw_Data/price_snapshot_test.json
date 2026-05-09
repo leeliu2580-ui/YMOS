@@ -1,35 +1,4 @@
-[
-  {
-    "symbol": "PENDLE",
-    "price_usd": 2.04,
-    "change_24h": 7.154174492686841,
-    "market_cap": 344324429.2030476,
-    "volume_24h": 80822271.43953581,
-    "timestamp": "2026-05-08T20:00:35.908247",
-    "source": "CoinGecko",
-    "vs_btc_strength": 8.029727823636241,
-    "vs_eth_strength": 8.721544763947715
-  },
-  {
-    "symbol": "BTC",
-    "price_usd": 80223,
-    "change_24h": -0.8755533309494001,
-    "market_cap": 1606533205588.7615,
-    "volume_24h": 38526553695.76822,
-    "timestamp": "2026-05-08T20:00:35.908247",
-    "source": "CoinGecko",
-    "vs_btc_strength": 0.0,
-    "vs_eth_strength": 0.691816940311474
-  },
-  {
-    "symbol": "ETH",
-    "price_usd": 2295.46,
-    "change_24h": -1.5673702712608741,
-    "market_cap": 277051466447.6049,
-    "volume_24h": 21209338028.075386,
-    "timestamp": "2026-05-08T20:00:35.908247",
-    "source": "CoinGecko",
-    "vs_btc_strength": -0.691816940311474,
-    "vs_eth_strength": 0.0
-  }
-]
+{
+  "success": false,
+  "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+}

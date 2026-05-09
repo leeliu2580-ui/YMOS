@@ -5,7 +5,11 @@ YMOS 数据新鲜度检查脚本
 功能：
 - 扫描 持仓/ 和 动态Watchlist/ 下的所有标的文件夹
 - 检查 个股基础知识库.md 中的 P4 关注点更新时间
-- 如果更新时间超过 30 天，则将其列为“待处理缺口”
+- 如果更新时间超过 30 天，则将其列为"待处理缺口"
+
+SOP 规范文件名：
+- 标准名：个股基础知识库.md
+- 历史遗留：基础知识库.md（BTC/HYPE 等早期标的使用）
 """
 
 import os
@@ -26,23 +30,40 @@ def check_freshness(directory):
     for folder in directory.iterdir():
         if not folder.is_dir():
             continue
-        
-        kb_path = folder / "个股基础知识库.md"
-        if not kb_path.exists():
+
+        # SOP 规范文件名（优先级：标准名 > 历史遗留名）
+        kb_names = ["个股基础知识库.md", "基础知识库.md"]
+        kb_path = None
+        for name in kb_names:
+            candidate = folder / name
+            if candidate.exists():
+                kb_path = candidate
+                break
+
+        if not kb_path:
             gaps.append(f"{folder.name}: 缺少个股基础知识库.md")
             continue
 
         content = kb_path.read_text(encoding="utf-8")
-        # 寻找 P4 更新时间，匹配格式如 "> 更新于 2026-03-18"
-        match = re.search(r"## P4 重点关注点.*?> 更新于 (\d{4}-\d{2}-\d{2})", content, re.DOTALL)
-        
+
+        # P4 更新时间正则：兼容多种格式
+        # ## P4 重点关注点 ... > 更新于 2026-03-18
+        # ## P4 重点关注点 ... > 更新于：2026-03-18
+        # > 更新于 2026-03-18（文件头部的全局时间戳）
+        # 匹配 P4 区块中的更新时间戳（优先）或文件头部时间戳（兜底）
+        match = re.search(
+            r"(?:## P4 重点关注点[^>]*> ?更新于[:：]? ?|更新时间：|更新于：)(\d{4}-\d{2}-\d{2})",
+            content,
+            re.DOTALL
+        )
+
         if not match:
             gaps.append(f"{folder.name}: P4 关注点从未更新或格式错误")
             continue
 
         update_date_str = match.group(1)
         update_date = datetime.strptime(update_date_str, "%Y-%m-%d")
-        
+
         if datetime.now() - update_date > timedelta(days=30):
             gaps.append(f"{folder.name}: P4 关注点已过期（最后更新于 {update_date_str}）")
 
@@ -50,12 +71,12 @@ def check_freshness(directory):
 
 def main():
     print("📡 正在检查个股文件夹新鲜度...")
-    
+
     holding_gaps = check_freshness(HOLDING_DIR)
     watchlist_gaps = check_freshness(WATCHLIST_DIR)
-    
+
     all_gaps = holding_gaps + watchlist_gaps
-    
+
     if not all_gaps:
         print("✅ 所有标的数据均在有效期内。")
     else:

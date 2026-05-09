@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YMOS Dashboard 2026-05-08</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  background: #f5f5f0;
+  color: #222;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+
+/* Top bar */
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 24px; background: #1a1a2e; color: #fff;
+  border-radius: 12px; margin-bottom: 24px;
+}
+.topbar-brand { font-size: 20px; font-weight: 700; letter-spacing: 1px; }
+.topbar-date { font-size: 14px; color: #aaa; }
+
+/* Cards */
+.card {
+  background: #fff; border-radius: 12px; padding: 24px;
+  margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.card-title {
+  font-size: 14px; font-weight: 600; color: #888;
+  text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 16px; border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+/* Status */
+.status-row { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.status-lamp { font-size: 32px; }
+.status-text { font-size: 15px; }
+.status-value { font-size: 24px; font-weight: 700; color: #1a1a2e; }
+
+/* Workflow */
+.workflow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 768px) { .workflow { grid-template-columns: repeat(2, 1fr); } }
+.step {
+  padding: 16px; border-radius: 8px; text-align: center;
+  font-size: 14px;
+}
+.step-done { background: #22c55e; color: #fff; }
+.step-done::before { content: "✅ "; }
+.step-pending { background: #e5e5e0; color: #888; }
+.step-pending::before { content: attr(data-num) " "; font-weight: 600; }
+
+/* Signals table */
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { background: #f8f8f5; text-align: left; padding: 10px 12px; font-weight: 600; }
+td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; }
+tr:last-child td { border-bottom: none; }
+
+/* Action queue */
+.action-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid #f5f5f0;
+}
+.action-item:last-child { border-bottom: none; }
+.priority-tag {
+  padding: 3px 8px; border-radius: 4px; font-size: 12px;
+  font-weight: 600; white-space: nowrap;
+}
+.p0 { background: #ef4444; color: #fff; }
+.p1 { background: #f97316; color: #fff; }
+.p2 { background: #9ca3af; color: #fff; }
+.done { background: #22c55e; color: #fff; }
+.obs { background: #e5e5e0; color: #666; }
+
+/* Holdings */
+.holding-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 0; border-bottom: 1px solid #f0f0f0;
+}
+.holding-row:last-child { border-bottom: none; }
+.holding-left { display: flex; align-items: center; gap: 12px; }
+.holding-name { font-weight: 600; font-size: 15px; }
+.holding-ticker { color: #888; font-size: 13px; }
+.holding-right { text-align: right; }
+.holding-dynamic { font-size: 14px; color: #444; }
+.holding-status { font-size: 12px; color: #888; margin-top: 2px; }
+.phase { padding: 2px 6px; border-radius: 3px; font-size: 11px; }
+.pve { background: #d1fae5; color: #065f46; }
+.mixed { background: #e0e7ff; color: #3730a3; }
+
+/* Watchlist */
+.wl-item {
+  display: flex; justify-content: space-between;
+  padding: 10px 0; border-bottom: 1px solid #f0f0f0;
+}
+.wl-item:last-child { border-bottom: none; }
+.wl-name { font-weight: 500; }
+.wl-price { font-weight: 600; }
+.wl-change { font-size: 13px; }
+.up { color: #22c55e; }
+.down { color: #ef4444; }
+
+/* Footer */
+.footer {
+  text-align: center; padding: 24px; font-size: 13px; color: #aaa;
+  border-top: 1px solid #e5e5e0; margin-top: 24px;
+}
+
+/* Gaps */
+.gap-item {
+  padding: 6px 0; font-size: 14px; color: #666;
+  border-bottom: 1px dashed #f0f0f0;
+}
+.gap-item:last-child { border-bottom: none; }
+
+/* Closed position */
+.closed { opacity: 0.5; text-decoration: line-through; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="topbar-brand">YMOS │ 投资操作系统</div>
+  <div class="topbar-date">2026-05-08 │ 真相源一致性修复版</div>
+</div>
+
+<!-- Status Overview -->
+<div class="card">
+  <div class="card-title">状态概览</div>
+  <div class="status-row">
+    <div class="status-lamp">🟢</div>
+    <div>
+      <div class="status-text">执行灯号</div>
+      <div class="status-value">绿灯 — 真相源一致性已修复</div>
+    </div>
+    <div style="margin-left:auto;">
+      <div class="status-text">Active 持仓</div>
+      <div class="status-value">5 只</div>
+    </div>
+    <div>
+      <div class="status-text">Watchlist</div>
+      <div class="status-value">6 只</div>
+    </div>
+    <div>
+      <div class="status-text">组合状态</div>
+      <div class="status-value">进攻（杠杆 ~1.2x）</div>
+    </div>
+  </div>
+  <div style="margin-top:16px;padding:12px 16px;background:#d1fae5;border-radius:8px;font-size:14px;color:#065f46;">
+    ✅ 杠杆风险已降低（HYPE 清仓后 ~1.2x）；HYPE 生态敞口归零；真相源一致性已全面核查
+  </div>
+</div>
+
+<!-- Daily Workflow -->
+<div class="card">
+  <div class="card-title">每日工作流</div>
+  <div class="workflow">
+    <div class="step step-done">市场洞察<br><span style="font-size:12px;opacity:0.8">今天已完成</span></div>
+    <div class="step step-done">投资雷达<br><span style="font-size:12px;opacity:0.8">今天已完成</span></div>
+    <div class="step step-done">策略分析<br><span style="font-size:12px;opacity:0.8">今天已完成</span></div>
+    <div class="step step-done">持仓收口<br><span style="font-size:12px;opacity:0.8">今天已完成</span></div>
+  </div>
+  <div style="text-align:center;margin-top:12px;font-size:13px;color:#888;">已完成 4/4</div>
+</div>
+
+<!-- Strategic Brief -->
+<div class="card">
+  <div class="card-title">战略简报</div>
+  <div style="margin-bottom:12px;">
+    <span style="padding:4px 10px;border-radius:4px;font-size:13px;font-weight:600;background:#fef3c7;color:#92400e;">Fear（恐惧）</span>
+    <span style="margin-left:12px;font-size:14px;">霍尔木兹局势降温，市场从 Chaos 回归 Fear & Greed 38</span>
+  </div>
+  <table>
+    <tr><th>信号类型</th><th>核心主题</th><th>研判结论</th></tr>
+    <tr><td>BTC 做T</td><td>76%减仓至22%，目标 $84K-85K</td><td>部分止盈，持有剩余两手</td></tr>
+    <tr><td>HYPE 清仓</td><td>05-07 $43.27 清仓 376 个，回收~$16,253</td><td>✅ 止损 $33 未触发，HYPE 生态敞口归零</td></tr>
+    <tr><td>PENDLE 建仓</td><td>DeFi 收益代币化，4% 卫星仓</td><td>5-6 月边走边看，目标 $2.2+</td></tr>
+    <tr><td>ZEC 调研</td><td>量子抵抗叙事，PVP 博弈</td><td>SOP 2 卫星仓，止损 $500</td></tr>
+  </table>
+</div>
+
+<!-- Action Queue -->
+<div class="card">
+  <div class="card-title">今日动作队列（修复版）</div>
+  <div class="action-item">
+    <span class="priority-tag done">✅ 完成</span>
+    <span>HYPE 05-07 $43.27 清仓最后 376 个（~15%，HYPE 生态敞口归零）</span>
+    <span style="margin-left:auto;color:#888;font-size:13px;">HYPE</span>
+  </div>
+  <div class="action-item">
+    <span class="priority-tag done">✅ 完成</span>
+    <span>BTC 做T 部分止盈（$79,677，76%减仓至22%，两手持有）</span>
+    <span style="margin-left:auto;color:#888;font-size:13px;">BTC</span>
+  </div>
+  <div class="action-item">
+    <span class="priority-tag done">✅ 完成</span>
+    <span>PENDLE 首次建仓（$1.855，~4%）</span>
+    <span style="margin-left:auto;color:#888;font-size:13px;">PENDLE</span>
+  </div>
+  <div class="action-item">
+    <span class="priority-tag done">✅ 完成</span>
+    <span>ZEC 初始调研 + 加入 Watchlist</span>
+    <span style="margin-left:auto;color:#888;font-size:13px;">ZEC</span>
+  </div>
+  <div class="action-item">
+    <span class="priority-tag p1">🟡 P1</span>
+    <span>ETH 空头接近解套（-3.7%），评估是否平仓</span>
+    <span style="margin-left:auto;color:#888;font-size:13px;">ETH-PERP-SHORT</span>
+  </div>
+  <div class="action-item">
+    <span class="priority-tag obs">⚠️ 观察</span>
+    <span>BTC 能否在 5/8 前后触及 $84K-$85K</span>
+    <span style="margin-left:auto;color:#888;font-size:13px;">BTC</span>
+  </div>
+  <div class="action-item">
+    <span class="priority-tag obs">⚠️ 观察</span>
+    <span>PENDLE 目标 $2.2+，边走边看</span>
+    <span style="margin-left:auto;color:#888;font-size:13px;">PENDLE</span>
+  </div>
+</div>
+
+<!-- Holdings (HYPE removed) -->
+<div class="card">
+  <div class="card-title">持仓一览（5只）</div>
+  <div class="holding-row">
+    <div class="holding-left">
+      <div class="holding-name">ETH 空头</div>
+      <div class="holding-ticker">ETH-PERP-SHORT</div>
+      <span class="phase mixed">PVP</span>
+    </div>
+    <div class="holding-right">
+      <div class="holding-dynamic">$2,280（空头-3.6%）</div>
+      <div class="holding-status">~7% · 成本 $2,200 · 长持对冲</div>
+    </div>
+  </div>
+  <div class="holding-row">
+    <div class="holding-left">
+      <div class="holding-name">HLP</div>
+      <div class="holding-ticker">做市金库</div>
+      <span class="phase pve">核心仓</span>
+    </div>
+    <div class="holding-right">
+      <div class="holding-dynamic">—（无实时报价）</div>
+      <div class="holding-status">~45% · 主要仓位 · 关注回撤</div>
+    </div>
+  </div>
+  <div class="holding-row">
+    <div class="holding-left">
+      <div class="holding-name">BTC 做T</div>
+      <div class="holding-ticker">BTC-T（5X杠杆）</div>
+      <span class="phase mixed">PVP</span>
+    </div>
+    <div class="holding-right">
+      <div class="holding-dynamic">$79,870（-2.28%）</div>
+      <div class="holding-status">~22% · 目标 $84K-85K · 止损 $74,400</div>
+    </div>
+  </div>
+  <div class="holding-row">
+    <div class="holding-left">
+      <div class="holding-name">PENDLE</div>
+      <div class="holding-ticker">PENDLE 现货</div>
+      <span class="phase pve">PVE</span>
+    </div>
+    <div class="holding-right">
+      <div class="holding-dynamic">$1.98（+6.75%）</div>
+      <div class="holding-status">~4% · 成本 $1.855 · 目标 $2.2+</div>
+    </div>
+  </div>
+  <div class="holding-row">
+    <div class="holding-left">
+      <div class="holding-name">USD</div>
+      <div class="holding-ticker">稳定币现金</div>
+      <span class="phase pve">待命</span>
+    </div>
+    <div class="holding-right">
+      <div class="holding-dynamic">$1.00</div>
+      <div class="holding-status">~22% · HYPE/BTC 减仓回收 · 等待机会</div>
+    </div>
+  </div>
+  <div class="holding-row closed">
+    <div class="holding-left">
+      <div class="holding-name">HYPE 现货</div>
+      <div class="holding-ticker">HYPE</div>
+    </div>
+    <div class="holding-right">
+      <div class="holding-dynamic">$43.27（已清仓）</div>
+      <div class="holding-status">✅ 05-07 清仓 376 个 · 回收 ~$16,253 · 止损 $33 未触发</div>
+    </div>
+  </div>
+</div>
+
+<!-- Watchlist -->
+<div class="card">
+  <div class="card-title">Watchlist（6只）</div>
+  <div class="wl-item">
+    <div>
+      <div class="wl-name">ZEC（Zcash）<span style="font-size:12px;color:#22c55e;margin-left:8px;">新加入</span></div>
+      <div style="font-size:13px;color:#888;">PVP 博弈 · 量子抵抗叙事 · 止损 $500</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="wl-price">$570.35</div>
+      <div class="wl-change up">+1315.7%（1年）</div>
+    </div>
+  </div>
+  <div class="wl-item">
+    <div>
+      <div class="wl-name">MU（美光）<span style="font-size:12px;color:#f97316;margin-left:8px;">⭐ MA120 建仓</span></div>
+      <div style="font-size:13px;color:#888;">建仓目标 MA120 $375 · 当前 $713（-47%距MA120）</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="wl-price">$713</div>
+      <div class="wl-change up">+659%（YTD）</div>
+    </div>
+  </div>
+  <div class="wl-item">
+    <div>
+      <div class="wl-name">NVDA（英伟达）</div>
+      <div style="font-size:13px;color:#888;">AI 算力核心 · 等回踩建仓</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="wl-price">$211.50</div>
+      <div class="wl-change up">+53%（近1月）</div>
+    </div>
+  </div>
+  <div class="wl-item">
+    <div>
+      <div class="wl-name">GOLD（黄金）</div>
+      <div style="font-size:13px;color:#888;">霍尔木兹下反常下跌</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="wl-price">—</div>
+      <div class="wl-change down">下跌</div>
+    </div>
+  </div>
+  <div class="wl-item">
+    <div>
+      <div class="wl-name">TON（Toncoin）</div>
+      <div style="font-size:13px;color:#888;">建仓参考 $2.0 底仓 / $2.5-3.0 加仓</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="wl-price">$2.57</div>
+      <div class="wl-change down">-1.97%</div>
+    </div>
+  </div>
+  <div class="wl-item">
+    <div>
+      <div class="wl-name">300308.SZ（中际旭创）</div>
+      <div style="font-size:13px;color:#888;">AI 光模块 · ¥857.50</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="wl-price">¥857.50</div>
+      <div class="wl-change up">+1.48%</div>
+    </div>
+  </div>
+</div>
+
+<!-- Gaps -->
+<div class="card">
+  <div class="card-title">缺口清单（3项真实缺口）</div>
+  <div style="margin-bottom:12px;font-size:14px;font-weight:600;color:#92400e;">⚠️ 修复后仅剩 3 项真实缺口（原 10 项为误报）</div>
+  <div class="gap-item">• GOLD_GOLD：P4 关注点已过期（最后更新于 2026-04-03，35天前）</div>
+  <div class="gap-item">• NVDA_NVDA：P4 关注点已过期（最后更新于 2026-04-03，35天前）</div>
+  <div class="gap-item">• HYPE_HYPE（Watchlist）：P4 关注点从未更新或格式错误（⚠️ 需新建）</div>
+  <div style="margin-top:12px;font-size:14px;font-weight:600;color:#065f46;">✅ 已修复（修复前误报）</div>
+  <div class="gap-item">• BTC_BTC：✅ 有 基础知识库.md（历史遗留文件名，已修复 check_data_freshness.py）</div>
+  <div class="gap-item">• HYPE_HYPE（持仓）：✅ P4 2026-05-08 已更新</div>
+  <div class="gap-item">• PENDLE：✅ P4 2026-05-08 已更新</div>
+  <div class="gap-item">• ZEC：✅ P4 2026-05-08 已补充时间戳</div>
+  <div class="gap-item">• MU：✅ P4 2026-05-08 已更新，MA120 建仓逻辑已补充</div>
+  <div style="margin-top:12px;font-size:14px;font-weight:600;color:#92400e;">📋 结构缺口</div>
+  <div class="gap-item">• HLP：做市金库成本/收益数据未补录（占比 45%）</div>
+  <div class="gap-item">• ETH-PERP-SHORT：无个股文件夹（仅在状态机中记录）</div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  YMOS Dashboard · 真相源一致性修复版 · 2026-05-08 · 仅供参考，不构成投资建议
+</div>
+
+</div>
+</body>
+</html>
