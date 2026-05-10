@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "lightweight-charts": "^5.2.0",
     "memory-lancedb-pro": "^1.1.0-beta.9"
   }
 }

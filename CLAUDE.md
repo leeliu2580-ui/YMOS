@@ -116,11 +116,11 @@
 - **YMOS 暗号**：Claude Code 无法直接触发 YMOS，但可以生成执行命令供用户在 WSL 终端运行。例如：
   - 执行“跑一下投资雷达”：
     ```bash
-    cd D:\0_workspace\trae_2601\ymos\YMOS && python3 -c "from eyes.radar import run; run()"
+    cd `/path/to/YMOS` && python3 -c "from eyes.radar import run; run()"
     ```
   - 执行“市场洞察”：
     ```bash
-    cd D:\0_workspace\trae_2601\ymos\YMOS && python3 -c "from eyes.insight import run; run()"
+    cd `/path/to/YMOS` && python3 -c "from eyes.insight import run; run()"
     ```
   请根据用户实际的 YMOS 路径替换 `/path/to/YMOS`。
 
