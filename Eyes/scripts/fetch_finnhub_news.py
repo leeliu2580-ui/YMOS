@@ -66,12 +66,18 @@ def extract_tickers_from_state_machine(filepath: Path, us_only: bool = True) -> 
             in_table = False
             continue
 
+        # 模板中的示例行只用于说明格式，不得进入真实数据链。
+        normalized_line = line.replace("（", "(").replace("）", ")")
+        if "(示例)" in normalized_line or "demo_only" in normalized_line.lower():
+            continue
+
         cols = [c.strip() for c in line.split("|") if c.strip()]
 
         if not in_table:
-            for i, col in enumerate(cols):
-                if col.lower() in ("ticker", "代码", "标的"):
-                    ticker_col_idx = i
+            lowered = [col.lower() for col in cols]
+            for header in ("ticker", "代码", "标的"):
+                if header in lowered:
+                    ticker_col_idx = lowered.index(header)
                     in_table = True
                     break
             continue
@@ -81,7 +87,7 @@ def extract_tickers_from_state_machine(filepath: Path, us_only: bool = True) -> 
 
         if 0 <= ticker_col_idx < len(cols):
             val = cols[ticker_col_idx].strip().upper()
-            if val and not val.startswith(":") and val != "---":
+            if val and not val.startswith(":") and val != "---" and re.fullmatch(r"[A-Z0-9.:-]+", val):
                 if us_only:
                     if not any(val.endswith(s) for s in (".SS", ".SZ", ".HK")):
                         tickers.add(val)
@@ -113,7 +119,7 @@ def fetch_company_news(ticker: str, api_key: str, from_date: str, to_date: str) 
         f"https://finnhub.io/api/v1/company-news"
         f"?symbol={ticker}&from={from_date}&to={to_date}&token={api_key}"
     )
-    req = urllib.request.Request(url, headers={"User-Agent": "YMOS/2.0"})
+    req = urllib.request.Request(url, headers={"User-Agent": "YMOS/4.0"})
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
             return json.loads(resp.read().decode())

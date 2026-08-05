@@ -36,7 +36,7 @@ from env_loader import load_dotenv
 # 状态机中统一写裸符号（BTC / ETH），路由器在调用数据源前自动转换
 # - Finnhub crypto endpoint 需要交易所前缀（BINANCE:BTCUSDT）
 # - Yahoo 需要 -USD 后缀（BTC-USD）
-CRYPTO_SYMBOLS = {"BTC", "ETH", "SOL", "DOGE", "XRP", "ADA", "AVAX", "DOT", "HYPE", "HYPE-PERP-SHORT", "ETH-PERP-SHORT", "BTC-PERP-SHORT", "SOL-PERP-SHORT", "HLP"}
+CRYPTO_SYMBOLS = {"BTC", "ETH", "SOL", "DOGE", "XRP", "ADA", "AVAX", "DOT"}
 
 CRYPTO_MAP_FINNHUB = {
     "BTC": "BINANCE:BTCUSDT",
@@ -60,32 +60,33 @@ CRYPTO_MAP_YAHOO = {
     "DOT": "DOT-USD",
 }
 
-# 黄金等大宗商品 Yahoo Finance 映射（Finnhub GOLD = per gram 单位错误，绕道 Yahoo GC=F）
-COMMODITY_MAP_YAHOO = {
-    "GOLD": "GC=F",
-    "XAU": "GC=F",
-    "XAUUSD": "GC=F",
-}
 
-CMC_CRYPTO_SYMBOLS = {"BTC", "ETH", "SOL", "HYPE", "HYPE-PERP-SHORT", "ETH-PERP-SHORT", "BTC-PERP-SHORT", "SOL-PERP-SHORT"}
+def crypto_base(symbol: str) -> str | None:
+    """接受状态机裸符号，也兼容常见 Yahoo / Finnhub 写法。"""
+    upper = symbol.upper()
+    if upper in CRYPTO_SYMBOLS:
+        return upper
+    if upper.endswith("-USD") and upper[:-4] in CRYPTO_SYMBOLS:
+        return upper[:-4]
+    if upper.startswith("BINANCE:") and upper.endswith("USDT"):
+        base = upper[len("BINANCE:"):-len("USDT")]
+        return base if base in CRYPTO_SYMBOLS else None
+    return None
 
 
 def is_crypto(symbol: str) -> bool:
-    return symbol.upper() in CRYPTO_SYMBOLS
+    return crypto_base(symbol) is not None
 
 
 def normalize_for_source(symbol: str, source: str) -> str:
     """将状态机中的 crypto 裸符号转换为数据源需要的格式。非 crypto 原样返回。"""
-    upper = symbol.upper()
-    if upper not in CRYPTO_SYMBOLS:
-        # 大宗商品映射（Finnhub GOLD = per gram，必须绕道 Yahoo）
-        if source == "yahoo" and upper in COMMODITY_MAP_YAHOO:
-            return COMMODITY_MAP_YAHOO[upper]
+    base = crypto_base(symbol)
+    if base is None:
         return symbol
     if source == "finnhub":
-        return CRYPTO_MAP_FINNHUB.get(upper, f"BINANCE:{upper}USDT")
+        return CRYPTO_MAP_FINNHUB.get(base, f"BINANCE:{base}USDT")
     if source == "yahoo":
-        return CRYPTO_MAP_YAHOO.get(upper, f"{upper}-USD")
+        return CRYPTO_MAP_YAHOO.get(base, f"{base}-USD")
     return symbol
 
 
@@ -98,21 +99,17 @@ def parse_symbols(raw: str) -> list[str]:
 def classify(symbol: str) -> str:
     """
     返回该 Ticker 优先走哪个数据源（不考虑 Key 是否存在）。
-      'cmc'     → 重点 Crypto（BTC/ETH/SOL/HYPE 及常见 PERP 映射）
-      'finnhub' → 美股 / 其他 Crypto
+      'finnhub' → 美股 / Crypto
       'tushare' → A股（上交所 .SS / 深交所 .SZ）
-      'yahoo'   → 港股（.HK）、黄金等大宗商品（Finnhub GOLD = per gram 单位错误，需绕道）
+      'yahoo'   → 港股（.HK），以及所有市场的兜底
     """
     if symbol.endswith((".SS", ".SZ")):
         return "tushare"
     if symbol.endswith(".HK"):
         return "yahoo"
-    # Finnhub GOLD 报价单位为 per gram（$44.51/g ≈ $1,384/oz），与市场基准（per oz）相差31倍
-    # 黄金价格统一走 Yahoo Finance GC=F
-    if symbol.upper() in ("GOLD", "XAU", "XAUUSD"):
-        return "yahoo"
-    if symbol.upper() in CMC_CRYPTO_SYMBOLS:
-        return "cmc"
+    if is_crypto(symbol):
+        return "finnhub"
+    # BTC/ETH 等 Crypto 及纯字母美股
     return "finnhub"
 
 
@@ -138,38 +135,26 @@ def main() -> None:
     if not symbols:
         raise SystemExit("symbols 不能为空")
 
-    finnhub_key    = args.finnhub_token  or os.getenv("FINNHUB_API_KEY", "")
-    tushare_token  = args.tushare_token  or os.getenv("TUSHARE_TOKEN", "")
-    tickflow_key   = os.getenv("TICKFLOW_API_KEY", "")
-    cmc_key        = os.getenv("COINMARKETCAP_API_KEY", "")
+    finnhub_key   = args.finnhub_token  or os.getenv("FINNHUB_API_KEY", "")
+    tushare_token = args.tushare_token  or os.getenv("TUSHARE_TOKEN", "")
 
     # ── 分流 ────────────────────────────────────────────────────────────────
-    cmc_syms:     list[str] = []
     finnhub_syms: list[str] = []
     tushare_syms: list[str] = []
     yahoo_syms:   list[str] = []
 
     for s in symbols:
         bucket = classify(s)
-        if bucket == "cmc":
-            if cmc_key:
-                cmc_syms.append(s)
-            elif finnhub_key:
-                finnhub_syms.append(s)
-            else:
-                yahoo_syms.append(s)
-        elif bucket == "finnhub":
+        if bucket == "finnhub":
             if finnhub_key:
                 finnhub_syms.append(s)
             else:
                 yahoo_syms.append(s)          # 无 Key → Yahoo 兜底
         elif bucket == "tushare":
-            if tickflow_key:
-                tushare_syms.append(s)
-            elif tushare_token:
+            if tushare_token:
                 tushare_syms.append(s)
             else:
-                yahoo_syms.append(s)          # 无 Token/Key → Yahoo 兜底
+                yahoo_syms.append(s)          # 无 Token → Yahoo 兜底
         else:  # "yahoo"
             yahoo_syms.append(s)
 
@@ -177,8 +162,7 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     date_tag = args.date_tag or "latest"
 
-    print(f"📡 价格路由分流结果：")
-    print(f"   CMC      ({len(cmc_syms)}): {cmc_syms or '—'}")
+    print("📡 价格路由分流结果：")
     print(f"   Finnhub  ({len(finnhub_syms)}): {finnhub_syms or '—'}")
     print(f"   Tushare  ({len(tushare_syms)}): {tushare_syms or '—'}")
     print(f"   Yahoo    ({len(yahoo_syms)}): {yahoo_syms or '—'}")
@@ -189,25 +173,12 @@ def main() -> None:
     yahoo_syms_norm   = [normalize_for_source(s, "yahoo")   for s in yahoo_syms]
 
     if finnhub_syms_norm != finnhub_syms or yahoo_syms_norm != yahoo_syms:
-        print(f"🔄 Crypto 归一化：")
+        print("🔄 Crypto 归一化：")
         if finnhub_syms_norm != finnhub_syms:
             print(f"   Finnhub: {finnhub_syms} → {finnhub_syms_norm}")
         if yahoo_syms_norm != yahoo_syms:
             print(f"   Yahoo:   {yahoo_syms} → {yahoo_syms_norm}")
         print()
-
-    # ── CoinMarketCap（重点 Crypto）───────────────────────────────────────
-    if cmc_syms:
-        out = out_dir / f"price_scan_cmc_{date_tag}.json"
-        cmd = [
-            sys.executable,
-            str(SCRIPTS_DIR / "fetch_price_cmc.py"),
-            "--symbols", ",".join(cmc_syms),
-            "--output", str(out),
-        ]
-        code = run(cmd)
-        if code != 0:
-            print(f"⚠️ CMC 调用失败（exit {code}），对应 ticker 可能无价格数据")
 
     # ── Finnhub ─────────────────────────────────────────────────────────────
     if finnhub_syms_norm:
@@ -224,44 +195,19 @@ def main() -> None:
         if code != 0:
             print(f"⚠️ Finnhub 调用失败（exit {code}），对应 ticker 可能无价格数据")
 
-    # ── A股主路由：TickFlow > Tushare ─────────────────────────────────────
+    # ── Tushare（A股）───────────────────────────────────────────────────────
     if tushare_syms:
-        if tickflow_key:
-            out = out_dir / f"price_scan_tickflow_{date_tag}.json"
-            cmd = [
-                sys.executable,
-                str(SCRIPTS_DIR / "fetch_price_tickflow.py"),
-                "--symbols", ",".join(tushare_syms),
-                "--token", tickflow_key,
-                "--output", str(out),
-            ]
-            code = run(cmd)
-            if code != 0:
-                print(f"⚠️ TickFlow 调用失败（exit {code}），尝试回退到 Tushare")
-                if tushare_token:
-                    out = out_dir / f"price_scan_tushare_{date_tag}.json"
-                    cmd = [
-                        sys.executable,
-                        str(SCRIPTS_DIR / "fetch_price_tushare.py"),
-                        "--symbols", ",".join(tushare_syms),
-                        "--token", tushare_token,
-                        "--output", str(out),
-                    ]
-                    code = run(cmd)
-                    if code != 0:
-                        print(f"⚠️ Tushare 调用失败（exit {code}），对应 ticker 可能无价格数据")
-        else:
-            out = out_dir / f"price_scan_tushare_{date_tag}.json"
-            cmd = [
-                sys.executable,
-                str(SCRIPTS_DIR / "fetch_price_tushare.py"),
-                "--symbols", ",".join(tushare_syms),
-                "--token", tushare_token,
-                "--output", str(out),
-            ]
-            code = run(cmd)
-            if code != 0:
-                print(f"⚠️ Tushare 调用失败（exit {code}），对应 ticker 可能无价格数据")
+        out = out_dir / f"price_scan_tushare_{date_tag}.json"
+        cmd = [
+            sys.executable,
+            str(SCRIPTS_DIR / "fetch_price_tushare.py"),
+            "--symbols", ",".join(tushare_syms),
+            "--token", tushare_token,
+            "--output", str(out),
+        ]
+        code = run(cmd)
+        if code != 0:
+            print(f"⚠️ Tushare 调用失败（exit {code}），对应 ticker 可能无价格数据")
 
     # ── Yahoo（港股 + 兜底）─────────────────────────────────────────────────
     if yahoo_syms_norm:

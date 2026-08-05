@@ -1,25 +1,19 @@
 # Environment & secrets
 .env
 .env.local
+# 可选：用户将官方外部 Skills 安装到 YMOS 根目录时，不纳入本仓库。
+skills/
 
-# Local-only directories
+# Local-only files & directories (not part of the open-source repo)
 wordpress-docs/
+# WordPress public demo is maintained outside the YMOS release package.
+Console/wordpress/
+# 内部开发交接文档：含商业渠道 / 定价、自用环境凭据状态、自用版与公开版对比
+PROJECT_STATE.md
 
 # OS
 .DS_Store
 Thumbs.db
-
-# Backup / build noise
-node_modules/
-*.log
-tmp/
-dist/
-build/
-.cache/
-.tools/
-output/
-.openclaw/
-.clawhub/
 
 # Python
 __pycache__/
@@ -29,13 +23,40 @@ __pycache__/
 # Obsidian
 .obsidian/
 
-# Runtime data (reports are generated locally, not tracked in repo)
-Eyes/市场洞察/2026-*/
+# User-local config — only the .example files are tracked
+Console/config.json
+Console/rules.json
+Reader/config.json
+Eyes/scripts/rss_sources_custom.json
+
+# Runtime data (generated locally, never tracked)
+Eyes/市场洞察/20[0-9][0-9]-*/
 Eyes/市场洞察/Raw_Data/
-Eyes/投资雷达/2026-*/
+Eyes/投资雷达/20[0-9][0-9]-*/
 Eyes/投资雷达/Raw_Data/
-Brain/策略分析/2026-*/
+Brain/策略分析/20[0-9][0-9]-*/
 Brain/策略分析/Raw_Data/
+Brain/策略配置/当前策略_Profile.md
+Brain/策略配置/驱动清单.md
+Brain/策略配置/模块清单.md
+Brain/内核审计/诊断记录/*
+Brain/交易计划/*
+!Brain/交易计划/README.md
+Brain/决策审计/*
+!Brain/决策审计/README.md
+Brain/内核审计/优化建议/*
+!Brain/内核审计/优化建议/README.md
+!Brain/内核审计/优化建议/_模板_平仓复盘.md
+Brain/买入卖出决策/*
+!Brain/买入卖出决策/README.md
+!Brain/买入卖出决策/_模板_买卖决策_状态机.md
+!Brain/买入卖出决策/已平仓/
+Brain/买入卖出决策/已平仓/*
+!Brain/买入卖出决策/已平仓/.gitkeep
+!Brain/买入卖出决策/已作废/
+Brain/买入卖出决策/已作废/*
+!Brain/买入卖出决策/已作废/.gitkeep
+持仓与关注/dashboard/
 
 # Personal stock folders (created during onboarding)
 持仓与关注/持仓/*/
@@ -44,5 +65,17 @@ Brain/策略分析/Raw_Data/
 !持仓与关注/动态Watchlist/.gitkeep
 持仓与关注/投资复盘/
 
-# Local docs (not part of YMOS repo)
-wordpress-docs/
+# BrainStorm：思考内容是高度个人的，只跟踪骨架与模板
+BrainStorm/每日头脑风暴/Raw_Thoughts/20[0-9][0-9]-*/
+BrainStorm/Summarized_Insights/20[0-9][0-9]-*/
+BrainStorm/状态机/20[0-9][0-9]-*/
+BrainStorm/投资感悟归档/*/*.md
+!BrainStorm/投资感悟归档/*/_模板_*.md
+
+# 历史投资资料：只跟踪说明、模板和空目录，不提交用户原件或整理结果
+BrainStorm/历史投资资料/资料索引.md
+BrainStorm/历史投资资料/原始资料/*
+!BrainStorm/历史投资资料/原始资料/.gitkeep
+BrainStorm/历史投资资料/索引与梳理/*.md
+!BrainStorm/历史投资资料/索引与梳理/_模板_*.md
+!BrainStorm/历史投资资料/索引与梳理/.gitkeep
